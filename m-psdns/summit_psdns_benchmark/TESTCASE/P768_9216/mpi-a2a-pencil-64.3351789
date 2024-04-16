@@ -1,0 +1,168 @@
+  
+MPI tasks_per_node =  6
+MPI Row Comms : Number On-Node        =     2
+MPI Row Comms : Number Across Network =     0
+MPI Col Comms : Number On-Node        =     3
+MPI Col Comms : Number Across Network =   189
+  
+Including self-communication in the B/W calculations
+  
+Each MPI rank is allocating  12.55 GB on both the CPUs and GPUs
+   
+   
+   
+   
+Row: Total Message size (MB) :  2157.79129
+Row: P2P Message size (MB)   :  1078.89565
+Col: Total Message size (MB) :  2125.64941
+Col: P2P Message size (MB)   :    11.07109
+   
+   
+Process for time-averaging across all the mpi ranks:
+(1) the timings for each mpi rank are averaged over  5
+    timesteps to get an average runtime for each rank
+   
+(2) these time-averaged runtimes are averaged across the
+    mpi ranks to find the average runtime for the ranks
+   
+   
+Row- CPU MPI-ALLTOALL          :  3.2353E-01
+Col- CPU MPI-ALLTOALL          :  1.4778E+00
+ -------------------------------------------------------
+Overall CPU Time               :  1.8014E+00
+   
+CPU MPI Row Comm Rate per MPI Rank
+    On-node (GB/sec) :       6.5132
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :       6.5132
+   
+CPU MPI Col Comm Rate per MPI Rank
+    On-node (GB/sec) :       0.0219
+    Network (GB/sec) :       1.3827
+    Total   (GB/sec) :       1.4046
+   
+   
+CPU MPI Row Comm Rate per Node
+    On-node (GB/sec) :      39.0794
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      39.0794
+   
+CPU MPI Col Comm Rate per Node
+    On-node (GB/sec) :       0.1317
+    Network (GB/sec) :       8.2962
+    Total   (GB/sec) :       8.4279
+   
+   
+Row- GPU MPI-ALLTOALL  :  4.3674E-01
+Col- GPU MPI-ALLTOALL  :  1.5505E+00
+ ---------------------------------------------------
+Overall GPU Time       :  1.9872E+00
+   
+GPU MPI Row Comm Rate per MPI Rank
+    On-node (GB/sec) :       4.8249
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :       4.8249
+   
+GPU MPI Col Comm Rate per MPI Rank
+    On-node (GB/sec) :       0.0209
+    Network (GB/sec) :       1.3179
+    Total   (GB/sec) :       1.3389
+   
+   
+GPU MPI Row Comm Rate per Node
+    On-node (GB/sec) :      28.9494
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      28.9494
+   
+GPU MPI Col Comm Rate per Node
+    On-node (GB/sec) :       0.1255
+    Network (GB/sec) :       7.9076
+    Total   (GB/sec) :       8.0331
+   
+   
+Total Job Runtime: 37 seconds
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 3351789: <mpi-a2a-pencil-64> in cluster <summit> Done
+
+Job <mpi-a2a-pencil-64> was submitted from host <login4> by user <khana> in cluster <summit> at Wed Mar 13 11:31:26 2024
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <khana> in cluster <summit> at Wed Mar 13 11:31:28 2024
+                            <42*a17n14>
+                            <42*a17n15>
+                            <42*a17n16>
+                            <42*a17n17>
+                            <42*a17n18>
+                            <42*a18n01>
+                            <42*a18n02>
+                            <42*a18n03>
+                            <42*a18n05>
+                            <42*a18n06>
+                            <42*a18n07>
+                            <42*a18n08>
+                            <42*a18n09>
+                            <42*a18n10>
+                            <42*a18n11>
+                            <42*a18n12>
+                            <42*a18n13>
+                            <42*a18n14>
+                            <42*a18n15>
+                            <42*a18n16>
+                            <42*a18n17>
+                            <42*a18n18>
+                            <42*a19n01>
+                            <42*f17n05>
+                            <42*f17n06>
+                            <42*f17n07>
+                            <42*f17n08>
+                            <42*f17n09>
+                            <42*f17n10>
+                            <42*f17n11>
+                            <42*f17n12>
+                            <42*f17n13>
+                            <42*f17n14>
+                            <42*f17n15>
+                            <42*f17n16>
+                            <42*f17n17>
+                            <42*f17n18>
+                            <42*f18n01>
+                            <42*f18n02>
+                            <42*f18n03>
+                            <42*f18n04>
+                            <42*f18n05>
+                            <42*f18n06>
+                            <42*f18n07>
+                            <42*f18n08>
+                            <42*f18n09>
+                            <42*f18n10>
+                            <42*f18n11>
+                            <42*f18n12>
+                            <42*f18n13>
+                            <42*f18n14>
+                            <42*f18n15>
+                            <42*f18n16>
+                            <42*f18n17>
+                            <42*f18n18>
+                            <42*f19n01>
+                            <42*f19n02>
+                            <42*f19n03>
+                            <42*f19n04>
+                            <42*f19n05>
+                            <42*f19n06>
+                            <42*f19n07>
+                            <42*f19n08>
+                            <42*f19n09>
+</ccs/home/khana> was used as the home directory.
+</gpfs/alpine2/stf008/proj-shared/khana/SUMMIT/TESTCASE/P384_9216> was used as the working directory.
+Started at Wed Mar 13 11:31:28 2024
+Terminated at Wed Mar 13 11:32:41 2024
+Results reported at Wed Mar 13 11:32:41 2024
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <mpi-a2a-pencil-64.err.3351789> for stderr output of this job.
+

@@ -1,0 +1,149 @@
+
+The following have been reloaded with a version change:
+  1) PrgEnv-cray/8.3.3 => PrgEnv-cray/8.4.0
+  2) cce/15.0.0 => cce/16.0.1
+  3) cray-libsci/22.12.1.1 => cray-libsci/23.09.1.1
+  4) cray-mpich/8.1.23 => cray-mpich/8.1.27
+  5) cray-pmi/6.1.8 => cray-pmi/6.1.12
+  6) craype/2.7.19 => craype/2.7.23
+  7) perftools-base/22.12.0 => perftools-base/23.09.0
+
++ srun -N 128 -n 128 --ntasks-per-node=1 ./shasta_addr 4
++ sort
++ set +x
+Found biggest group = 6, count = 2
+Have 73 dragonfly groups
+Adding node frontier00001 from group 6
+Adding node frontier00129 from group 7
+Adding node frontier00257 from group 8
+Adding node frontier00385 from group 9
+Adding node frontier00513 from group 10
+Adding node frontier00641 from group 11
+Adding node frontier00769 from group 12
+Adding node frontier00897 from group 13
+Adding node frontier01025 from group 14
+Adding node frontier01153 from group 15
+Adding node frontier01281 from group 16
+Adding node frontier01409 from group 17
+Adding node frontier01537 from group 18
+Adding node frontier01665 from group 19
+Adding node frontier01793 from group 20
+Adding node frontier01921 from group 21
+Adding node frontier02049 from group 22
+Adding node frontier02177 from group 23
+Adding node frontier02305 from group 24
+Adding node frontier02433 from group 25
+Adding node frontier02561 from group 26
+Adding node frontier02689 from group 27
+Adding node frontier02817 from group 28
+Adding node frontier02945 from group 29
+Adding node frontier03073 from group 30
+Adding node frontier03201 from group 31
+Adding node frontier03329 from group 32
+Adding node frontier03457 from group 33
+Adding node frontier03585 from group 34
+Adding node frontier03713 from group 35
+Adding node frontier03841 from group 36
+Adding node frontier03969 from group 37
+Adding node frontier04097 from group 38
+Adding node frontier04225 from group 39
+Adding node frontier04353 from group 40
+Adding node frontier04481 from group 41
+Adding node frontier04609 from group 42
+Adding node frontier04737 from group 43
+Adding node frontier04865 from group 44
+Adding node frontier04993 from group 45
+Adding node frontier05121 from group 46
+Adding node frontier05249 from group 47
+Adding node frontier05377 from group 48
+Adding node frontier05505 from group 49
+Adding node frontier05633 from group 50
+Adding node frontier05761 from group 51
+Adding node frontier05889 from group 52
+Adding node frontier06017 from group 53
+Adding node frontier06145 from group 54
+Adding node frontier06273 from group 55
+Adding node frontier06401 from group 56
+Adding node frontier06529 from group 57
+Adding node frontier06657 from group 58
+Adding node frontier06785 from group 59
+Adding node frontier06913 from group 60
+Adding node frontier07041 from group 61
+Adding node frontier07169 from group 62
+Adding node frontier07297 from group 63
+Adding node frontier07425 from group 64
+Adding node frontier07553 from group 65
+Adding node frontier07681 from group 66
+Adding node frontier07809 from group 67
+Adding node frontier07937 from group 68
+Adding node frontier08065 from group 69
+Adding node frontier08193 from group 70
+Adding node frontier08321 from group 71
+Adding node frontier08449 from group 72
+Adding node frontier08582 from group 73
+Adding node frontier08710 from group 74
+Adding node frontier08885 from group 75
+Adding node frontier09086 from group 76
+Adding node frontier10208 from group 77
+Adding node frontier10284 from group 78
+Adding node frontier00002 from group 6
+Adding node frontier00130 from group 7
+Adding node frontier00258 from group 8
+Adding node frontier00386 from group 9
+Adding node frontier00514 from group 10
+Adding node frontier00642 from group 11
+Adding node frontier00770 from group 12
+Adding node frontier00898 from group 13
+Adding node frontier01026 from group 14
+Adding node frontier01154 from group 15
+Adding node frontier01282 from group 16
+Adding node frontier01410 from group 17
+Adding node frontier01538 from group 18
+Adding node frontier01666 from group 19
+Adding node frontier01794 from group 20
+Adding node frontier01922 from group 21
+Adding node frontier02050 from group 22
+Adding node frontier02178 from group 23
+Adding node frontier02306 from group 24
+Adding node frontier02434 from group 25
+Adding node frontier02562 from group 26
+Adding node frontier02690 from group 27
+Adding node frontier02818 from group 28
+Adding node frontier02946 from group 29
+Adding node frontier03074 from group 30
+Adding node frontier03202 from group 31
+Adding node frontier03330 from group 32
+Adding node frontier03458 from group 33
+Adding node frontier03586 from group 34
+Adding node frontier03714 from group 35
+Adding node frontier03842 from group 36
+Adding node frontier03970 from group 37
+Adding node frontier04098 from group 38
+Adding node frontier04226 from group 39
+Adding node frontier04354 from group 40
+Adding node frontier04482 from group 41
+Adding node frontier04610 from group 42
+Adding node frontier04738 from group 43
+Adding node frontier04866 from group 44
+Adding node frontier04994 from group 45
+Adding node frontier05122 from group 46
+Adding node frontier05250 from group 47
+Adding node frontier05378 from group 48
+Adding node frontier05506 from group 49
+Adding node frontier05634 from group 50
+Adding node frontier05762 from group 51
+Adding node frontier05892 from group 52
+Adding node frontier06019 from group 53
+Adding node frontier06147 from group 54
+Adding node frontier06275 from group 55
+Adding node frontier06403 from group 56
+Adding node frontier06532 from group 57
+Adding node frontier06659 from group 58
+Adding node frontier06787 from group 59
+Adding node frontier06915 from group 60
+Creating rank reorder file in rank_reorder.1781245
++ srun -N128 -n1024 -c7 --ntasks-per-gpu=1 --gpu-bind=closest -w 'frontier[00001-00002,00129-00130,00257-00258,00385-00386,00513-00514,00641-00642,00769-00770,00897-00898,01025-01026,01153-01154,01281-01282,01409-01410,01537-01538,01665-01666,01793-01794,01921-01922,02049-02050,02177-02178,02305-02306,02433-02434,02561-02562,02689-02690,02817-02818,02945-02946,03073-03074,03201-03202,03329-03330,03457-03458,03585-03586,03713-03714,03841-03842,03969-03970,04097-04098,04225-04226,04353-04354,04481-04482,04609-04610,04737-04738,04865-04866,04993-04994,05121-05122,05249-05250,05377-05378,05505-05506,05633-05634,05761-05762,05889,05892,06017,06019,06145,06147,06273,06275,06401,06403,06529,06532,06657,06659,06785,06787,06913,06915,07041,07169,07297,07425,07553,07681,07809,07937,08065,08193,08321,08449,08582,08710,08885,09086,10208]' /lustre/orion/proj-shared/stf008/hvac/network_eval/FRONTIER/MPI_A2A.x
+ADIOI_CRAY_WRITECONTIG(244): filename='/lustre/orion/darshan/frontier/2024/3/21/khana_MPI_A2A.x_id1781245-67103_3-21-26314-5009375479847716044.darshan_partial'  error='Bad file descriptor'  errno=9  PE=00000  W_rec=00000  off=0000000360  len=0000000588  See MPICH_MPIIO_ABORT_ON_RW_ERROR.
+darshan_library_warning: error writing job record.
+darshan_library_warning: unable to write job record to file /lustre/orion/darshan/frontier/2024/3/21/khana_MPI_A2A.x_id1781245-67103_3-21-26314-5009375479847716044.darshan_partial.
++ set +x

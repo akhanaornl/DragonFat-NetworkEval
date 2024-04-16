@@ -1,0 +1,4 @@
+-v base_size 8
+# Use this file to define what the base system size should be.
+# 8x8x8 x 98304 atoms is 50,331,648 atoms per node.
+# Only the first line of this file is read

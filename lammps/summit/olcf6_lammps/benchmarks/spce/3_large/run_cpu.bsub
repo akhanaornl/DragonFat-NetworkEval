@@ -1,0 +1,58 @@
+#!/bin/bash
+
+#BSUB -J lammps_benchmark_cpu
+
+# Ensure that this script is launched from a read-write-able space
+
+source ../../../common_files/environment/setup_env_cpu.sh
+
+benchmark_size=$(basename $(dirname $PWD))
+benchmark_name=$(basename $(dirname $(dirname $PWD)))
+echo "Running the ${benchmark_name} benchmark, size ${benchmark_size}"
+
+# Requires ${BENCHMARK_ROOT}/build/lammps/install-cpu/bin/lmp
+exe=""
+if [ -f ${BENCHMARK_ROOT}/build/lammps/install-cpu/bin/lmp ]; then
+    exe=$(realpath ${BENCHMARK_ROOT}/build/lammps/install-cpu/bin/lmp)
+else
+    echo "Could not find binary in ${BENCHMARK_ROOT}/build/lammps/install-cpu/bin/lmp"
+    exit 1
+fi
+echo "Using binary located in: $exe"
+
+# In the current directory, we expect symlinks to the input & data files,
+#  as well as a file named ``size_cmd.txt``, which gives us the factors to replicate
+#  the unit cell by in X, Y, and Z dimensions.
+# Optionally, a file named ``kokkos_args.txt`` may be provided, which supplies
+#  additional arguments to the ``package kokkos`` command of LAMMPS.
+if [ ! -f size_cmd.txt ]; then
+    echo "Could not find the required 'size_cmd.txt' file in ${PWD}. Aborting run."
+    exit 1
+fi
+size_cmd=$(head -n 1 size_cmd.txt)
+echo "Using size multiplier: ${size_cmd}"
+
+# Dynamically get the number of nodes
+JOB_NODES=`cat $LSB_DJOB_HOSTFILE | sort | uniq | wc -l`
+# Remove batch node from node count
+JOB_NODES=`expr $JOB_NODES - 1`
+
+# Summit network tunables -- this tuning configuration is suitable for low-latency communication
+export PAMI_ENABLE_STRIPING=0
+export PAMI_IBV_ENABLE_DCT=1
+export PAMI_IBV_DEVICE_NAME="mlx5_0:1"
+export PAMI_IBV_DEVICE_NAME_1="mlx5_3:1"
+
+export OMP_NUM_THREADS=7
+export OMP_PROC_BIND=true
+export OMP_PLACES=cores
+
+# ``-sf omp -pk omp ${OMP_NUM_THREADS`` enables the OpenMP backend of LAMMPS
+# --smpiargs are network tunables on Summit (see ``ompi_info --param pml pami --level 4`` and ``ompi_info --param coll hcoll --level 9``)
+# On Summit, we pack 6 MPI ranks per node, each rank gets 7 CPU cores
+jsrun --nrs $(expr ${JOB_NODES} \* 6) --cpu_per_rs 7 --tasks_per_rs 1 --rs_per_host 6 \
+    -d packed -b packed:7 --smpiargs="-mca coll_hcoll_enable 1 -mca coll_hcoll_np 0 -hcoll -mca pml_pami_local_eager_limit $(expr 8192 \* 2) -mca pml_pami_remote_eager_limit $(expr 8192 \* 32)" \
+    stdbuf -i0 -o0 -e0 ${exe} -sf omp -pk omp ${OMP_NUM_THREADS} \
+    -in input.in -log none ${size_cmd}
+
+echo "Completed with exit code: $?"

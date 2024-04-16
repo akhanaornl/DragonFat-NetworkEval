@@ -1,0 +1,5 @@
+romio_cb_write enable
+romio_ds_write enable
+romio_cb_read enable
+cb_buffer_size 16777216
+cb_nodes 256

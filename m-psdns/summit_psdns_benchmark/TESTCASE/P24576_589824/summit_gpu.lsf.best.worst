@@ -1,0 +1,52 @@
+#!/bin/bash
+# Begin LSF Directives
+#BSUB -P Project
+#BSUB -W 0:05
+#BSUB -nnodes 4096
+####BSUB -alloc_flags "smt1"
+#BSUB -J mpsdns
+#BSUB -o mpsdns-4096.%J
+#BSUB -e mpsdns-4096.err.%J
+
+export CODE_PATH=/gpfs/alpine2/project/proj-shared/user/SUMMIT
+source ${CODE_PATH}/setUpModules.sh
+#module list
+
+exec=${CODE_PATH}/MPI_A2A.x
+
+export CUDA_LAUNCH_BLOCKING=1
+export OMP_NUM_THREADS=1
+
+#Runtime Calculation
+start_time=$(date +%s)  # Record the start time in seconds
+
+# LSB_DJOB_HOSTFILE is a file containing the node list in the job. Copying it to help debugging later
+cp $LSB_DJOB_HOSTFILE ./job.${LSB_JOBID}.nodes
+
+
+# Beginning size
+NNODES_ARR=(4096)
+
+for NNODES in ${NNODES_ARR[@]}; do
+    echo "Starting NNODES=${NNODES}"
+    nodelist=$(./give_me_nodes_summit.py -N ${NNODES} --erf-file ${LSB_JOBID}.${NNODES}.best.erf --node-file $LSB_DJOB_HOSTFILE)
+    set -x
+    jsrun --erf_input ${LSB_JOBID}.${NNODES}.best.erf --smpiargs="-gpu" stdbuf -i0 -o0 -e0 $exec
+    exit_code=$?
+    set +x
+    echo "Completed with exit code: $exit_code"
+
+    # Now run the random ordering problem
+    nodelist=$(./give_me_nodes_summit.py -N ${NNODES} --erf-file ${LSB_JOBID}.${NNODES}.worst.erf --node-file $LSB_DJOB_HOSTFILE --worst)
+    set -x
+    jsrun --erf_input ${LSB_JOBID}.${NNODES}.worst.erf --smpiargs="-gpu" stdbuf -i0 -o0 -e0 $exec
+    exit_code=$?
+    set +x
+    echo "Completed with exit code: $exit_code"
+done
+
+end_time=$(date +%s)  # Record the end time in seconds
+total_runtime=$((end_time - start_time))  # Calculate the total runtime in seconds
+
+# Print the total runtime to stdout
+echo "Total Job Runtime: ${total_runtime} seconds"

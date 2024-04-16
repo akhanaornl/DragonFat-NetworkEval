@@ -1,0 +1,8 @@
+nx, ny, nz, nv
+   8192, 8291, 8291, 1
+iproc, jproc
+   2, 512
+nstep
+   6 
+tasks_per_node
+   8

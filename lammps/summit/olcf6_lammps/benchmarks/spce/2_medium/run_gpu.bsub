@@ -1,0 +1,65 @@
+#!/bin/bash
+
+#BSUB -J lammps_benchmark_gpu
+
+# Ensure that this script is launched from a read-write-able space
+
+source ../../../common_files/environment/setup_env_gpu.sh
+
+benchmark_size=$(basename $PWD)
+benchmark_name=$(basename $(dirname $PWD))
+echo "Running the ${benchmark_name} benchmark, size ${benchmark_size}"
+
+# Requires ${BENCHMARK_ROOT}/build/lammps/install-gpu/bin/lmp
+exe=""
+if [ -f ${BENCHMARK_ROOT}/build/lammps/install-gpu/bin/lmp ]; then
+    exe=$(realpath ${BENCHMARK_ROOT}/build/lammps/install-gpu/bin/lmp)
+else
+    echo "Could not find binary in ${BENCHMARK_ROOT}/build/lammps/install-gpu/bin/lmp"
+    exit 1
+fi
+echo "Using binary located in: $exe"
+
+# In the current directory, we expect symlinks to the input & data files
+# We expect a file one directory level back that provides the replication factor for a 1-node system
+# The LAMMPS input script parses the number of nodes (must be a perfect cube) and replicates that base system
+# Optionally, a file named ``kokkos_args.txt`` may be provided, which supplies
+#  additional arguments to the ``package kokkos`` command of LAMMPS.
+if [ ! -f ../base_size_cmd.txt ]; then
+    echo "Could not find the required 'base_size_cmd.txt' file in $(realpath ${PWD}/..). Aborting run."
+    exit 1
+fi
+size_cmd=$(head -n 1 ../base_size_cmd.txt)
+echo "Using size multiplier: ${size_cmd}"
+
+kokkos_args=""
+if [ -f kokkos_args.txt ]; then
+    kokkos_args=$(head -n 1 kokkos_args.txt)
+    echo "Found additional Kokkos arguments: ${kokkos_args}"
+fi
+
+# Dynamically get the number of nodes
+JOB_NODES=`cat $LSB_DJOB_HOSTFILE | sort | uniq | wc -l`
+# Remove batch node from node count
+JOB_NODES=`expr $JOB_NODES - 1`
+
+# Summit network tunables -- this tuning configuration is suitable for low-latency communication
+export PAMI_ENABLE_STRIPING=0
+export PAMI_IBV_ENABLE_DCT=1
+export PAMI_IBV_DEVICE_NAME="mlx5_0:1"
+export PAMI_IBV_DEVICE_NAME_1="mlx5_3:1"
+
+export OMP_NUM_THREADS=7
+export OMP_PROC_BIND=true
+export OMP_PLACES=cores
+
+# ``--smpiargs="-gpu"`` is required for GPU-aware MPI
+# The remaining smpiargs are network tunables on Summit (see ``ompi_info --param pml pami --level 4`` and ``ompi_info --param coll hcoll --level 9``)
+# ``-k on g 1 -sf kk -pk kokkos gpu/aware on`` are the minimum flags to enable Kokkos for the run.
+# On Summit, we pack 6 MPI ranks per node, each rank gets 7 CPU cores and 1 NVIDIA V100
+jsrun --nrs $(expr ${JOB_NODES} \* 6) --gpu_per_rs 1 --cpu_per_rs 7 --tasks_per_rs 1 --rs_per_host 6 \
+    -d packed -b packed:7 --smpiargs="-gpu -mca coll_hcoll_enable 1 -mca coll_hcoll_np 0 -hcoll -mca pml_pami_local_eager_limit $(expr 8192 \* 2) -mca pml_pami_remote_eager_limit $(expr 8192 \* 32)" \
+    stdbuf -i0 -o0 -e0 ${exe} -k on g 1 -sf kk -pk kokkos gpu/aware on ${kokkos_args} \
+    -in input.in -log none ${size_cmd} -v nnodes ${JOB_NODES}
+
+echo "Completed with exit code: $?"

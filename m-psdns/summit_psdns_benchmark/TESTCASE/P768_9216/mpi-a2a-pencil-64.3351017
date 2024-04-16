@@ -1,0 +1,146 @@
+  
+MPI tasks_per_node =  6
+MPI Row Comms : Number On-Node        =     2
+MPI Row Comms : Number Across Network =     0
+MPI Col Comms : Number On-Node        =     3
+MPI Col Comms : Number Across Network =   189
+  
+Neglecting self-communication in the B/W calculations
+  
+Each MPI rank is allocating   0.72 GB on both the CPUs and GPUs
+   
+   
+   
+   
+Row: Total Message size (MB) :   123.61853
+Row: P2P Message size (MB)   :    61.80927
+Col: Total Message size (MB) :   122.55469
+Col: P2P Message size (MB)   :     0.63831
+   
+   
+Process for time-averaging across all the mpi ranks:
+(1) the timings for each mpi rank are averaged over  5
+    timesteps to get an average runtime for each rank
+   
+(2) these time-averaged runtimes are averaged across the
+    mpi ranks to find the average runtime for the ranks
+   
+   
+Row- CPU MPI-ALLTOALL          :  1.8577E-02
+Col- CPU MPI-ALLTOALL          :  1.0186E-01
+ -------------------------------------------------------
+Overall CPU Time               :  1.2044E-01
+   
+CPU MPI Row Comm Rate
+    On-node (GB/sec) :       6.4983
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :       6.4983
+   
+CPU MPI Col Comm Rate
+    On-node (GB/sec) :       0.0245
+    Network (GB/sec) :       2.3131
+    Total   (GB/sec) :       2.3376
+   
+   
+Row- GPU MPI-ALLTOALL  :  2.6984E-02
+Col- GPU MPI-ALLTOALL  :  1.1118E-01
+ ---------------------------------------------------
+Overall GPU Time       :  1.3816E-01
+   
+GPU MPI Row Comm Rate
+    On-node (GB/sec) :       4.4738
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :       4.4738
+   
+GPU MPI Col Comm Rate
+    On-node (GB/sec) :       0.0224
+    Network (GB/sec) :       2.1194
+    Total   (GB/sec) :       2.1418
+   
+   
+Total Job Runtime: 6 seconds
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch1>
+Subject: Job 3351017: <mpi-a2a-pencil-64> in cluster <summit> Done
+
+Job <mpi-a2a-pencil-64> was submitted from host <login3> by user <khana> in cluster <summit> at Tue Mar 12 11:44:56 2024
+Job was executed on host(s) <1*batch1>, in queue <batch>, as user <khana> in cluster <summit> at Tue Mar 12 11:45:10 2024
+                            <42*h20n08>
+                            <42*h20n11>
+                            <42*h20n12>
+                            <42*h20n13>
+                            <42*h20n14>
+                            <42*h20n15>
+                            <42*h20n16>
+                            <42*h20n17>
+                            <42*h20n18>
+                            <42*h21n01>
+                            <42*h21n02>
+                            <42*h21n03>
+                            <42*h21n04>
+                            <42*h21n05>
+                            <42*h21n06>
+                            <42*h21n07>
+                            <42*h21n08>
+                            <42*h21n09>
+                            <42*h21n10>
+                            <42*h21n11>
+                            <42*h21n12>
+                            <42*h21n13>
+                            <42*h21n14>
+                            <42*h21n15>
+                            <42*h21n16>
+                            <42*h21n17>
+                            <42*h21n18>
+                            <42*h22n01>
+                            <42*h22n02>
+                            <42*h22n03>
+                            <42*h22n04>
+                            <42*h22n05>
+                            <42*h22n06>
+                            <42*h22n07>
+                            <42*h22n08>
+                            <42*h22n09>
+                            <42*h22n10>
+                            <42*h22n11>
+                            <42*h22n12>
+                            <42*h22n13>
+                            <42*h22n14>
+                            <42*h22n15>
+                            <42*h22n16>
+                            <42*h22n17>
+                            <42*h22n18>
+                            <42*h23n01>
+                            <42*h23n02>
+                            <42*h23n03>
+                            <42*h23n04>
+                            <42*h23n05>
+                            <42*h23n06>
+                            <42*h23n07>
+                            <42*h23n08>
+                            <42*h23n09>
+                            <42*h23n10>
+                            <42*h23n11>
+                            <42*h23n12>
+                            <42*h23n13>
+                            <42*h23n14>
+                            <42*h23n15>
+                            <42*h23n16>
+                            <42*h23n17>
+                            <42*h23n18>
+                            <42*h24n01>
+</ccs/home/khana> was used as the home directory.
+</gpfs/alpine2/stf008/proj-shared/khana/SUMMIT/TESTCASE/P384_9216> was used as the working directory.
+Started at Tue Mar 12 11:45:10 2024
+Terminated at Tue Mar 12 11:45:50 2024
+Results reported at Tue Mar 12 11:45:50 2024
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <mpi-a2a-pencil-64.err.3351017> for stderr output of this job.
+

@@ -1,0 +1,45 @@
+Found biggest group = b25, count = 18
+Have 5 switches
+Generating binding with 28 hardware threads per task (4 hw threads per core)
++ jsrun --erf_input 3363932.64.best.erf '--smpiargs=-gpu ...' ' '
+--------------------------------------------------------------------------
+mpirun was unable to find the specified executable file, and therefore
+did not launch the job.  This error was first reported for process
+rank 0; it may have occurred for other processes as well.
+
+NOTE: A common cause for this error is misspelling a mpirun command
+      line parameter option (remember that mpirun interprets the first
+      unrecognized command line token as the executable).
+
+Node:       batch5
+Executable: ...
+--------------------------------------------------------------------------
+Error: Generator command below failed with 134
+Command: env MPI_ROOT=/sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr OPAL_PREFIX=/sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr OPAL_LIBDIR=/sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr/lib LD_LIBRARY_PATH=/sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr/lib /sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr/bin/alias.pl /sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr/bin/stock/mpirun -gpu ... --write_env_keyval /tmp/smpiargs.2748165.lqtUPr -jsrun
+03-26-2024 08:35:29:786 2748165 main: Error. Failed to setup the Spectrum MPI environment. Will not continue.
++ stdbuf -i0 -o0 -e0 /gpfs/alpine2/stf008/proj-shared/khana/SUMMIT/MPI_A2A.x
+Error: OMPI_COMM_WORLD_RANK is not set in environment like it should be.
+Error checking ibm license.
++ exit_code=255
++ set +x
+Found biggest group = b25, count = 18
+Have 5 switches
+Generating binding with 28 hardware threads per task (4 hw threads per core)
++ jsrun --erf_input 3363932.64.worst.erf '--smpiargs=-gpu ...' stdbuf -i0 -o0 -e0 /gpfs/alpine2/stf008/proj-shared/khana/SUMMIT/MPI_A2A.x
+--------------------------------------------------------------------------
+mpirun was unable to find the specified executable file, and therefore
+did not launch the job.  This error was first reported for process
+rank 0; it may have occurred for other processes as well.
+
+NOTE: A common cause for this error is misspelling a mpirun command
+      line parameter option (remember that mpirun interprets the first
+      unrecognized command line token as the executable).
+
+Node:       batch5
+Executable: ...
+--------------------------------------------------------------------------
+Error: Generator command below failed with 134
+Command: env MPI_ROOT=/sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr OPAL_PREFIX=/sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr OPAL_LIBDIR=/sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr/lib LD_LIBRARY_PATH=/sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr/lib /sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr/bin/alias.pl /sw/summit/spack-envs/summit-plus/opt/xl-16.1.1-13/spectrum-mpi-10.4.0.6-20230210-zh3mxrmvkq3q3b3lnlrovby6vgg2b4yr/bin/stock/mpirun -gpu ... --write_env_keyval /tmp/smpiargs.2748235.xPrphO -jsrun
+03-26-2024 08:35:30:525 2748235 main: Error. Failed to setup the Spectrum MPI environment. Will not continue.
++ exit_code=1
++ set +x

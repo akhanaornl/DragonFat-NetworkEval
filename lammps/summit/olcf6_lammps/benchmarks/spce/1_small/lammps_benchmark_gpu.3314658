@@ -1,0 +1,167 @@
+Running the spce benchmark, size 1_small
+Using binary located in: /gpfs/alpine2/stf243/proj-shared/hagertnl/olcf6/lammps/build/lammps-new/install-gpu/bin/lmp
+Using size multiplier: -v base_size 4
+Found additional Kokkos arguments: neigh half comm device newton off neigh/transpose on sort device atom/map device
+LAMMPS (7 Feb 2024 - Development - patch_7Feb2024_update1-33-g08498637aa)
+KOKKOS mode with Kokkos version 4.2.0 is enabled (../kokkos.cpp:72)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (-49.901276 -49.901276 -49.901276) to (49.901276 49.901276 49.901276)
+  3 by 4 by 4 MPI processor grid
+  reading atoms ...
+  98304 atoms
+  reading velocities ...
+  98304 velocities
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  1 = max angles/atom
+  reading bonds ...
+  65536 bonds
+  reading angles ...
+  32768 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 0.004 seconds
+  read_data CPU = 0.946 seconds
+Replication is creating a 8x8x8 = 512 times larger system...
+  orthogonal box = (-49.901276 -49.901276 -49.901276) to (748.51914 748.51914 748.51914)
+  3 by 4 by 4 MPI processor grid
+  bounding box image = (-1 -1 -1) to (1 1 1)
+  bounding box extra memory = 17.75 MB
+  average # of replicas added to proc = 102.35 out of 512 (19.99%)
+  50331648 atoms
+  33554432 bonds
+  16777216 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 4.961 seconds
+  replicate CPU = 5.644 seconds
+
+Info-Info-Info-Info-Info-Info-Info-Info-Info-Info-Info
+Printed on Mon Feb 26 11:03:26 2024
+
+Coeff status information:
+
+Pair Coeffs:
+     1      1: is set
+     1      2: is set
+     2      2: is set
+
+Bond Coeffs:
+     1: is set
+
+Angle Coeffs:
+     1: is set
+
+Info-Info-Info-Info-Info-Info-Info-Info-Info-Info-Info
+
+Finding SHAKE clusters ...
+       0 = # of size 2 clusters
+       0 = # of size 3 clusters
+       0 = # of size 4 clusters
+16777216 = # of frozen angles
+  find clusters CPU = 1.985 seconds
+PPPM Kokkos initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:342)
+  G vector (1/distance) = 0.33317903
+  grid = 720 720 720
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0043969159
+  estimated relative force accuracy = 1.3241182e-05
+  using double precision cuFFT
+  3d grid and FFT values/proc = 8637343 7776000
+Generated 0 of 1 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 2 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11
+  ghost atom cutoff = 11
+  binsize = 11, bins = 73 73 73
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long/kk, perpetual
+      attributes: half, newton off, kokkos_device
+      pair build: half/bin/newtoff/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.5
+Per MPI rank memory allocation (min/avg/max) = 1712 | 1712 | 1712 Mbytes
+   Step         TotEng          Temp          PotEng         KinEng        Density    
+         0  -1.5678708e+08  297.77243     -1.8657009e+08  29783015       0.98609321   
+        10  -1.5678827e+08  297.98006     -1.8659205e+08  29803783       0.98609321   
+        20  -1.5678814e+08  298.32923     -1.8662685e+08  29838706       0.98609321   
+        30  -1.5678801e+08  298.14741     -1.8660853e+08  29820521       0.98609321   
+        40  -1.567879e+08   297.73457     -1.8656712e+08  29779229       0.98609321   
+        50  -1.5678761e+08  298.07854     -1.8660124e+08  29813632       0.98609321   
+        60  -1.5678732e+08  298.37275     -1.8663038e+08  29843059       0.98609321   
+        70  -1.5678693e+08  297.76047     -1.8656875e+08  29781820       0.98609321   
+        80  -1.5678644e+08  297.3941      -1.8653161e+08  29745175       0.98609321   
+        90  -1.5678579e+08  297.96855     -1.8658842e+08  29802631       0.98609321   
+       100  -1.5678485e+08  298.50134     -1.8664077e+08  29855920       0.98609321   
+Loop time of 62.3828 on 48 procs for 100 steps with 50331648 atoms
+
+Performance: 0.069 ns/day, 346.571 hours/ns, 1.603 timesteps/s, 80.682 Matom-step/s
+91.4% CPU use with 48 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 0.49081    | 0.49676    | 0.50309    |   0.3 |  0.80
+Bond    | 0.001172   | 0.001256   | 0.0014077  |   0.1 |  0.00
+Kspace  | 56.067     | 56.088     | 56.11      |   0.2 | 89.91
+Neigh   | 2.0177     | 2.0323     | 2.0365     |   0.4 |  3.26
+Comm    | 0.26037    | 0.27961    | 0.31788    |   3.0 |  0.45
+Output  | 0.064411   | 0.076959   | 0.082048   |   1.4 |  0.12
+Modify  | 3.2846     | 3.3289     | 3.3591     |   1.4 |  5.34
+Other   |            | 0.07882    |            |       |  0.13
+
+Nlocal:    1.04858e+06 ave 1.04868e+06 max 1.04843e+06 min
+Histogram: 16 0 0 0 0 0 0 16 0 16
+Nghost:         351017 ave      351203 max      350846 min
+Histogram: 16 0 0 0 16 0 0 0 0 16
+Neighs:    3.04792e+08 ave 3.04879e+08 max 3.04696e+08 min
+Histogram: 16 0 0 0 0 16 0 0 0 16
+
+Total # of neighbors = 1.4630031e+10
+Ave neighs/atom = 290.67261
+Ave special neighs/atom = 2
+Neighbor list builds = 3
+Dangerous builds = 0
+Total wall time: 0:01:19
+Completed with exit code: 0
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 3314658: <lammps_benchmark_gpu> in cluster <summit> Done
+
+Job <lammps_benchmark_gpu> was submitted from host <login3> by user <hagertnl> in cluster <summit> at Mon Feb 26 11:02:35 2024
+Job was executed on host(s) <1*batch4>, in queue <batch>, as user <hagertnl> in cluster <summit> at Mon Feb 26 11:02:54 2024
+                            <42*h15n05>
+                            <42*h15n06>
+                            <42*h15n07>
+                            <42*h15n08>
+                            <42*h15n09>
+                            <42*h15n13>
+                            <42*h15n14>
+                            <42*h15n15>
+</ccs/home/hagertnl> was used as the home directory.
+</gpfs/alpine2/proj-shared/stf243/hagertnl/olcf6/lammps/benchmarks/spce/1_small> was used as the working directory.
+Started at Mon Feb 26 11:02:54 2024
+Terminated at Mon Feb 26 11:04:37 2024
+Results reported at Mon Feb 26 11:04:37 2024
+
+The output (if any) is above this job summary.
+

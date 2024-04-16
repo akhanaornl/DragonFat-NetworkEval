@@ -1,0 +1,44 @@
+#!/bin/bash
+# Begin LSF Directives
+#BSUB -P Project
+#BSUB -W 0:10
+#BSUB -nnodes 64
+#BSUB -q debug
+####BSUB -alloc_flags "smt1"
+#BSUB -J psdns-64
+#BSUB -o psdns-64.%J
+#BSUB -e psdns-64.err.%J
+
+export CODE_PATH=/gpfs/alpine2/project/proj-shared/user/SUMMIT
+source ${CODE_PATH}/setUpModules.sh
+#module list
+
+exec=${CODE_PATH}/MPI_A2A.x
+
+export CUDA_LAUNCH_BLOCKING=1
+export OMP_NUM_THREADS=1
+
+# Beginning size
+NNODES_ARR=(64)
+
+# LSB_DJOB_HOSTFILE is a file containing the node list in the job. Copying it to help debugging later
+cp $LSB_DJOB_HOSTFILE ./job.${LSB_JOBID}.nodes
+
+for NNODES in ${NNODES_ARR[@]}; do
+    echo "Starting NNODES=${NNODES}"
+    nodelist=$(./give_me_nodes_summit.py -N ${NNODES} --erf-file ${LSB_JOBID}.${NNODES}.best.erf --node-file $LSB_DJOB_HOSTFILE)
+    set -x
+    jsrun --erf_input ${LSB_JOBID}.${NNODES}.best.erf --smpiargs="-gpu" stdbuf -i0 -o0 -e0 $exec
+    exit_code=$?
+    set +x
+    echo "Completed with exit code: $exit_code"
+
+    # Now run the random ordering problem
+    nodelist=$(./give_me_nodes_summit.py -N ${NNODES} --erf-file ${LSB_JOBID}.${NNODES}.worst.erf --node-file $LSB_DJOB_HOSTFILE --worst)
+    set -x
+    jsrun --erf_input ${LSB_JOBID}.${NNODES}.worst.erf --smpiargs="-gpu" stdbuf -i0 -o0 -e0 $exec
+    exit_code=$?
+    set +x
+    echo "Completed with exit code: $exit_code"
+done
+

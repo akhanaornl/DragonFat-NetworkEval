@@ -1,0 +1,787 @@
+
+The following have been reloaded with a version change:
+  1) PrgEnv-cray/8.3.3 => PrgEnv-cray/8.4.0
+  2) cce/15.0.0 => cce/16.0.1
+  3) cray-libsci/22.12.1.1 => cray-libsci/23.09.1.1
+  4) cray-mpich/8.1.23 => cray-mpich/8.1.27
+  5) cray-pmi/6.1.8 => cray-pmi/6.1.12
+  6) craype/2.7.19 => craype/2.7.23
+  7) perftools-base/22.12.0 => perftools-base/23.09.0
+
++ srun -N 128 -n 128 --ntasks-per-node=1 ./shasta_addr 4
++ sort
++ set +x
+Found biggest group = 6, count = 2
+Have 73 dragonfly groups
+Adding node frontier00038 from group 6
+Adding node frontier00166 from group 7
+Adding node frontier00292 from group 8
+Adding node frontier00548 from group 10
+Adding node frontier00676 from group 11
+Adding node frontier00805 from group 12
+Adding node frontier00931 from group 13
+Adding node frontier01059 from group 14
+Adding node frontier01187 from group 15
+Adding node frontier01315 from group 16
+Adding node frontier01443 from group 17
+Adding node frontier01573 from group 18
+Adding node frontier01701 from group 19
+Adding node frontier01827 from group 20
+Adding node frontier01953 from group 21
+Adding node frontier02083 from group 22
+Adding node frontier02211 from group 23
+Adding node frontier02339 from group 24
+Adding node frontier02467 from group 25
+Adding node frontier02595 from group 26
+Adding node frontier02708 from group 27
+Adding node frontier02851 from group 28
+Adding node frontier02979 from group 29
+Adding node frontier03162 from group 30
+Adding node frontier03312 from group 31
+Adding node frontier03440 from group 32
+Adding node frontier03572 from group 33
+Adding node frontier03700 from group 34
+Adding node frontier03828 from group 35
+Adding node frontier03956 from group 36
+Adding node frontier04092 from group 37
+Adding node frontier04204 from group 38
+Adding node frontier04341 from group 39
+Adding node frontier04474 from group 40
+Adding node frontier04592 from group 41
+Adding node frontier04728 from group 42
+Adding node frontier04793 from group 43
+Adding node frontier04986 from group 44
+Adding node frontier05108 from group 45
+Adding node frontier05227 from group 46
+Adding node frontier05360 from group 47
+Adding node frontier05442 from group 48
+Adding node frontier05511 from group 49
+Adding node frontier05637 from group 50
+Adding node frontier05765 from group 51
+Adding node frontier05905 from group 52
+Adding node frontier06032 from group 53
+Adding node frontier06160 from group 54
+Adding node frontier06288 from group 55
+Adding node frontier06416 from group 56
+Adding node frontier06545 from group 57
+Adding node frontier06672 from group 58
+Adding node frontier06800 from group 59
+Adding node frontier06928 from group 60
+Adding node frontier07056 from group 61
+Adding node frontier07184 from group 62
+Adding node frontier07312 from group 63
+Adding node frontier07440 from group 64
+Adding node frontier07568 from group 65
+Adding node frontier07698 from group 66
+Adding node frontier07824 from group 67
+Adding node frontier07952 from group 68
+Adding node frontier08080 from group 69
+Adding node frontier08208 from group 70
+Adding node frontier08337 from group 71
+Adding node frontier08464 from group 72
+Adding node frontier08597 from group 73
+Adding node frontier08710 from group 74
+Adding node frontier08833 from group 75
+Adding node frontier08967 from group 76
+Adding node frontier10113 from group 77
+Adding node frontier10241 from group 78
+Adding node frontier10369 from group 79
+Adding node frontier00039 from group 6
+Adding node frontier00167 from group 7
+Adding node frontier00293 from group 8
+Adding node frontier00549 from group 10
+Adding node frontier00677 from group 11
+Adding node frontier00806 from group 12
+Adding node frontier00932 from group 13
+Adding node frontier01060 from group 14
+Adding node frontier01188 from group 15
+Adding node frontier01316 from group 16
+Adding node frontier01444 from group 17
+Adding node frontier01574 from group 18
+Adding node frontier01702 from group 19
+Adding node frontier01828 from group 20
+Adding node frontier01954 from group 21
+Adding node frontier02084 from group 22
+Adding node frontier02212 from group 23
+Adding node frontier02340 from group 24
+Adding node frontier02468 from group 25
+Adding node frontier02596 from group 26
+Adding node frontier02709 from group 27
+Adding node frontier02852 from group 28
+Adding node frontier02980 from group 29
+Adding node frontier03163 from group 30
+Adding node frontier03313 from group 31
+Adding node frontier03441 from group 32
+Adding node frontier03573 from group 33
+Adding node frontier03701 from group 34
+Adding node frontier03829 from group 35
+Adding node frontier03957 from group 36
+Adding node frontier04093 from group 37
+Adding node frontier04205 from group 38
+Adding node frontier04342 from group 39
+Adding node frontier04475 from group 40
+Adding node frontier04593 from group 41
+Adding node frontier04729 from group 42
+Adding node frontier04794 from group 43
+Adding node frontier04987 from group 44
+Adding node frontier05109 from group 45
+Adding node frontier05228 from group 46
+Adding node frontier05361 from group 47
+Adding node frontier05443 from group 48
+Adding node frontier05512 from group 49
+Adding node frontier05638 from group 50
+Adding node frontier05766 from group 51
+Adding node frontier05906 from group 52
+Adding node frontier06033 from group 53
+Adding node frontier06161 from group 54
+Adding node frontier06289 from group 55
+Adding node frontier06417 from group 56
+Adding node frontier06546 from group 57
+Adding node frontier06673 from group 58
+Adding node frontier06801 from group 59
+Adding node frontier06929 from group 60
+Adding node frontier07057 from group 61
+Creating rank reorder file in rank_reorder.1781142
++ srun -N128 -n1024 -c7 --ntasks-per-gpu=1 --gpu-bind=closest -w 'frontier[00038-00039,00166-00167,00292-00293,00548-00549,00676-00677,00805-00806,00931-00932,01059-01060,01187-01188,01315-01316,01443-01444,01573-01574,01701-01702,01827-01828,01953-01954,02083-02084,02211-02212,02339-02340,02467-02468,02595-02596,02708-02709,02851-02852,02979-02980,03162-03163,03312-03313,03440-03441,03572-03573,03700-03701,03828-03829,03956-03957,04092-04093,04204-04205,04341-04342,04474-04475,04592-04593,04728-04729,04793-04794,04986-04987,05108-05109,05227-05228,05360-05361,05442-05443,05511-05512,05637-05638,05765-05766,05905-05906,06032-06033,06160-06161,06288-06289,06416-06417,06545-06546,06672-06673,06800-06801,06928-06929,07056-07057,07184,07312,07440,07568,07698,07824,07952,08080,08208,08337,08464,08597,08710,08833,08967,10113,10241]' /lustre/orion/proj-shared/stf008/hvac/network_eval/FRONTIER/MPI_A2A.x
+Thu Mar 21 07:14:53 2024: [PE_0]:rankfile_read:FATAL: Unable to open file named '/lustre/orion/proj-shared/stf008/hvac/network_eval/FRONTIER/TESTCASE/P512_9216/rank_reorder.1781142.'.  This file must be read-accessible by rank 0 in the current working directory.
+Thu Mar 21 07:14:54 2024: [PE_232]:inet_recv:inet_recv: unexpected socket EOF on frontier01954 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_232]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_232]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_456]:inet_recv:inet_recv: unexpected socket EOF on frontier03829 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_456]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_456]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_712]:inet_recv:inet_recv: unexpected socket EOF on frontier05766 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_712]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_712]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_488]:inet_recv:inet_recv: unexpected socket EOF on frontier04093 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_488]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_488]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_104]:inet_recv:inet_recv: unexpected socket EOF on frontier00932 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_104]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_104]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_520]:inet_recv:inet_recv: unexpected socket EOF on frontier04342 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_520]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_520]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_328]:inet_recv:inet_recv: unexpected socket EOF on frontier02709 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_328]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_328]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_1000]:inet_recv:inet_recv: unexpected socket EOF on frontier10113 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_1000]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_1000]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_136]:inet_recv:inet_recv: unexpected socket EOF on frontier01188 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_136]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_136]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_744]:inet_recv:inet_recv: unexpected socket EOF on frontier06033 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_744]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_744]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_72]:inet_recv:inet_recv: unexpected socket EOF on frontier00677 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_72]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_72]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_360]:inet_recv:inet_recv: unexpected socket EOF on frontier02980 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_360]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_360]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_936]:inet_recv:inet_recv: unexpected socket EOF on frontier08080 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_936]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_936]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_552]:inet_recv:inet_recv: unexpected socket EOF on frontier04593 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_552]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_552]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_648]:inet_recv:inet_recv: unexpected socket EOF on frontier05361 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_648]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_648]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_392]:inet_recv:inet_recv: unexpected socket EOF on frontier03313 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_392]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_392]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_584]:inet_recv:inet_recv: unexpected socket EOF on frontier04794 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_584]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_584]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_872]:inet_recv:inet_recv: unexpected socket EOF on frontier07057 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_872]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_872]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_808]:inet_recv:inet_recv: unexpected socket EOF on frontier06546 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_808]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_808]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_616]:inet_recv:inet_recv: unexpected socket EOF on frontier05109 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_616]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_616]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_968]:inet_recv:inet_recv: unexpected socket EOF on frontier08597 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_968]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_968]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_40]:inet_recv:inet_recv: unexpected socket EOF on frontier00293 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_40]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_40]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_840]:inet_recv:inet_recv: unexpected socket EOF on frontier06801 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_840]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_840]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_264]:inet_recv:inet_recv: unexpected socket EOF on frontier02212 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_264]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_264]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_200]:inet_recv:inet_recv: unexpected socket EOF on frontier01702 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_200]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_200]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_8]:inet_recv:inet_recv: unexpected socket EOF on frontier00039 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_8]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_8]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_424]:inet_recv:inet_recv: unexpected socket EOF on frontier03573 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_424]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_424]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_904]:inet_recv:inet_recv: unexpected socket EOF on frontier07568 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_904]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_904]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_168]:inet_recv:inet_recv: unexpected socket EOF on frontier01444 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_168]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_168]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_296]:inet_recv:inet_recv: unexpected socket EOF on frontier02468 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_296]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_296]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_680]:inet_recv:inet_recv: unexpected socket EOF on frontier05512 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_680]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_680]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_776]:inet_recv:inet_recv: unexpected socket EOF on frontier06289 from frontier00038: Success
+Thu Mar 21 07:14:54 2024: [PE_776]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_776]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_216]:inet_recv:inet_recv: unexpected socket EOF on frontier01828 from frontier01702: Success
+Thu Mar 21 07:14:54 2024: [PE_216]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_216]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_208]:inet_recv:inet_recv: unexpected socket EOF on frontier01827 from frontier01702: Success
+Thu Mar 21 07:14:54 2024: [PE_208]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_208]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_272]:inet_recv:inet_recv: unexpected socket EOF on frontier02339 from frontier02212: Success
+Thu Mar 21 07:14:54 2024: [PE_272]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_272]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_288]:inet_recv:inet_recv: unexpected socket EOF on frontier02467 from frontier02212: Success
+Thu Mar 21 07:14:54 2024: [PE_288]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_288]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_280]:inet_recv:inet_recv: unexpected socket EOF on frontier02340 from frontier02212: Success
+Thu Mar 21 07:14:54 2024: [PE_280]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_280]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_224]:inet_recv:inet_recv: unexpected socket EOF on frontier01953 from frontier01702: Success
+Thu Mar 21 07:14:54 2024: [PE_224]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_224]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_536]:inet_recv:inet_recv: unexpected socket EOF on frontier04475 from frontier04342: Success
+Thu Mar 21 07:14:54 2024: [PE_536]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_536]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_544]:inet_recv:inet_recv: unexpected socket EOF on frontier04592 from frontier04342: Success
+Thu Mar 21 07:14:54 2024: [PE_544]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_544]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_528]:inet_recv:inet_recv: unexpected socket EOF on frontier04474 from frontier04342: Success
+Thu Mar 21 07:14:54 2024: [PE_528]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_528]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_984]:inet_recv:inet_recv: unexpected socket EOF on frontier08833 from frontier08597: Success
+Thu Mar 21 07:14:54 2024: [PE_984]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_984]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_976]:inet_recv:inet_recv: unexpected socket EOF on frontier08710 from frontier08597: Success
+Thu Mar 21 07:14:54 2024: [PE_976]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_976]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_152]:inet_recv:inet_recv: unexpected socket EOF on frontier01316 from frontier01188: Success
+Thu Mar 21 07:14:54 2024: [PE_152]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_152]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_160]:inet_recv:inet_recv: unexpected socket EOF on frontier01443 from frontier01188: Success
+Thu Mar 21 07:14:54 2024: [PE_160]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_160]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_144]:inet_recv:inet_recv: unexpected socket EOF on frontier01315 from frontier01188: Success
+Thu Mar 21 07:14:54 2024: [PE_144]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_144]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_440]:inet_recv:inet_recv: unexpected socket EOF on frontier03701 from frontier03573: Success
+Thu Mar 21 07:14:54 2024: [PE_440]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_440]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_992]:inet_recv:inet_recv: unexpected socket EOF on frontier08967 from frontier08597: Success
+Thu Mar 21 07:14:54 2024: [PE_992]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_992]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_432]:inet_recv:inet_recv: unexpected socket EOF on frontier03700 from frontier03573: Success
+Thu Mar 21 07:14:54 2024: [PE_432]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_432]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_448]:inet_recv:inet_recv: unexpected socket EOF on frontier03828 from frontier03573: Success
+Thu Mar 21 07:14:54 2024: [PE_448]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_448]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_464]:inet_recv:inet_recv: unexpected socket EOF on frontier03956 from frontier03829: Success
+Thu Mar 21 07:14:54 2024: [PE_464]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_464]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_88]:inet_recv:inet_recv: unexpected socket EOF on frontier00806 from frontier00677: Success
+Thu Mar 21 07:14:54 2024: [PE_88]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_88]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_80]:inet_recv:inet_recv: unexpected socket EOF on frontier00805 from frontier00677: Success
+Thu Mar 21 07:14:54 2024: [PE_80]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_80]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_480]:inet_recv:inet_recv: unexpected socket EOF on frontier04092 from frontier03829: Success
+Thu Mar 21 07:14:54 2024: [PE_480]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_480]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_184]:inet_recv:inet_recv: unexpected socket EOF on frontier01574 from frontier01444: Success
+Thu Mar 21 07:14:54 2024: [PE_184]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_184]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_96]:inet_recv:inet_recv: unexpected socket EOF on frontier00931 from frontier00677: Success
+Thu Mar 21 07:14:54 2024: [PE_96]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_96]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_192]:inet_recv:inet_recv: unexpected socket EOF on frontier01701 from frontier01444: Success
+Thu Mar 21 07:14:54 2024: [PE_192]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_192]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_768]:inet_recv:inet_recv: unexpected socket EOF on frontier06288 from frontier06033: Success
+Thu Mar 21 07:14:54 2024: [PE_768]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_768]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_472]:inet_recv:inet_recv: unexpected socket EOF on frontier03957 from frontier03829: Success
+Thu Mar 21 07:14:54 2024: [PE_472]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_472]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_240]:inet_recv:inet_recv: unexpected socket EOF on frontier02083 from frontier01954: Success
+Thu Mar 21 07:14:54 2024: [PE_240]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_240]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_752]:inet_recv:inet_recv: unexpected socket EOF on frontier06160 from frontier06033: Success
+Thu Mar 21 07:14:54 2024: [PE_752]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_752]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_760]:inet_recv:inet_recv: unexpected socket EOF on frontier06161 from frontier06033: Success
+Thu Mar 21 07:14:54 2024: [PE_760]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_760]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_736]:inet_recv:inet_recv: unexpected socket EOF on frontier06032 from frontier05766: Success
+Thu Mar 21 07:14:54 2024: [PE_736]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_736]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_256]:inet_recv:inet_recv: unexpected socket EOF on frontier02211 from frontier01954: Success
+Thu Mar 21 07:14:54 2024: [PE_256]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_256]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_176]:inet_recv:inet_recv: unexpected socket EOF on frontier01573 from frontier01444: Success
+Thu Mar 21 07:14:54 2024: [PE_176]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_176]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_728]:inet_recv:inet_recv: unexpected socket EOF on frontier05906 from frontier05766: Success
+Thu Mar 21 07:14:54 2024: [PE_728]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_728]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_248]:inet_recv:inet_recv: unexpected socket EOF on frontier02084 from frontier01954: Success
+Thu Mar 21 07:14:54 2024: [PE_248]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_248]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_720]:inet_recv:inet_recv: unexpected socket EOF on frontier05905 from frontier05766: Success
+Thu Mar 21 07:14:54 2024: [PE_720]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_720]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_368]:inet_recv:inet_recv: unexpected socket EOF on frontier03162 from frontier02980: Success
+Thu Mar 21 07:14:54 2024: [PE_368]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_368]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_384]:inet_recv:inet_recv: unexpected socket EOF on frontier03312 from frontier02980: Success
+Thu Mar 21 07:14:54 2024: [PE_384]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_384]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_376]:inet_recv:inet_recv: unexpected socket EOF on frontier03163 from frontier02980: Success
+Thu Mar 21 07:14:54 2024: [PE_376]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_376]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_304]:inet_recv:inet_recv: unexpected socket EOF on frontier02595 from frontier02468: Success
+Thu Mar 21 07:14:54 2024: [PE_304]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_304]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_672]:inet_recv:inet_recv: unexpected socket EOF on frontier05511 from frontier05361: Success
+Thu Mar 21 07:14:54 2024: [PE_672]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_672]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_416]:inet_recv:inet_recv: unexpected socket EOF on frontier03572 from frontier03313: Success
+Thu Mar 21 07:14:54 2024: [PE_416]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_416]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_656]:inet_recv:inet_recv: unexpected socket EOF on frontier05442 from frontier05361: Success
+Thu Mar 21 07:14:54 2024: [PE_656]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_656]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_664]:inet_recv:inet_recv: unexpected socket EOF on frontier05443 from frontier05361: Success
+Thu Mar 21 07:14:54 2024: [PE_664]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_664]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_408]:inet_recv:inet_recv: unexpected socket EOF on frontier03441 from frontier03313: Success
+Thu Mar 21 07:14:54 2024: [PE_408]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_408]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_400]:inet_recv:inet_recv: unexpected socket EOF on frontier03440 from frontier03313: Success
+Thu Mar 21 07:14:54 2024: [PE_400]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_400]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_320]:inet_recv:inet_recv: unexpected socket EOF on frontier02708 from frontier02468: Success
+Thu Mar 21 07:14:54 2024: [PE_320]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_320]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_32]:inet_recv:inet_recv: unexpected socket EOF on frontier00292 from frontier00039: Success
+Thu Mar 21 07:14:54 2024: [PE_32]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_32]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_16]:inet_recv:inet_recv: unexpected socket EOF on frontier00166 from frontier00039: Success
+Thu Mar 21 07:14:54 2024: [PE_16]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_16]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_312]:inet_recv:inet_recv: unexpected socket EOF on frontier02596 from frontier02468: Success
+Thu Mar 21 07:14:54 2024: [PE_312]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_312]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_24]:inet_recv:inet_recv: unexpected socket EOF on frontier00167 from frontier00039: Success
+Thu Mar 21 07:14:54 2024: [PE_24]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_24]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_496]:inet_recv:inet_recv: unexpected socket EOF on frontier04204 from frontier04093: Success
+Thu Mar 21 07:14:54 2024: [PE_496]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_496]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_504]:inet_recv:inet_recv: unexpected socket EOF on frontier04205 from frontier04093: Success
+Thu Mar 21 07:14:54 2024: [PE_504]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_504]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_960]:inet_recv:inet_recv: unexpected socket EOF on frontier08464 from frontier08080: Success
+Thu Mar 21 07:14:54 2024: [PE_960]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_960]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_944]:inet_recv:inet_recv: unexpected socket EOF on frontier08208 from frontier08080: Success
+Thu Mar 21 07:14:54 2024: [PE_944]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_944]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_600]:inet_recv:inet_recv: unexpected socket EOF on frontier04987 from frontier04794: Success
+Thu Mar 21 07:14:54 2024: [PE_600]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_600]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_512]:inet_recv:inet_recv: unexpected socket EOF on frontier04341 from frontier04093: Success
+Thu Mar 21 07:14:54 2024: [PE_512]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_512]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_592]:inet_recv:inet_recv: unexpected socket EOF on frontier04986 from frontier04794: Success
+Thu Mar 21 07:14:54 2024: [PE_592]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_592]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_952]:inet_recv:inet_recv: unexpected socket EOF on frontier08337 from frontier08080: Success
+Thu Mar 21 07:14:54 2024: [PE_952]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_952]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_608]:inet_recv:inet_recv: unexpected socket EOF on frontier05108 from frontier04794: Success
+Thu Mar 21 07:14:54 2024: [PE_608]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_608]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_920]:inet_recv:inet_recv: unexpected socket EOF on frontier07824 from frontier07568: Success
+Thu Mar 21 07:14:54 2024: [PE_920]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_920]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_912]:inet_recv:inet_recv: unexpected socket EOF on frontier07698 from frontier07568: Success
+Thu Mar 21 07:14:54 2024: [PE_912]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_912]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_1016]:inet_recv:inet_recv: unexpected socket EOF on frontier10369 from frontier10113: Success
+Thu Mar 21 07:14:54 2024: [PE_1016]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_1016]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_928]:inet_recv:inet_recv: unexpected socket EOF on frontier07952 from frontier07568: Success
+Thu Mar 21 07:14:54 2024: [PE_928]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_928]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_1008]:inet_recv:inet_recv: unexpected socket EOF on frontier10241 from frontier10113: Success
+Thu Mar 21 07:14:54 2024: [PE_1008]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_1008]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_56]:inet_recv:inet_recv: unexpected socket EOF on frontier00549 from frontier00293: Success
+Thu Mar 21 07:14:54 2024: [PE_56]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_56]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_64]:inet_recv:inet_recv: unexpected socket EOF on frontier00676 from frontier00293: Success
+Thu Mar 21 07:14:54 2024: [PE_64]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_64]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_696]:inet_recv:inet_recv: unexpected socket EOF on frontier05638 from frontier05512: Success
+Thu Mar 21 07:14:54 2024: [PE_696]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_696]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_704]:inet_recv:inet_recv: unexpected socket EOF on frontier05765 from frontier05512: Success
+Thu Mar 21 07:14:54 2024: [PE_704]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_704]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_688]:inet_recv:inet_recv: unexpected socket EOF on frontier05637 from frontier05512: Success
+Thu Mar 21 07:14:54 2024: [PE_688]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_688]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_48]:inet_recv:inet_recv: unexpected socket EOF on frontier00548 from frontier00293: Success
+Thu Mar 21 07:14:54 2024: [PE_48]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_48]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_560]:inet_recv:inet_recv: unexpected socket EOF on frontier04728 from frontier04593: Success
+Thu Mar 21 07:14:54 2024: [PE_560]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_560]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_568]:inet_recv:inet_recv: unexpected socket EOF on frontier04729 from frontier04593: Success
+Thu Mar 21 07:14:54 2024: [PE_568]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_568]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_576]:inet_recv:inet_recv: unexpected socket EOF on frontier04793 from frontier04593: Success
+Thu Mar 21 07:14:54 2024: [PE_576]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_576]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_792]:inet_recv:inet_recv: unexpected socket EOF on frontier06417 from frontier06289: Success
+Thu Mar 21 07:14:54 2024: [PE_792]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_792]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_800]:inet_recv:inet_recv: unexpected socket EOF on frontier06545 from frontier06289: Success
+Thu Mar 21 07:14:54 2024: [PE_800]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_800]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_352]:inet_recv:inet_recv: unexpected socket EOF on frontier02979 from frontier02709: Success
+Thu Mar 21 07:14:54 2024: [PE_352]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_352]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_784]:inet_recv:inet_recv: unexpected socket EOF on frontier06416 from frontier06289: Success
+Thu Mar 21 07:14:54 2024: [PE_784]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_784]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_336]:inet_recv:inet_recv: unexpected socket EOF on frontier02851 from frontier02709: Success
+Thu Mar 21 07:14:54 2024: [PE_336]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_336]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_632]:inet_recv:inet_recv: unexpected socket EOF on frontier05228 from frontier05109: Success
+Thu Mar 21 07:14:54 2024: [PE_632]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_632]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_624]:inet_recv:inet_recv: unexpected socket EOF on frontier05227 from frontier05109: Success
+Thu Mar 21 07:14:54 2024: [PE_624]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_624]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_344]:inet_recv:inet_recv: unexpected socket EOF on frontier02852 from frontier02709: Success
+Thu Mar 21 07:14:54 2024: [PE_344]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_344]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_640]:inet_recv:inet_recv: unexpected socket EOF on frontier05360 from frontier05109: Success
+Thu Mar 21 07:14:54 2024: [PE_640]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_640]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_832]:inet_recv:inet_recv: unexpected socket EOF on frontier06800 from frontier06546: Success
+Thu Mar 21 07:14:54 2024: [PE_832]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_832]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_816]:inet_recv:inet_recv: unexpected socket EOF on frontier06672 from frontier06546: Success
+Thu Mar 21 07:14:54 2024: [PE_816]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_816]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_824]:inet_recv:inet_recv: unexpected socket EOF on frontier06673 from frontier06546: Success
+Thu Mar 21 07:14:54 2024: [PE_824]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_824]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_856]:inet_recv:inet_recv: unexpected socket EOF on frontier06929 from frontier06801: Success
+Thu Mar 21 07:14:54 2024: [PE_856]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_856]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_864]:inet_recv:inet_recv: unexpected socket EOF on frontier07056 from frontier06801: Success
+Thu Mar 21 07:14:54 2024: [PE_864]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_864]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_888]:inet_recv:inet_recv: unexpected socket EOF on frontier07312 from frontier07057: Success
+Thu Mar 21 07:14:54 2024: [PE_888]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_888]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_896]:inet_recv:inet_recv: unexpected socket EOF on frontier07440 from frontier07057: Success
+Thu Mar 21 07:14:54 2024: [PE_896]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_896]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_848]:inet_recv:inet_recv: unexpected socket EOF on frontier06928 from frontier06801: Success
+Thu Mar 21 07:14:54 2024: [PE_848]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_848]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_880]:inet_recv:inet_recv: unexpected socket EOF on frontier07184 from frontier07057: Success
+Thu Mar 21 07:14:54 2024: [PE_880]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_880]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_128]:inet_recv:inet_recv: unexpected socket EOF on frontier01187 from frontier00932: Success
+Thu Mar 21 07:14:54 2024: [PE_128]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_128]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_112]:inet_recv:inet_recv: unexpected socket EOF on frontier01059 from frontier00932: Success
+Thu Mar 21 07:14:54 2024: [PE_112]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_112]:_pmi_bcast:_pmi_bcast failed
+Thu Mar 21 07:14:54 2024: [PE_120]:inet_recv:inet_recv: unexpected socket EOF on frontier01060 from frontier00932: Success
+Thu Mar 21 07:14:54 2024: [PE_120]:_pmi_network_bcast:_pmi_inet_recv from controller 1
+Thu Mar 21 07:14:54 2024: [PE_120]:_pmi_bcast:_pmi_bcast failed
+srun: error: frontier00038: task 0: Aborted (core dumped)
+srun: Terminating StepId=1781142.1
+slurmstepd: error: *** STEP 1781142.1 ON frontier00038 CANCELLED AT 2024-03-21T07:14:54 ***
+srun: error: frontier02709: task 328: Segmentation fault
+srun: error: frontier02709: tasks 329-335: Terminated
+srun: error: frontier00293: task 40: Segmentation fault
+srun: error: frontier02212: task 264: Segmentation fault
+srun: error: frontier00293: tasks 41-47: Terminated
+srun: error: frontier02212: tasks 265-271: Terminated
+srun: error: frontier00039: task 8: Segmentation fault
+srun: error: frontier06033: task 744: Segmentation fault
+srun: error: frontier00039: tasks 9-15: Terminated
+srun: error: frontier06033: tasks 745-751: Terminated
+srun: error: frontier02980: task 360: Segmentation fault
+srun: error: frontier01954: task 232: Segmentation fault
+srun: error: frontier02980: tasks 361-367: Terminated
+srun: error: frontier01954: tasks 233-239: Terminated
+srun: error: frontier05361: task 648: Segmentation fault
+srun: error: frontier04342: task 520: Segmentation fault
+srun: error: frontier01702: task 200: Segmentation fault
+srun: error: frontier03573: task 424: Segmentation fault
+srun: error: frontier05361: tasks 649-655: Terminated
+srun: error: frontier08597: task 968: Segmentation fault
+srun: error: frontier04342: tasks 521-527: Terminated
+srun: error: frontier01702: tasks 201-207: Terminated
+srun: error: frontier10113: task 1000: Segmentation fault
+srun: error: frontier08597: tasks 969-975: Terminated
+srun: error: frontier01188: task 136: Segmentation fault
+srun: error: frontier03573: tasks 425-431: Terminated
+srun: error: frontier07568: task 904: Segmentation fault
+srun: error: frontier05512: task 680: Segmentation fault
+srun: error: frontier10113: tasks 1001-1007: Terminated
+srun: error: frontier01188: tasks 137-143: Terminated
+srun: error: frontier07568: tasks 905-911: Terminated
+srun: error: frontier05512: tasks 681-687: Terminated
+srun: error: frontier00677: task 72: Segmentation fault
+srun: error: frontier06546: task 808: Segmentation fault
+srun: error: frontier02468: task 296: Segmentation fault
+srun: error: frontier00677: tasks 73-79: Terminated
+srun: error: frontier06546: tasks 809-815: Terminated
+srun: error: frontier02468: tasks 297-303: Terminated
+srun: error: frontier06289: task 776: Segmentation fault
+srun: error: frontier07057: task 872: Segmentation fault
+srun: error: frontier05766: task 712: Segmentation fault
+srun: error: frontier03829: task 456: Segmentation fault
+srun: error: frontier04794: task 584: Segmentation fault
+srun: error: frontier06289: tasks 777-783: Terminated
+srun: error: frontier05766: tasks 713-719: Terminated
+srun: error: frontier03829: tasks 457-463: Terminated
+srun: error: frontier07057: tasks 873-879: Terminated
+srun: error: frontier04794: tasks 585-591: Terminated
+srun: error: frontier04093: task 488: Segmentation fault
+srun: error: frontier04593: task 552: Segmentation fault
+srun: error: frontier03313: task 392: Segmentation fault
+srun: error: frontier08080: task 936: Segmentation fault
+srun: error: frontier04093: tasks 489-495: Terminated
+srun: error: frontier04593: tasks 553-559: Terminated
+srun: error: frontier03313: tasks 393-399: Terminated
+srun: error: frontier08080: tasks 937-943: Terminated
+srun: error: frontier01444: task 168: Segmentation fault
+srun: error: frontier01444: tasks 169-175: Terminated
+srun: error: frontier06801: task 840: Segmentation fault
+srun: error: frontier06801: tasks 841-847: Terminated
+srun: error: frontier01443: task 160: Segmentation fault
+srun: error: frontier00932: task 104: Segmentation fault
+srun: error: frontier05442: task 656: Segmentation fault
+srun: error: frontier01443: tasks 161-167: Terminated
+srun: error: frontier00932: tasks 105-111: Terminated
+srun: error: frontier05109: task 616: Segmentation fault
+srun: error: frontier05442: tasks 657-663: Terminated
+srun: error: frontier05109: tasks 617-623: Terminated
+srun: error: frontier06160: task 752: Segmentation fault
+srun: error: frontier06160: tasks 753-759: Terminated
+srun: error: frontier04092: task 480: Segmentation fault
+srun: error: frontier03828: task 448: Segmentation fault
+srun: error: frontier04092: tasks 481-487: Terminated
+srun: error: frontier03828: tasks 449-455: Terminated
+srun: error: frontier04205: task 504: Segmentation fault
+srun: error: frontier05443: task 664: Segmentation fault
+srun: error: frontier04205: tasks 505-511: Terminated
+srun: error: frontier03572: task 416: Segmentation fault
+srun: error: frontier05443: tasks 665-671: Terminated
+srun: error: frontier01953: task 224: Segmentation fault
+srun: error: frontier01316: task 152: Segmentation fault
+srun: error: frontier01315: task 144: Segmentation fault
+srun: error: frontier03572: tasks 417-423: Terminated
+srun: error: frontier01828: task 216: Segmentation fault
+srun: error: frontier02084: task 248: Segmentation fault
+srun: error: frontier01827: task 208: Segmentation fault
+srun: error: frontier01315: tasks 145-151: Terminated
+srun: error: frontier04475: task 536: Segmentation fault
+srun: error: frontier03957: task 472: Segmentation fault
+srun: error: frontier01828: tasks 217-223: Terminated
+srun: error: frontier01953: tasks 225-231: Terminated
+srun: error: frontier01827: tasks 209-215: Terminated
+srun: error: frontier00167: task 24: Segmentation fault
+srun: error: frontier01316: tasks 153-159: Terminated
+srun: error: frontier03957: tasks 473-479: Terminated
+srun: error: frontier03700: task 432: Segmentation fault
+srun: error: frontier02084: tasks 249-255: Terminated
+srun: error: frontier00167: tasks 25-31: Terminated
+srun: error: frontier04475: tasks 537-543: Terminated
+srun: error: frontier03700: tasks 433-439: Terminated
+srun: error: frontier06673: task 824: Segmentation fault
+srun: error: frontier04987: task 600: Segmentation fault
+srun: error: frontier02340: task 280: Segmentation fault
+srun: error: frontier06673: tasks 825-831: Terminated
+srun: error: frontier04987: tasks 601-607: Terminated
+srun: error: frontier07824: task 920: Segmentation fault
+srun: error: frontier02340: tasks 281-287: Terminated
+srun: error: frontier03441: task 408: Segmentation fault
+srun: error: frontier07824: tasks 921-927: Terminated
+srun: error: frontier00806: task 88: Segmentation fault
+srun: error: frontier05638: task 696: Segmentation fault
+srun: error: frontier05765: task 704: Segmentation fault
+srun: error: frontier10241: task 1008: Segmentation fault
+srun: error: frontier02852: task 344: Segmentation fault
+srun: error: frontier02595: task 304: Segmentation fault
+srun: error: frontier03441: tasks 409-415: Terminated
+srun: error: frontier05765: tasks 705-711: Terminated
+srun: error: frontier00806: tasks 89-95: Terminated
+srun: error: frontier05638: tasks 697-703: Terminated
+srun: error: frontier02852: tasks 345-351: Terminated
+srun: error: frontier03440: task 400: Segmentation fault
+srun: error: frontier10241: tasks 1009-1015: Terminated
+srun: error: frontier03956: task 464: Segmentation fault
+srun: error: frontier00676: task 64: Segmentation fault
+srun: error: frontier01701: task 192: Segmentation fault
+srun: error: frontier04729: task 568: Segmentation fault
+srun: error: frontier06672: task 816: Segmentation fault
+srun: error: frontier03956: tasks 465-471: Terminated
+srun: error: frontier03163: task 376: Segmentation fault
+srun: error: frontier05511: task 672: Segmentation fault
+srun: error: frontier00292: task 32: Segmentation fault
+srun: error: frontier02595: tasks 305-311: Terminated
+srun: error: frontier00931: task 96: Segmentation fault
+srun: error: frontier05228: task 632: Segmentation fault
+srun: error: frontier03440: tasks 401-407: Terminated
+srun: error: frontier07698: task 912: Segmentation fault
+srun: error: frontier00292: tasks 33-39: Terminated
+srun: error: frontier00676: tasks 65-71: Terminated
+srun: error: frontier01701: tasks 193-199: Terminated
+srun: error: frontier05228: tasks 633-639: Terminated
+srun: error: frontier08710: task 976: Segmentation fault
+srun: error: frontier06672: tasks 817-823: Terminated
+srun: error: frontier05906: task 728: Segmentation fault
+srun: error: frontier04729: tasks 569-575: Terminated
+srun: error: frontier00548: task 48: Segmentation fault
+srun: error: frontier08967: task 992: Segmentation fault
+srun: error: frontier04204: task 496: Segmentation fault
+srun: error: frontier05511: tasks 673-679: Terminated
+srun: error: frontier08208: task 944: Segmentation fault
+srun: error: frontier03163: tasks 377-383: Terminated
+srun: error: frontier02596: task 312: Segmentation fault
+srun: error: frontier06545: task 800: Segmentation fault
+srun: error: frontier02211: task 256: Segmentation fault
+srun: error: frontier02083: task 240: Segmentation fault
+srun: error: frontier03701: task 440: Segmentation fault
+srun: error: frontier08337: task 952: Segmentation fault
+srun: error: frontier02467: task 288: Segmentation fault
+srun: error: frontier05906: tasks 729-735: Terminated
+srun: error: frontier06929: task 856: Segmentation fault
+srun: error: frontier00931: tasks 97-103: Terminated
+srun: error: frontier08967: tasks 993-999: Terminated
+srun: error: frontier02979: task 352: Segmentation fault
+srun: error: frontier07698: tasks 913-919: Terminated
+srun: error: frontier02339: task 272: Segmentation fault
+srun: error: frontier00166: task 16: Segmentation fault
+srun: error: frontier02851: task 336: Segmentation fault
+srun: error: frontier08208: tasks 945-951: Terminated
+srun: error: frontier08710: tasks 977-983: Terminated
+srun: error: frontier00548: tasks 49-55: Terminated
+srun: error: frontier06545: tasks 801-807: Terminated
+srun: error: frontier01574: task 184: Segmentation fault
+srun: error: frontier02596: tasks 313-319: Terminated
+srun: error: frontier03701: tasks 441-447: Terminated
+srun: error: frontier04204: tasks 497-503: Terminated
+srun: error: frontier02083: tasks 241-247: Terminated
+srun: error: frontier05108: task 608: Segmentation fault
+srun: error: frontier04592: task 544: Segmentation fault
+srun: error: frontier02467: tasks 289-295: Terminated
+srun: error: frontier04341: task 512: Segmentation fault
+srun: error: frontier02211: tasks 257-263: Terminated
+srun: error: frontier06288: task 768: Segmentation fault
+srun: error: frontier00805: task 80: Segmentation fault
+srun: error: frontier08337: tasks 953-959: Terminated
+srun: error: frontier06417: task 792: Segmentation fault
+srun: error: frontier04728: task 560: Segmentation fault
+srun: error: frontier06929: tasks 857-863: Terminated
+srun: error: frontier02851: tasks 337-343: Terminated
+srun: error: frontier01573: task 176: Segmentation fault
+srun: error: frontier06416: task 784: Segmentation fault
+srun: error: frontier08464: task 960: Segmentation fault
+srun: error: frontier10369: task 1016: Segmentation fault
+srun: error: frontier02979: tasks 353-359: Terminated
+srun: error: frontier04474: task 528: Segmentation fault
+srun: error: frontier03162: task 368: Segmentation fault
+srun: error: frontier00166: tasks 17-23: Terminated
+srun: error: frontier08833: task 984: Segmentation fault
+srun: error: frontier02339: tasks 273-279: Terminated
+srun: error: frontier01574: tasks 185-191: Terminated
+srun: error: frontier06288: tasks 769-775: Terminated
+srun: error: frontier00549: task 56: Segmentation fault
+srun: error: frontier04986: task 592: Segmentation fault
+srun: error: frontier06417: tasks 793-799: Terminated
+srun: error: frontier07440: task 896: Segmentation fault
+srun: error: frontier04592: tasks 545-551: Terminated
+srun: error: frontier08464: tasks 961-967: Terminated
+srun: error: frontier05108: tasks 609-615: Terminated
+srun: error: frontier06032: task 736: Segmentation fault
+srun: error: frontier03312: task 384: Segmentation fault
+srun: error: frontier00805: tasks 81-87: Terminated
+srun: error: frontier07952: task 928: Segmentation fault
+srun: error: frontier04474: tasks 529-535: Terminated
+srun: error: frontier04341: tasks 513-519: Terminated
+srun: error: frontier05637: task 688: Segmentation fault
+srun: error: frontier08833: tasks 985-991: Terminated
+srun: error: frontier04728: tasks 561-567: Terminated
+srun: error: frontier06416: tasks 785-791: Terminated
+srun: error: frontier07056: task 864: Segmentation fault
+srun: error: frontier02708: task 320: Segmentation fault
+srun: error: frontier06161: task 760: Segmentation fault
+srun: error: frontier03312: tasks 385-391: Terminated
+srun: error: frontier01573: tasks 177-183: Terminated
+srun: error: frontier04986: tasks 593-599: Terminated
+srun: error: frontier04793: task 576: Segmentation fault
+srun: error: frontier10369: tasks 1017-1023: Terminated
+srun: error: frontier06032: tasks 737-743: Terminated
+srun: error: frontier07056: tasks 865-871: Terminated
+srun: error: frontier03162: tasks 369-375: Terminated
+srun: error: frontier07952: tasks 929-935: Terminated
+srun: error: frontier05905: task 720: Segmentation fault
+srun: error: frontier00549: tasks 57-63: Terminated
+srun: error: frontier05360: task 640: Segmentation fault
+srun: error: frontier04793: tasks 577-583: Terminated
+srun: error: frontier07440: tasks 897-903: Terminated
+srun: error: frontier05637: tasks 689-695: Terminated
+srun: error: frontier07312: task 888: Segmentation fault
+srun: error: frontier06928: task 848: Segmentation fault
+srun: error: frontier06161: tasks 761-767: Terminated
+srun: error: frontier05905: tasks 721-727: Terminated
+srun: error: frontier02708: tasks 321-327: Terminated
+srun: error: frontier05360: tasks 641-647: Terminated
+srun: error: frontier07312: tasks 889-895: Terminated
+srun: error: frontier06928: tasks 849-855: Terminated
+srun: error: frontier07184: task 880: Segmentation fault
+srun: error: frontier06800: task 832: Segmentation fault
+srun: error: frontier01059: task 112: Segmentation fault
+srun: error: frontier07184: tasks 881-887: Terminated
+srun: error: frontier01060: task 120: Segmentation fault
+srun: error: frontier06800: tasks 833-839: Terminated
+srun: error: frontier01059: tasks 113-119: Terminated
+srun: error: frontier01060: tasks 121-127: Terminated
+srun: error: frontier05227: task 624: Segmentation fault
+srun: error: frontier05227: tasks 625-631: Terminated
+srun: error: frontier01187: task 128: Segmentation fault
+srun: error: frontier01187: tasks 129-135: Terminated
+srun: error: frontier00038: tasks 1-7: Terminated
+srun: Force Terminated StepId=1781142.1
++ set +x

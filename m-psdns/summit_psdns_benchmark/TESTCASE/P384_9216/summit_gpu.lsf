@@ -1,0 +1,30 @@
+#!/bin/bash
+# Begin LSF Directives
+#BSUB -P Project
+#BSUB -W 0:05
+#BSUB -nnodes 64
+#BSUB -alloc_flags "smt1"
+#BSUB -J mpi-a2a-pencil-64
+#BSUB -o mpi-a2a-pencil-64.%J
+#BSUB -e mpi-a2a-pencil-64.err.%J
+
+export CODE_PATH=/gpfs/alpine2/project/proj-shared/user/SUMMIT
+source ${CODE_PATH}/setUpModules.sh
+
+#module list
+
+exec=${CODE_PATH}/MPI_A2A.x
+
+export CUDA_LAUNCH_BLOCKING=1
+export OMP_NUM_THREADS=1
+
+#Runtime Calculation
+start_time=$(date +%s)  # Record the start time in seconds
+
+jsrun -n 384 -r 6 -a 1 -c 1 -g 1 -d packed --smpiargs="-gpu" $exec
+
+end_time=$(date +%s)  # Record the end time in seconds
+total_runtime=$((end_time - start_time))  # Calculate the total runtime in seconds
+
+# Print the total runtime to stdout
+echo "Total Job Runtime: ${total_runtime} seconds"

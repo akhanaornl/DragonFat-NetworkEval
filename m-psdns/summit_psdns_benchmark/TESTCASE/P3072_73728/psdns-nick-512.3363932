@@ -1,0 +1,91 @@
+Starting NNODES=64
+32 total processes failed to start
+Completed with exit code: 255
+32 total processes failed to start
+Completed with exit code: 1
+Total Job Runtime: 1 seconds
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch5>
+Subject: Job 3363932: <psdns-nick-512> in cluster <summit> Done
+
+Job <psdns-nick-512> was submitted from host <login3> by user <khana> in cluster <summit> at Tue Mar 26 08:34:57 2024
+Job was executed on host(s) <1*batch5>, in queue <debug>, as user <khana> in cluster <summit> at Tue Mar 26 08:35:10 2024
+                            <42*a25n12>
+                            <42*a25n13>
+                            <42*a25n14>
+                            <42*a25n15>
+                            <42*b24n06>
+                            <42*b24n07>
+                            <42*b24n08>
+                            <42*b24n09>
+                            <42*b24n10>
+                            <42*b24n11>
+                            <42*b24n12>
+                            <42*b24n13>
+                            <42*b24n14>
+                            <42*b24n15>
+                            <42*b24n16>
+                            <42*b24n17>
+                            <42*b24n18>
+                            <42*b25n01>
+                            <42*b25n02>
+                            <42*b25n03>
+                            <42*b25n04>
+                            <42*b25n05>
+                            <42*b25n06>
+                            <42*b25n07>
+                            <42*b25n08>
+                            <42*b25n09>
+                            <42*b25n10>
+                            <42*b25n11>
+                            <42*b25n12>
+                            <42*b25n13>
+                            <42*b25n14>
+                            <42*b25n15>
+                            <42*b25n16>
+                            <42*b25n17>
+                            <42*b25n18>
+                            <42*b26n01>
+                            <42*b26n02>
+                            <42*b26n03>
+                            <42*b26n04>
+                            <42*b26n05>
+                            <42*b26n06>
+                            <42*b26n07>
+                            <42*b26n08>
+                            <42*b26n09>
+                            <42*b26n10>
+                            <42*b26n11>
+                            <42*b26n12>
+                            <42*b26n13>
+                            <42*b26n14>
+                            <42*b26n15>
+                            <42*b26n16>
+                            <42*b26n17>
+                            <42*b26n18>
+                            <42*b27n01>
+                            <42*b27n02>
+                            <42*b27n03>
+                            <42*b27n04>
+                            <42*b27n05>
+                            <42*b27n06>
+                            <42*b27n07>
+                            <42*b27n08>
+                            <42*b27n09>
+                            <42*b27n10>
+                            <42*b27n11>
+</ccs/home/khana> was used as the home directory.
+</gpfs/alpine2/stf008/proj-shared/khana/SUMMIT/TESTCASE/P3072_73728> was used as the working directory.
+Started at Tue Mar 26 08:35:10 2024
+Terminated at Tue Mar 26 08:35:31 2024
+Results reported at Tue Mar 26 08:35:31 2024
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <psdns-nick-512.err.3363932> for stderr output of this job.
+

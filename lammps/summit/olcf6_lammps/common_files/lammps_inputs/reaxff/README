@@ -1,0 +1,2 @@
+These files were copied from the lammps/bench/POTENTIALS directory of the specific LAMMPS commit used to compile.
+The in.reaxc file was modified to accomodate the nx, ny, nz, and nsteps variables.

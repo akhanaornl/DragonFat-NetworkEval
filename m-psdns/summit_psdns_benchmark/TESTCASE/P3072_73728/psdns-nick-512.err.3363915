@@ -1,0 +1,20 @@
+Found biggest group = b07, count = 18
+Have 4 switches
+Generating binding with 28 hardware threads per task (4 hw threads per core)
++ jsrun --erf_input 3363915.64.best.erf -r 6 -a 1 -c 1 -g 1 -d packed --smpiargs=-gpu /gpfs/alpine2/stf008/proj-shared/khana/SUMMIT/MPI_A2A.x
+-a is not allowed when --erf_input is used.
+-r is not allowed when --erf_input is used.
+-c is not allowed when --erf_input is used.
+-g is not allowed when --erf_input is used.
++ exit_code=1
++ set +x
+Found biggest group = b07, count = 18
+Have 4 switches
+Generating binding with 28 hardware threads per task (4 hw threads per core)
++ jsrun --erf_input 3363915.64.worst.erf -r 6 -a 1 -c 1 -g 1 -d packed --smpiargs=-gpu /gpfs/alpine2/stf008/proj-shared/khana/SUMMIT/MPI_A2A.x
+-a is not allowed when --erf_input is used.
+-r is not allowed when --erf_input is used.
+-c is not allowed when --erf_input is used.
+-g is not allowed when --erf_input is used.
++ exit_code=1
++ set +x

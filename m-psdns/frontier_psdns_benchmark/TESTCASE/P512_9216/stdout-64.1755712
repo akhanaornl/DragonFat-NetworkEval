@@ -1,0 +1,83 @@
+  
+MPI tasks_per_node =  8
+MPI Row Comms : Number On-Node        =     2
+MPI Row Comms : Number Across Network =     0
+MPI Col Comms : Number On-Node        =     4
+MPI Col Comms : Number Across Network =   252
+  
+Including self-communication in the B/W calculations
+  
+Each MPI rank is allocating  34.17 GB on both the CPUs and GPUs
+   
+   
+   
+   
+Row: Total Message size (MB) :  5832.00000
+Row: P2P Message size (MB)   :  2916.00000
+Col: Total Message size (MB) :  5832.00000
+Col: P2P Message size (MB)   :    22.78125
+   
+   
+Process for time-averaging across all the mpi ranks:
+(1) the timings for each mpi rank are averaged over  5
+    timesteps to get an average runtime for each rank
+   
+(2) these time-averaged runtimes are averaged across the
+    mpi ranks to find the average runtime for the ranks
+   
+   
+Row- CPU MPI-ALLTOALL          :  5.4764E-01
+Col- CPU MPI-ALLTOALL          :  8.7327E-01
+ -------------------------------------------------------
+Overall CPU Time               :  1.4209E+00
+   
+CPU MPI Row Comm Rate per MPI Rank
+    On-node (GB/sec) :      10.3998
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      10.3998
+   
+CPU MPI Col Comm Rate per MPI Rank
+    On-node (GB/sec) :       0.1019
+    Network (GB/sec) :       6.4199
+    Total   (GB/sec) :       6.5218
+   
+   
+CPU MPI Row Comm Rate per Node
+    On-node (GB/sec) :      83.1986
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      83.1986
+   
+CPU MPI Col Comm Rate per Node
+    On-node (GB/sec) :       0.8152
+    Network (GB/sec) :      51.3591
+    Total   (GB/sec) :      52.1743
+   
+   
+Row- GPU MPI-ALLTOALL  :  6.5802E-02
+Col- GPU MPI-ALLTOALL  :  8.2963E-01
+ ---------------------------------------------------
+Overall GPU Time       :  8.9543E-01
+   
+GPU MPI Row Comm Rate per MPI Rank
+    On-node (GB/sec) :      86.5526
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      86.5526
+   
+GPU MPI Col Comm Rate per MPI Rank
+    On-node (GB/sec) :       0.1073
+    Network (GB/sec) :       6.7577
+    Total   (GB/sec) :       6.8649
+   
+   
+GPU MPI Row Comm Rate per Node
+    On-node (GB/sec) :     692.4205
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :     692.4205
+   
+GPU MPI Col Comm Rate per Node
+    On-node (GB/sec) :       0.8581
+    Network (GB/sec) :      54.0612
+    Total   (GB/sec) :      54.9193
+   
+   
+Total Job Runtime: 70 seconds

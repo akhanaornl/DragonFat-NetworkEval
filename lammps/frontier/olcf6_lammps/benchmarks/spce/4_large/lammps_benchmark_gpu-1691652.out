@@ -1,0 +1,173 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+Lmod is automatically replacing "cce/15.0.0" with "amd/5.3.0".
+
+
+Lmod is automatically replacing "PrgEnv-cray/8.3.3" with "PrgEnv-amd/8.5.0".
+
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) cray-mpich/8.1.23
+
+
+The following have been reloaded with a version change:
+  1) cray-libsci/22.12.1.1 => cray-libsci/23.12.5
+  2) cray-mpich/8.1.23 => cray-mpich/8.1.28
+  3) cray-pmi/6.1.8 => cray-pmi/6.1.13
+  4) craype/2.7.19 => craype/2.7.30
+  5) perftools-base/22.12.0 => perftools-base/23.12.0
+
+
+The following have been reloaded with a version change:
+  1) amd/5.3.0 => amd/5.7.1
+
+Running the spce benchmark, size 4_large
+Sending the binary found in /lustre/orion/stf016/proj-shared/hagertnl/olcf6/lammps/build/lammps-new/install-gpu/bin/lmp to node-local /tmp...
+Using base system size multiplier: -v base_size 8
+Found additional Kokkos arguments: neigh half comm device newton off neigh/transpose on sort device atom/map no
+++ expr 4096 '*' 8
++ srun -N 4096 -n 32768 -c 7 --gpus-per-task=1 --gpu-bind=closest --unbuffered /tmp/lmp -k on g 1 -sf kk -pk kokkos gpu/aware on neigh half comm device newton off neigh/transpose on sort device atom/map no -in input.in -log none -v base_size 8 -v nnodes 4096
+LAMMPS (7 Feb 2024 - Development - patch_7Feb2024_update1-33-g08498637aa)
+KOKKOS mode with Kokkos version 4.2.0 is enabled (../kokkos.cpp:72)
+  will use up to 1 GPU(s) per node
+Reading data file ...
+  orthogonal box = (-49.901276 -49.901276 -49.901276) to (49.901276 49.901276 49.901276)
+  32 by 32 by 32 MPI processor grid
+  2 by 2 by 2 core grid within node
+  reading atoms ...
+  98304 atoms
+  reading velocities ...
+  98304 velocities
+  scanning bonds ...
+  2 = max bonds/atom
+  scanning angles ...
+  1 = max angles/atom
+  reading bonds ...
+  65536 bonds
+  reading angles ...
+  32768 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 2.877 seconds
+  read_data CPU = 3.889 seconds
+Replication is creating a 128x128x128 = 2097152 times larger system...
+  orthogonal box = (-49.901276 -49.901276 -49.901276) to (12724.825 12724.825 12724.825)
+  32 by 32 by 32 MPI processor grid
+  2 by 2 by 2 core grid within node
+  bounding box image = (-1 -1 -1) to (1 1 1)
+  bounding box extra memory = 17.75 MB
+  average # of replicas added to proc = 219.39 out of 2097152 (0.01%)
+  206158430208 atoms
+  137438953472 bonds
+  68719476736 angles
+Finding 1-2 1-3 1-4 neighbors ...
+  special bond factors lj:    0        0        0       
+  special bond factors coul:  0        0        0       
+     2 = max # of 1-2 neighbors
+     1 = max # of 1-3 neighbors
+     1 = max # of 1-4 neighbors
+     2 = max # of special neighbors
+  special bonds CPU = 38.412 seconds
+  replicate CPU = 42.708 seconds
+
+Info-Info-Info-Info-Info-Info-Info-Info-Info-Info-Info
+Printed on Fri Feb 23 16:40:44 2024
+
+Coeff status information:
+
+Pair Coeffs:
+     1      1: is set
+     1      2: is set
+     2      2: is set
+
+Bond Coeffs:
+     1: is set
+
+Angle Coeffs:
+     1: is set
+
+Info-Info-Info-Info-Info-Info-Info-Info-Info-Info-Info
+
+Finding SHAKE clusters ...
+       0 = # of size 2 clusters
+       0 = # of size 3 clusters
+       0 = # of size 4 clusters
+68719476736 = # of frozen angles
+  find clusters CPU = 29.775 seconds
+PPPM Kokkos initialization ...
+  using 12-bit tables for long-range coulomb (../kspace.cpp:342)
+  G vector (1/distance) = 0.33317903
+  grid = 11520 11520 11520
+  stencil order = 5
+  estimated absolute RMS force accuracy = 0.0043969159
+  estimated relative force accuracy = 1.3241182e-05
+  using double precision hipFFT
+  3d grid and FFT values/proc = 49430863 46656000
+Generated 0 of 1 mixed pair_coeff terms from geometric mixing rule
+Neighbor list info ...
+  update: every = 1 steps, delay = 2 steps, check = yes
+  max neighbors/atom: 2000, page size: 100000
+  master list distance cutoff = 11
+  ghost atom cutoff = 11
+  binsize = 11, bins = 1162 1162 1162
+  1 neighbor lists, perpetual/occasional/extra = 1 0 0
+  (1) pair lj/cut/coul/long/kk, perpetual
+      attributes: half, newton off, kokkos_device
+      pair build: half/bin/newtoff/kk/device
+      stencil: full/bin/3d
+      bin: kk/device
+Setting up Verlet run ...
+  Unit style    : real
+  Current step  : 0
+  Time step     : 0.5
+Per MPI rank memory allocation (min/avg/max) = 9699 | 9699 | 9699 Mbytes
+   Step         TotEng          Temp          PotEng         KinEng         E_vdwl         E_coul         E_long         E_bond        E_angle        Density    
+         0  -6.4219988e+11  297.77242     -7.6419111e+11  1.2199123e+11  1.4878846e+11  3.7044617e+12 -4.6174413e+12  0              0              0.98609321   
+        10  -6.4220478e+11  297.98        -7.6428105e+11  1.2207627e+11  1.4900833e+11  3.7041439e+12 -4.6174333e+12  0              0              0.98609321   
+        20  -6.422046e+11   298.32835     -7.6442358e+11  1.2221898e+11  1.4916488e+11  3.7038601e+12 -4.6174485e+12  0              0              0.98609321   
+        30  -6.4220457e+11  298.1456      -7.6434868e+11  1.2214411e+11  1.4928559e+11  3.703816e+12  -4.6174503e+12  0              0              0.98609321   
+        40  -6.4220455e+11  297.73214     -7.6417928e+11  1.2197473e+11  1.4939789e+11  3.7038456e+12 -4.6174227e+12  0              0              0.98609321   
+        50  -6.42204e+11    298.07519     -7.6431927e+11  1.2211527e+11  1.4947649e+11  3.7036222e+12 -4.6174179e+12  0              0              0.98609321   
+        60  -6.4220383e+11  298.3675      -7.6443886e+11  1.2223502e+11  1.4949342e+11  3.7034924e+12 -4.6174247e+12  0              0              0.98609321   
+        70  -6.4220336e+11  297.75353     -7.6418685e+11  1.2198349e+11  1.4945919e+11  3.7037672e+12 -4.6174132e+12  0              0              0.98609321   
+        80  -6.4220254e+11  297.38548     -7.6403525e+11  1.2183271e+11  1.4940056e+11  3.7040129e+12 -4.6174487e+12  0              0              0.98609321   
+        90  -6.4220217e+11  297.95573     -7.642685e+11   1.2206633e+11  1.4934686e+11  3.7039286e+12 -4.617544e+12   0              0              0.98609321   
+       100  -6.4220135e+11  298.4833      -7.6448382e+11  1.2228246e+11  1.4929121e+11  3.7038093e+12 -4.6175844e+12  0              0              0.98609321   
+Loop time of 324.39 on 32768 procs for 100 steps with 206158430208 atoms
+
+Performance: 0.013 ns/day, 1802.165 hours/ns, 0.308 timesteps/s, 63.553 Gatom-step/s
+99.9% CPU use with 32768 MPI tasks x 1 OpenMP threads
+
+MPI task timing breakdown:
+Section |  min time  |  avg time  |  max time  |%varavg| %total
+---------------------------------------------------------------
+Pair    | 4.5934     | 5.0225     | 5.1933     |   3.1 |  1.55
+Bond    | 0.0014101  | 0.0015564  | 0.0017945  |   0.1 |  0.00
+Kspace  | 282.12     | 284.62     | 286.73     |   4.8 | 87.74
+Neigh   | 1.7564     | 2.1132     | 2.5269     |   4.2 |  0.65
+Comm    | 5.9549     | 6.3731     | 6.7275     |   2.5 |  1.96
+Output  | 0.134      | 0.14666    | 0.15959    |   1.9 |  0.05
+Modify  | 23.605     | 25.656     | 28.027     |  15.8 |  7.91
+Other   |            | 0.4583     |            |       |  0.14
+
+Nlocal:    6.29146e+06 ave 6.29146e+06 max 6.29146e+06 min
+Histogram: 32768 0 0 0 0 0 0 0 0 0
+Nghost:     1.0993e+06 ave  1.0993e+06 max  1.0993e+06 min
+Histogram: 32768 0 0 0 0 0 0 0 0 0
+Neighs:    1.78512e+09 ave 1.78512e+09 max 1.78512e+09 min
+Histogram: 32768 0 0 0 0 0 0 0 0 0
+
+Total # of neighbors = 5.8494777e+13
+Ave neighs/atom = 283.73701
+Ave special neighs/atom = 2
+Neighbor list builds = 3
+Dangerous builds = 0
+Total wall time: 0:10:31
++ exit_code=0
++ set +x
+Completed with exit code: 0

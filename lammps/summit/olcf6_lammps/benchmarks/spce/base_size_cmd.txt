@@ -1,0 +1,4 @@
+-v base_size 4
+# Use this file to determine what the base (per-1-node) system size should be
+# 4x4x4 x 98304 atoms is 6,291,456 atoms per node
+# Only the first line of this file is read

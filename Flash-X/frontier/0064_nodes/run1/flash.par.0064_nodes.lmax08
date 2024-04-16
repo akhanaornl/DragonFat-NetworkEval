@@ -1,0 +1,130 @@
+# Runtime parameters for the Maclaurin spheroid problem.
+
+#-------------------------------------------------------------------------------
+
+# Parameters for initial model
+
+angular_velocity          = 0.        # Dimensionless angular velocity (Omega)
+density                   = 1.        # Spheroid density (rho)
+eccentricity              = 0.9       # Eccentricity of spheroid (e)
+equatorial_semimajor_axis = 0.25      # Equatorial semimajor axis (a1)
+
+xctr                      = 0.5       # Coordinates of center of spheroid
+yctr                      = 0.5
+zctr                      = 0.5
+
+nsubzones                 = 2         # Number of averaging sub-zones per dimen.
+
+#-------------------------------------------------------------------------------
+
+# Computational volume parameters
+
+xmin                      = 0.        # Physical dimensions of the box
+xmax                      = 1.
+ymin                      = 0.
+ymax                      = 1.
+zmin                      = 0.
+zmax                      = 1.
+
+xl_boundary_type          = "outflow" # Boundary conditions
+xr_boundary_type          = "outflow"
+yl_boundary_type          = "outflow"
+yr_boundary_type          = "outflow"
+zl_boundary_type          = "outflow"
+zr_boundary_type          = "outflow"
+grav_boundary_type        = "isolated"
+
+xl_mg_boundary_type          = "dirichlet" # Boundary conditions for hybrid multigrid
+xr_mg_boundary_type          = "dirichlet"
+yl_mg_boundary_type          = "dirichlet"
+yr_mg_boundary_type          = "dirichlet"
+zl_mg_boundary_type          = "dirichlet"
+zr_mg_boundary_type          = "dirichlet"
+
+gr_pfftDiffOpDiscretize = 2   # Pfft level to use 2nd order FD discretization
+
+#-------------------------------------------------------------------------------
+
+# Adaptive mesh parameters
+
+lrefine_max               = 6         # Maximum refinement level
+lrefine_min               = 1         # Minimum refinement level
+
+refine_var_1              = "dens"    # Refinement variables
+refine_var_2              = "pres"
+
+#Nblockx                   = 3         # Number of top-level blocks
+#Nblocky                   = 3
+#Nblockz                   = 3
+
+convertToConsvdInMeshInterp  = .true.    # Interpolate conserved variables?
+
+#-------------------------------------------------------------------------------
+
+# Time and I/O parameters
+
+run_comment               = "Maclaurin spheroid test"
+                                      # Comment to use in log file
+basenm                    = "maclaurin_"
+                                      # Base name for output files
+output_directory          = "chk"
+summaryOutputOnly         = .true.
+
+restart                   = .false.   # Start from checkpoint file?
+checkpointFileNumber      = 0         # Initial checkpoint file number
+
+checkpointFileIntervalTime = 0.1      # Checkpoint simulation-time interval
+checkpointFileIntervalStep = 200       # Checkpoint step interval
+wall_clock_checkpoint      = 3600.     # Checkpoint wall-clock interval
+
+dtinit                    = 1.0E-3    # Initial time step
+dtmin                     = 1.0E-3    # Minimum time step
+dtmax                     = 1.0E-1    # Maximum time step
+
+nend                      = 0         # Maximum number of steps to take
+tmax                      = 0.0       # Maximum time to run (not used)
+
+alwaysRestrictCheckpoint = .FALSE.
+
+plot_var_1                = "dens"
+plot_var_2                = "pres"
+plot_var_3                = "temp"
+plot_var_4                = "ener"
+plot_var_5                = "eint"
+
+#-------------------------------------------------------------------------------
+
+# Physics/solver parameters
+
+gamma                     = 1.6666667 # Ratio of specific heats
+cfl                       = 0.8       # Courant timestep parameter
+
+useGravity                = .true.    # Turn on gravity?
+#mpole_lmax                = 8         # Maximum multipole moment
+mpole_dumpMoments         = .false.      # output the moment array
+mpole_printRadialInfo     = .true.
+#mpole_InnerZoneResolution = 0.02
+#mpole_InnerZoneSize       = 4
+#mpole_ZoneType_1          = "logarithmic"
+#mpole_ZoneExponent_1      = 0.005
+#mpole_ZoneScalar_1         = 0.1
+#-------------------------------------------------------------------------------
+
+# End
+eintSwitch     = 1.e-4
+
+num_poisson_solves = 3
+
+#gr_enableTiling = .TRUE.
+#gr_useTiling = .TRUE.
+#hy_useTiling = .TRUE.
+#gr_tileSizeX = 8
+#gr_tileSizeY = 4
+#gr_tileSizeZ = 2
+
+Nblockx                   = 3         # Number of top-level blocks
+Nblocky                   = 3
+Nblockz                   = 3
+
+mpole_ZoneScalar_1         = 0.1
+mpole_lmax                = 8         # Maximum multipole moment

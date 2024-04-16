@@ -1,0 +1,710 @@
+Starting NNODES=512
+  
+PROBLEM: Invalid values for MPI
+         Requirement: iproc*jproc = numtasks
+         Attempting to correct with iproc = 2 and jproc = numtasks/2
+  
+  
+MPI tasks_per_node =  6
+MPI Row Comms : Number On-Node        =     2
+MPI Row Comms : Number Across Network =     0
+MPI Col Comms : Number On-Node        =     3
+MPI Col Comms : Number Across Network =  1533
+  
+Including self-communication in the B/W calculations
+  
+Each MPI rank is allocating   1.08 GB on both the CPUs and GPUs
+   
+   
+   
+   
+Row: Total Message size (MB) :   208.81851
+Row: P2P Message size (MB)   :   104.40926
+Col: Total Message size (MB) :   159.25781
+Col: P2P Message size (MB)   :     0.10368
+   
+   
+Process for time-averaging across all the mpi ranks:
+(1) the timings for each mpi rank are averaged over  5
+    timesteps to get an average runtime for each rank
+   
+(2) these time-averaged runtimes are averaged across the
+    mpi ranks to find the average runtime for the ranks
+   
+   
+Row- CPU MPI-ALLTOALL          :  2.2429E-02
+Col- CPU MPI-ALLTOALL          :  1.5714E-01
+ -------------------------------------------------------
+Overall CPU Time               :  1.7957E-01
+   
+CPU MPI Row Comm Rate per MPI Rank
+    On-node (GB/sec) :      18.1839
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      18.1839
+   
+CPU MPI Col Comm Rate per MPI Rank
+    On-node (GB/sec) :       0.0039
+    Network (GB/sec) :       1.9755
+    Total   (GB/sec) :       1.9794
+   
+   
+CPU MPI Row Comm Rate per Node
+    On-node (GB/sec) :     109.1032
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :     109.1032
+   
+CPU MPI Col Comm Rate per Node
+    On-node (GB/sec) :       0.0232
+    Network (GB/sec) :      11.8531
+    Total   (GB/sec) :      11.8763
+   
+   
+Row- GPU MPI-ALLTOALL  :  3.6833E-02
+Col- GPU MPI-ALLTOALL  :  1.6692E-01
+ ---------------------------------------------------
+Overall GPU Time       :  2.0375E-01
+   
+GPU MPI Row Comm Rate per MPI Rank
+    On-node (GB/sec) :      11.0729
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      11.0729
+   
+GPU MPI Col Comm Rate per MPI Rank
+    On-node (GB/sec) :       0.0036
+    Network (GB/sec) :       1.8599
+    Total   (GB/sec) :       1.8635
+   
+   
+GPU MPI Row Comm Rate per Node
+    On-node (GB/sec) :      66.4376
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      66.4376
+   
+GPU MPI Col Comm Rate per Node
+    On-node (GB/sec) :       0.0218
+    Network (GB/sec) :      11.1592
+    Total   (GB/sec) :      11.1810
+   
+   
+Completed with exit code: 0
+  
+PROBLEM: Invalid values for MPI
+         Requirement: iproc*jproc = numtasks
+         Attempting to correct with iproc = 2 and jproc = numtasks/2
+  
+  
+MPI tasks_per_node =  6
+MPI Row Comms : Number On-Node        =     2
+MPI Row Comms : Number Across Network =     0
+MPI Col Comms : Number On-Node        =     3
+MPI Col Comms : Number Across Network =  1533
+  
+Including self-communication in the B/W calculations
+  
+Each MPI rank is allocating   1.08 GB on both the CPUs and GPUs
+   
+   
+   
+   
+Row: Total Message size (MB) :   208.81851
+Row: P2P Message size (MB)   :   104.40926
+Col: Total Message size (MB) :   159.25781
+Col: P2P Message size (MB)   :     0.10368
+   
+   
+Process for time-averaging across all the mpi ranks:
+(1) the timings for each mpi rank are averaged over  5
+    timesteps to get an average runtime for each rank
+   
+(2) these time-averaged runtimes are averaged across the
+    mpi ranks to find the average runtime for the ranks
+   
+   
+Row- CPU MPI-ALLTOALL          :  2.2958E-02
+Col- CPU MPI-ALLTOALL          :  1.5860E-01
+ -------------------------------------------------------
+Overall CPU Time               :  1.8156E-01
+   
+CPU MPI Row Comm Rate per MPI Rank
+    On-node (GB/sec) :      17.7654
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      17.7654
+   
+CPU MPI Col Comm Rate per MPI Rank
+    On-node (GB/sec) :       0.0038
+    Network (GB/sec) :       1.9574
+    Total   (GB/sec) :       1.9612
+   
+   
+CPU MPI Row Comm Rate per Node
+    On-node (GB/sec) :     106.5921
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :     106.5921
+   
+CPU MPI Col Comm Rate per Node
+    On-node (GB/sec) :       0.0230
+    Network (GB/sec) :      11.7445
+    Total   (GB/sec) :      11.7675
+   
+   
+Row- GPU MPI-ALLTOALL  :  3.7281E-02
+Col- GPU MPI-ALLTOALL  :  1.6207E-01
+ ---------------------------------------------------
+Overall GPU Time       :  1.9935E-01
+   
+GPU MPI Row Comm Rate per MPI Rank
+    On-node (GB/sec) :      10.9400
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      10.9400
+   
+GPU MPI Col Comm Rate per MPI Rank
+    On-node (GB/sec) :       0.0037
+    Network (GB/sec) :       1.9155
+    Total   (GB/sec) :       1.9193
+   
+   
+GPU MPI Row Comm Rate per Node
+    On-node (GB/sec) :      65.6398
+    Network (GB/sec) :       0.0000
+    Total   (GB/sec) :      65.6398
+   
+GPU MPI Col Comm Rate per Node
+    On-node (GB/sec) :       0.0225
+    Network (GB/sec) :      11.4931
+    Total   (GB/sec) :      11.5156
+   
+   
+Completed with exit code: 0
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch4>
+Subject: Job 3364013: <psdns-nick-512> in cluster <summit> Done
+
+Job <psdns-nick-512> was submitted from host <login3> by user <khana> in cluster <summit> at Tue Mar 26 10:00:54 2024
+Job was executed on host(s) <1*batch4>, in queue <debug>, as user <khana> in cluster <summit> at Tue Mar 26 11:42:56 2024
+                            <42*a15n07>
+                            <42*a15n08>
+                            <42*a15n09>
+                            <42*a15n10>
+                            <42*a15n11>
+                            <42*a15n12>
+                            <42*a15n13>
+                            <42*a15n14>
+                            <42*a15n15>
+                            <42*a15n16>
+                            <42*c13n17>
+                            <42*c13n18>
+                            <42*c25n01>
+                            <42*c25n02>
+                            <42*c25n03>
+                            <42*c25n04>
+                            <42*c25n06>
+                            <42*c25n07>
+                            <42*c25n08>
+                            <42*c31n17>
+                            <42*c31n18>
+                            <42*c32n01>
+                            <42*c32n02>
+                            <42*c32n03>
+                            <42*c32n04>
+                            <42*c32n05>
+                            <42*c32n06>
+                            <42*c32n07>
+                            <42*c32n08>
+                            <42*c32n09>
+                            <42*c32n10>
+                            <42*c32n11>
+                            <42*c32n12>
+                            <42*c32n13>
+                            <42*c32n14>
+                            <42*c32n15>
+                            <42*c32n16>
+                            <42*c32n17>
+                            <42*c32n18>
+                            <42*c33n01>
+                            <42*c33n02>
+                            <42*c33n03>
+                            <42*c33n04>
+                            <42*c33n05>
+                            <42*c33n06>
+                            <42*c33n07>
+                            <42*c33n08>
+                            <42*c33n09>
+                            <42*c33n10>
+                            <42*c33n11>
+                            <42*c33n12>
+                            <42*c33n13>
+                            <42*c33n14>
+                            <42*c33n15>
+                            <42*c33n16>
+                            <42*c33n17>
+                            <42*c33n18>
+                            <42*c34n01>
+                            <42*c34n02>
+                            <42*c34n03>
+                            <42*c34n04>
+                            <42*c34n05>
+                            <42*c34n06>
+                            <42*c34n07>
+                            <42*c34n08>
+                            <42*c34n09>
+                            <42*c34n10>
+                            <42*c34n11>
+                            <42*c34n12>
+                            <42*c34n13>
+                            <42*c34n14>
+                            <42*c34n15>
+                            <42*c34n16>
+                            <42*c34n17>
+                            <42*c34n18>
+                            <42*c35n01>
+                            <42*c35n02>
+                            <42*c35n03>
+                            <42*c35n04>
+                            <42*c35n05>
+                            <42*c35n06>
+                            <42*c35n07>
+                            <42*c35n08>
+                            <42*c35n09>
+                            <42*c35n10>
+                            <42*c35n11>
+                            <42*c35n12>
+                            <42*c35n13>
+                            <42*c35n14>
+                            <42*c35n15>
+                            <42*c35n16>
+                            <42*c35n17>
+                            <42*c35n18>
+                            <42*c36n01>
+                            <42*c36n02>
+                            <42*c36n03>
+                            <42*c36n04>
+                            <42*c36n05>
+                            <42*c36n06>
+                            <42*c36n07>
+                            <42*c36n08>
+                            <42*c36n09>
+                            <42*c36n10>
+                            <42*c36n11>
+                            <42*c36n12>
+                            <42*c36n13>
+                            <42*c36n14>
+                            <42*c36n15>
+                            <42*c36n16>
+                            <42*c36n17>
+                            <42*c36n18>
+                            <42*d01n10>
+                            <42*d01n11>
+                            <42*d01n12>
+                            <42*d01n13>
+                            <42*d01n15>
+                            <42*d01n16>
+                            <42*d01n17>
+                            <42*d01n18>
+                            <42*d01n01>
+                            <42*d01n02>
+                            <42*d01n03>
+                            <42*d01n04>
+                            <42*d01n05>
+                            <42*d01n06>
+                            <42*d01n07>
+                            <42*d01n08>
+                            <42*d01n09>
+                            <42*d02n01>
+                            <42*d02n02>
+                            <42*d02n03>
+                            <42*d02n04>
+                            <42*d02n05>
+                            <42*d02n06>
+                            <42*d02n07>
+                            <42*d02n08>
+                            <42*d02n09>
+                            <42*d02n10>
+                            <42*d02n11>
+                            <42*d02n12>
+                            <42*d02n13>
+                            <42*d02n14>
+                            <42*d02n15>
+                            <42*d02n16>
+                            <42*d02n17>
+                            <42*d02n18>
+                            <42*d03n01>
+                            <42*d03n02>
+                            <42*d03n03>
+                            <42*d03n04>
+                            <42*d03n05>
+                            <42*d03n06>
+                            <42*d03n07>
+                            <42*d03n08>
+                            <42*d03n09>
+                            <42*d03n10>
+                            <42*d03n11>
+                            <42*d03n12>
+                            <42*d03n13>
+                            <42*d03n14>
+                            <42*d03n15>
+                            <42*d03n16>
+                            <42*d03n17>
+                            <42*d03n18>
+                            <42*d04n01>
+                            <42*d04n02>
+                            <42*d04n03>
+                            <42*d04n04>
+                            <42*d04n05>
+                            <42*d04n06>
+                            <42*d04n07>
+                            <42*d04n08>
+                            <42*d04n09>
+                            <42*d04n10>
+                            <42*d04n11>
+                            <42*d04n12>
+                            <42*d04n13>
+                            <42*d04n14>
+                            <42*d04n15>
+                            <42*d04n16>
+                            <42*d04n17>
+                            <42*d04n18>
+                            <42*d05n01>
+                            <42*d05n02>
+                            <42*d05n03>
+                            <42*d05n04>
+                            <42*d05n05>
+                            <42*d05n06>
+                            <42*d05n07>
+                            <42*d05n08>
+                            <42*d05n09>
+                            <42*d05n10>
+                            <42*d05n11>
+                            <42*d05n12>
+                            <42*d05n13>
+                            <42*d05n14>
+                            <42*d05n15>
+                            <42*d05n16>
+                            <42*d05n17>
+                            <42*d05n18>
+                            <42*d06n01>
+                            <42*d06n02>
+                            <42*d06n03>
+                            <42*d06n04>
+                            <42*d06n05>
+                            <42*d06n06>
+                            <42*d06n07>
+                            <42*d06n08>
+                            <42*d06n09>
+                            <42*d29n14>
+                            <42*d29n15>
+                            <42*d29n16>
+                            <42*d29n17>
+                            <42*d29n18>
+                            <42*d30n01>
+                            <42*d30n02>
+                            <42*d30n03>
+                            <42*d30n04>
+                            <42*d30n05>
+                            <42*d30n06>
+                            <42*d30n07>
+                            <42*d30n08>
+                            <42*d30n09>
+                            <42*d30n10>
+                            <42*d30n11>
+                            <42*d30n12>
+                            <42*d30n13>
+                            <42*d30n14>
+                            <42*d30n15>
+                            <42*d30n16>
+                            <42*d30n17>
+                            <42*d30n18>
+                            <42*d31n01>
+                            <42*d31n02>
+                            <42*d31n03>
+                            <42*d31n04>
+                            <42*d31n05>
+                            <42*d31n06>
+                            <42*d31n07>
+                            <42*d31n08>
+                            <42*d31n09>
+                            <42*d31n10>
+                            <42*d31n11>
+                            <42*d31n12>
+                            <42*d31n13>
+                            <42*d31n14>
+                            <42*d31n15>
+                            <42*d31n16>
+                            <42*d31n17>
+                            <42*d31n18>
+                            <42*d32n01>
+                            <42*d32n02>
+                            <42*d32n03>
+                            <42*d32n04>
+                            <42*d32n05>
+                            <42*d32n06>
+                            <42*d32n07>
+                            <42*d32n08>
+                            <42*d32n09>
+                            <42*d32n10>
+                            <42*d32n11>
+                            <42*d32n12>
+                            <42*d32n13>
+                            <42*d32n14>
+                            <42*d32n15>
+                            <42*d32n16>
+                            <42*d32n17>
+                            <42*d32n18>
+                            <42*d34n10>
+                            <42*d34n11>
+                            <42*d34n12>
+                            <42*d34n13>
+                            <42*d34n14>
+                            <42*d34n15>
+                            <42*d34n16>
+                            <42*d34n17>
+                            <42*d34n18>
+                            <42*d34n01>
+                            <42*d34n02>
+                            <42*d34n03>
+                            <42*d34n04>
+                            <42*d34n05>
+                            <42*d34n06>
+                            <42*d34n07>
+                            <42*d34n08>
+                            <42*d34n09>
+                            <42*d35n01>
+                            <42*d35n02>
+                            <42*d35n03>
+                            <42*d35n04>
+                            <42*d35n05>
+                            <42*d35n06>
+                            <42*d35n07>
+                            <42*d35n08>
+                            <42*d35n09>
+                            <42*d35n10>
+                            <42*d35n11>
+                            <42*d35n12>
+                            <42*d35n13>
+                            <42*d35n14>
+                            <42*d35n15>
+                            <42*d35n16>
+                            <42*d35n17>
+                            <42*d35n18>
+                            <42*d36n01>
+                            <42*d36n02>
+                            <42*d36n03>
+                            <42*d36n04>
+                            <42*d36n05>
+                            <42*d36n06>
+                            <42*d36n07>
+                            <42*d36n08>
+                            <42*d36n09>
+                            <42*d36n10>
+                            <42*d36n11>
+                            <42*d36n12>
+                            <42*d36n13>
+                            <42*d36n14>
+                            <42*d36n15>
+                            <42*d36n16>
+                            <42*d36n17>
+                            <42*d36n18>
+                            <42*e01n01>
+                            <42*e01n02>
+                            <42*e01n03>
+                            <42*e01n04>
+                            <42*e01n05>
+                            <42*e01n06>
+                            <42*e01n07>
+                            <42*e01n08>
+                            <42*e01n09>
+                            <42*e01n10>
+                            <42*e01n11>
+                            <42*e01n12>
+                            <42*e01n13>
+                            <42*e01n14>
+                            <42*e01n15>
+                            <42*e01n16>
+                            <42*e01n17>
+                            <42*e01n18>
+                            <42*e02n01>
+                            <42*e02n02>
+                            <42*e02n03>
+                            <42*e02n04>
+                            <42*e02n05>
+                            <42*e02n06>
+                            <42*e02n07>
+                            <42*e02n08>
+                            <42*e02n09>
+                            <42*e02n10>
+                            <42*e02n11>
+                            <42*e02n12>
+                            <42*e02n13>
+                            <42*e02n14>
+                            <42*e02n15>
+                            <42*e02n16>
+                            <42*e02n17>
+                            <42*e02n18>
+                            <42*e03n01>
+                            <42*e03n02>
+                            <42*e03n03>
+                            <42*e03n04>
+                            <42*e03n05>
+                            <42*e03n06>
+                            <42*e03n07>
+                            <42*e03n08>
+                            <42*e03n09>
+                            <42*e03n10>
+                            <42*e03n11>
+                            <42*e03n12>
+                            <42*e03n13>
+                            <42*e03n14>
+                            <42*e03n15>
+                            <42*e03n16>
+                            <42*e03n17>
+                            <42*e03n18>
+                            <42*e04n01>
+                            <42*e04n02>
+                            <42*e04n03>
+                            <42*e04n04>
+                            <42*e04n05>
+                            <42*e04n06>
+                            <42*e04n07>
+                            <42*e04n08>
+                            <42*e04n09>
+                            <42*e04n10>
+                            <42*e04n11>
+                            <42*e04n12>
+                            <42*e04n13>
+                            <42*e04n14>
+                            <42*e04n15>
+                            <42*e04n16>
+                            <42*e04n17>
+                            <42*e04n18>
+                            <42*e05n01>
+                            <42*e05n02>
+                            <42*e05n03>
+                            <42*e05n04>
+                            <42*e05n05>
+                            <42*e05n06>
+                            <42*e05n07>
+                            <42*e05n08>
+                            <42*e05n09>
+                            <42*e05n10>
+                            <42*e05n11>
+                            <42*e05n12>
+                            <42*e05n13>
+                            <42*e05n14>
+                            <42*e05n15>
+                            <42*e05n16>
+                            <42*e05n17>
+                            <42*e05n18>
+                            <42*e06n01>
+                            <42*e06n02>
+                            <42*e06n03>
+                            <42*e06n04>
+                            <42*e06n05>
+                            <42*e06n06>
+                            <42*e06n07>
+                            <42*e06n08>
+                            <42*e06n09>
+                            <42*e06n10>
+                            <42*e06n11>
+                            <42*e06n12>
+                            <42*e06n13>
+                            <42*e06n14>
+                            <42*e06n15>
+                            <42*e06n16>
+                            <42*e06n17>
+                            <42*e06n18>
+                            <42*e07n01>
+                            <42*e07n02>
+                            <42*e07n03>
+                            <42*e07n04>
+                            <42*e07n05>
+                            <42*e07n06>
+                            <42*e07n07>
+                            <42*e07n08>
+                            <42*e07n09>
+                            <42*e07n10>
+                            <42*e07n11>
+                            <42*e07n12>
+                            <42*e07n13>
+                            <42*e07n14>
+                            <42*e07n15>
+                            <42*e07n16>
+                            <42*e07n17>
+                            <42*e07n18>
+                            <42*e08n01>
+                            <42*e08n02>
+                            <42*e08n03>
+                            <42*e08n04>
+                            <42*e08n05>
+                            <42*e08n06>
+                            <42*e08n07>
+                            <42*e08n08>
+                            <42*e08n09>
+                            <42*e08n10>
+                            <42*e08n11>
+                            <42*e08n12>
+                            <42*e08n13>
+                            <42*e08n14>
+                            <42*e08n15>
+                            <42*e08n16>
+                            <42*e08n17>
+                            <42*e08n18>
+                            <42*e09n01>
+                            <42*e09n02>
+                            <42*e09n03>
+                            <42*e09n04>
+                            <42*e09n05>
+                            <42*e09n06>
+                            <42*e09n07>
+                            <42*e09n08>
+                            <42*e09n09>
+                            <42*e09n10>
+                            <42*e09n11>
+                            <42*e09n12>
+                            <42*e09n13>
+                            <42*e09n14>
+                            <42*e09n15>
+                            <42*e09n16>
+                            <42*e09n17>
+                            <42*e09n18>
+                            <42*e10n01>
+                            <42*e10n02>
+                            <42*e10n03>
+                            <42*e10n04>
+                            <42*e10n05>
+                            <42*e10n06>
+                            <42*e10n07>
+                            <42*e10n08>
+                            <42*e10n09>
+                            <42*e10n10>
+                            <42*e10n11>
+                            <42*e10n12>
+                            <42*e10n13>
+                            <42*e10n14>
+                            <42*e10n15>
+                            <42*e10n16>
+                            <42*e10n17>
+                            <42*e10n18>
+                            <42*e11n01>
+                            <42*e11n02>
+                            <42*e11n03>
+                            <42*e11n04>
+                            <42*e11n05>
+                            <42*e11n06>
+                            <42*e11n07>
+                            <42*e11n08>
+                            <42*e11n09>
+                            <42*e11n10>
+</ccs/home/khana> was used as the home directory.
+</gpfs/alpine2/stf008/proj-shared/khana/SUMMIT/TESTCASE/P3072_73728/nick_run> was used as the working directory.
+Started at Tue Mar 26 11:42:56 2024
+Terminated at Tue Mar 26 11:43:36 2024
+Results reported at Tue Mar 26 11:43:36 2024
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <psdns-nick-512.err.3364013> for stderr output of this job.
+

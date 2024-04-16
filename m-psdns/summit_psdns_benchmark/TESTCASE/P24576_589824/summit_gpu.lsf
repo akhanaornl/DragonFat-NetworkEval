@@ -1,0 +1,22 @@
+#!/bin/bash
+# Begin LSF Directives
+#BSUB -P Project
+#BSUB -W 0:05
+#BSUB -nnodes 4096
+#BSUB -alloc_flags "smt1"
+#BSUB -J mpi-a2a-pencil
+#BSUB -o mpi-a2a-pencil-4096.%J
+#BSUB -e mpi-a2a-pencil-4096.err.%J
+
+export CODE_PATH=/gpfs/alpine2/project/proj-shared/user/SUMMIT
+source ${CODE_PATH}/setUpModules.sh
+#module list
+
+exec=${CODE_PATH}/MPI_A2A.x
+
+export CUDA_LAUNCH_BLOCKING=1
+export OMP_NUM_THREADS=1
+
+jsrun -n 24576 -r 6 -a 1 -c 1 -g 1 -d packed --smpiargs="-gpu" $exec
+
+

@@ -1,0 +1,41 @@
+# Build Documentation
+
+## LAMMPS Version
+This benchmark was constructed using the LAMMPS commit 08498637aa, which is based on the February 7, 2024 version of LAMMPS with bug fixes and performance improvements.
+See https://docs.lammps.org/Build_make.html for more information about building LAMMPS with the Make-based build system.
+
+## Required Packages
+The supplied LAMMPS benchmarks require the following packages:
+- KSPACE -- for PPPM long-range solver
+- MOLECULE -- for ``atom_style full``
+- REAXFF -- for ReaxFF potential
+- RIGID -- for ``fix shake``
+
+And additional packages for acceleration:
+- KOKKOS -- for CPU (OpenMP) and GPU acceleration
+or
+- OPENMP -- for CPU-based acceleration
+
+## Software Prerequisites
+- A C++14 capable compiler
+- GNU make
+- Optional: hwloc
+- Optional: LAMMPS-supported FFT library for KSPACE (ie, FFTW3, cuFFT)
+
+## How to Build:
+There are 2 build scripts provided:
+- build_lammps_cpu.sh -- builds an OpenMP-accelerated binary of LAMMPS using FFTW3 for FFTs.
+- build_lammps_gpu.sh -- builds a GPU-accelerated binary of LAMMPS using Kokkos with CUDA backend, using cuFFT for FFTs.
+
+### build_lammps_cpu.sh
+This script sets up the environment used on the Summit POWER9 supercomputer at Oak Ridge National Laboratory (ORNL) for CPU-only runs.
+The Makefile, which is located in ``makefiles/Makefile.summit_cpu``, uses the GNU ``g++`` compiler & linker.
+The build script copies this script into ``lammps/src/MAKE/MINE/Makefile.summit_cpu``, where it is found by the LAMMPS build system.
+To use the internal LAMMPS KISS-FFT instead of FFTW3, remove the define, include, and link lines in the ``Makefile.summit_cpu``.
+
+### build_lammps_gpu.sh
+This script sets up the environment used on the Summit POWER9 supercomputer at Oak Ridge National Laboratory (ORNL), with NVIDIA V100 support.
+The Makefile, which is located in ``makefiles/Makefile.summit_gpu``, uses the Kokkos ``nvcc_wrapper`` for compilation and linking.
+The build script copies this script into ``lammps/src/MAKE/MINE/Makefile.summit_gpu``, where it is found by the LAMMPS build system.
+To use the internal LAMMPS KISS-FFT instead of cuFFT, remove the define, include, and link lines in the ``Makefile.summit_gpu``.
+Kokkos is compiled with CUDA support.

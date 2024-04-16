@@ -1,0 +1,55 @@
+app 0: bash -c "echo $OMPI_COMM_WORLD_RANK: $(hostname)" 
+cpu_index_using: logical
+overlapping_rs: allow
+oversubscribe_cpu: warn
+oversubscribe_gpu: allow
+oversubscribe_mem: allow
+launch_distribution: packed
+rank: 0: { host: 1; cpu: {0-3} ; gpu: {0} ; mem: {0-730} } : app 0
+rank: 1: { host: 1; cpu: {4-7} ; gpu: {1} ; mem: {731-1461} } : app 0
+rank: 2: { host: 1; cpu: {8-11} ; gpu: {2} ; mem: {1462-2192} } : app 0
+rank: 3: { host: 1; cpu: {84-87} ; gpu: {3} ; mem: {257688-258418} } : app 0
+rank: 4: { host: 1; cpu: {88-91} ; gpu: {4} ; mem: {258419-259149} } : app 0
+rank: 5: { host: 1; cpu: {92-95} ; gpu: {5} ; mem: {259150-259880} } : app 0
+rank: 6: { host: 2; cpu: {0-3} ; gpu: {0} ; mem: {0-730} } : app 0
+rank: 7: { host: 2; cpu: {4-7} ; gpu: {1} ; mem: {731-1461} } : app 0
+rank: 8: { host: 2; cpu: {8-11} ; gpu: {2} ; mem: {1462-2192} } : app 0
+rank: 9: { host: 2; cpu: {84-87} ; gpu: {3} ; mem: {257688-258418} } : app 0
+rank: 10: { host: 2; cpu: {88-91} ; gpu: {4} ; mem: {258419-259149} } : app 0
+rank: 11: { host: 2; cpu: {92-95} ; gpu: {5} ; mem: {259150-259880} } : app 0
+rank: 12: { host: 3; cpu: {0-3} ; gpu: {0} ; mem: {0-730} } : app 0
+rank: 13: { host: 3; cpu: {4-7} ; gpu: {1} ; mem: {731-1461} } : app 0
+rank: 14: { host: 3; cpu: {8-11} ; gpu: {2} ; mem: {1462-2192} } : app 0
+rank: 15: { host: 3; cpu: {84-87} ; gpu: {3} ; mem: {257688-258418} } : app 0
+rank: 16: { host: 3; cpu: {88-91} ; gpu: {4} ; mem: {258419-259149} } : app 0
+rank: 17: { host: 3; cpu: {92-95} ; gpu: {5} ; mem: {259150-259880} } : app 0
+rank: 18: { host: 4; cpu: {0-3} ; gpu: {0} ; mem: {0-730} } : app 0
+rank: 19: { host: 4; cpu: {4-7} ; gpu: {1} ; mem: {731-1461} } : app 0
+rank: 20: { host: 4; cpu: {8-11} ; gpu: {2} ; mem: {1462-2192} } : app 0
+rank: 21: { host: 4; cpu: {84-87} ; gpu: {3} ; mem: {257688-258418} } : app 0
+rank: 22: { host: 4; cpu: {88-91} ; gpu: {4} ; mem: {258419-259149} } : app 0
+rank: 23: { host: 4; cpu: {92-95} ; gpu: {5} ; mem: {259150-259880} } : app 0
+rank: 24: { host: 5; cpu: {0-3} ; gpu: {0} ; mem: {0-730} } : app 0
+rank: 25: { host: 5; cpu: {4-7} ; gpu: {1} ; mem: {731-1461} } : app 0
+rank: 26: { host: 5; cpu: {8-11} ; gpu: {2} ; mem: {1462-2192} } : app 0
+rank: 27: { host: 5; cpu: {84-87} ; gpu: {3} ; mem: {257688-258418} } : app 0
+rank: 28: { host: 5; cpu: {88-91} ; gpu: {4} ; mem: {258419-259149} } : app 0
+rank: 29: { host: 5; cpu: {92-95} ; gpu: {5} ; mem: {259150-259880} } : app 0
+rank: 30: { host: 6; cpu: {0-3} ; gpu: {0} ; mem: {0-730} } : app 0
+rank: 31: { host: 6; cpu: {4-7} ; gpu: {1} ; mem: {731-1461} } : app 0
+rank: 32: { host: 6; cpu: {8-11} ; gpu: {2} ; mem: {1462-2192} } : app 0
+rank: 33: { host: 6; cpu: {84-87} ; gpu: {3} ; mem: {257688-258418} } : app 0
+rank: 34: { host: 6; cpu: {88-91} ; gpu: {4} ; mem: {258419-259149} } : app 0
+rank: 35: { host: 6; cpu: {92-95} ; gpu: {5} ; mem: {259150-259880} } : app 0
+rank: 36: { host: 7; cpu: {0-3} ; gpu: {0} ; mem: {0-730} } : app 0
+rank: 37: { host: 7; cpu: {4-7} ; gpu: {1} ; mem: {731-1461} } : app 0
+rank: 38: { host: 7; cpu: {8-11} ; gpu: {2} ; mem: {1462-2192} } : app 0
+rank: 39: { host: 7; cpu: {84-87} ; gpu: {3} ; mem: {257688-258418} } : app 0
+rank: 40: { host: 7; cpu: {88-91} ; gpu: {4} ; mem: {258419-259149} } : app 0
+rank: 41: { host: 7; cpu: {92-95} ; gpu: {5} ; mem: {259150-259880} } : app 0
+rank: 42: { host: 8; cpu: {0-3} ; gpu: {0} ; mem: {0-730} } : app 0
+rank: 43: { host: 8; cpu: {4-7} ; gpu: {1} ; mem: {731-1461} } : app 0
+rank: 44: { host: 8; cpu: {8-11} ; gpu: {2} ; mem: {1462-2192} } : app 0
+rank: 45: { host: 8; cpu: {84-87} ; gpu: {3} ; mem: {257688-258418} } : app 0
+rank: 46: { host: 8; cpu: {88-91} ; gpu: {4} ; mem: {258419-259149} } : app 0
+rank: 47: { host: 8; cpu: {92-95} ; gpu: {5} ; mem: {259150-259880} } : app 0

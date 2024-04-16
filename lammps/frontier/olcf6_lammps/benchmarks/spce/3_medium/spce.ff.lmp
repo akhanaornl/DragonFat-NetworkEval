@@ -1,0 +1,11 @@
+
+# Define pair-wise coefficients
+pair_coeff  1 1 0.0      0.0
+pair_coeff  1 2 0.0      0.0
+pair_coeff  2 2 0.155394 3.1655
+
+# Define harmonic bond coefficients
+bond_coeff  1 450.0 1.00
+
+# Define harmonic angle coefficients
+angle_coeff 1 55.0  109.4

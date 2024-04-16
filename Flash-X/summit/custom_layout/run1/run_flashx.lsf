@@ -1,0 +1,87 @@
+#!/bin/bash -l
+#BSUB -P AST203
+#BSUB -W 00:30
+#BSUB -nnodes 4096
+#BSUB -J maclaurin
+#BSUB -o maclaurin.%J.out
+#BSUB -e maclaurin.%J.err
+#BSUB -alloc_flags "gpumps smt4"
+
+cd $LSB_OUTDIR
+
+## Needed since Summit uses shared libraries
+module load gcc hdf5 essl netlib-lapack
+
+NNODES_ARR=(64 512 4096)
+cp $LSB_DJOB_HOSTFILE ./job.${LSB_JOBID}.nodes
+
+## Setup resource sets, MPI ranks, and OpenMP threads
+#export NNODES=$(($(cat $LSB_DJOB_HOSTFILE | uniq | wc -l)-1))
+#export NCORES_PER_NODE=42
+#export NGPU_PER_NODE=6
+#export NRS_PER_NODE=6
+#export NMPI_PER_RS=1
+#export NCORES_PER_RS=$(($NCORES_PER_NODE/$NRS_PER_NODE))
+#export NCORES_PER_MPI=$(($NCORES_PER_RS/$NMPI_PER_RS))
+#export NGPU_PER_RS=$(($NGPU_PER_NODE/$NRS_PER_NODE))
+#export NRS=$(($NNODES*$NRS_PER_NODE))
+#
+#export HWTHREADS_PER_CORE=1
+#export OMP_NUM_THREADS=$(($HWTHREADS_PER_CORE*$NCORES_PER_MPI))
+#export OMP_SCHEDULE="dynamic"
+
+export OMPI_MCA_io=romio321
+export ROMIO_HINTS=$LSB_OUTDIR/romio_hints
+echo "romio_cb_write enable" > $ROMIO_HINTS
+echo "romio_ds_write enable" >> $ROMIO_HINTS
+echo "romio_cb_read enable"  >> $ROMIO_HINTS
+echo "cb_buffer_size 16777216" >> $ROMIO_HINTS
+echo "cb_nodes $(($NNODES*4))" >> $ROMIO_HINTS
+
+cp ../../flashx .
+
+for NNODES in ${NNODES_ARR[@]}; do
+    echo "Starting NNODES=${NNODES}"
+    node_rundir=$(printf %04d ${NNODES})_nodes
+
+    nodelist=$(./give_me_nodes_summit.py -N ${NNODES} --erf-file ${LSB_JOBID}.${NNODES}.best.erf --node-file $LSB_DJOB_HOSTFILE)
+    cd grouped/${node_rundir}
+    cp ../../flashx .
+    for i in lmax08 lmax16 lmax32 lmax64; do
+        cat ../../../../flash.par.base ../../../../flash.par.$(printf %04d ${NNODES})_nodes ../../../../flash.par.${i} > flash.par.${i}
+
+        set -x
+        stdbuf -o0 -e0 jsrun \
+          --erf_input ../../${LSB_JOBID}.${NNODES}.best.erf \
+          ./flashx -par_file flash.par.${i}
+        exit_code=$?
+        set +x
+        echo "Completed grouped with exit code: $exit_code (${node_rundir} / ${i})"
+
+        mkdir -p ${i}
+        mv maclaurin.log maclaurin.dat maclaurin_RadialInfoPrint.txt unitTest* ${i}/
+    done
+    cd ../../
+
+    # Now run the random ordering problem
+    nodelist=$(./give_me_nodes_summit.py -N ${NNODES} --erf-file ${LSB_JOBID}.${NNODES}.worst.erf --node-file $LSB_DJOB_HOSTFILE --worst)
+    cd random/${node_rundir}
+    cp ../../flashx .
+    for i in lmax08 lmax16 lmax32 lmax64; do
+        cat ../../../../flash.par.base ../../../../flash.par.$(printf %04d ${NNODES})_nodes ../../../../flash.par.${i} > flash.par.${i}
+
+        set -x
+        stdbuf -o0 -e0 jsrun \
+          --erf_input ../../${LSB_JOBID}.${NNODES}.worst.erf \
+          ./flashx -par_file flash.par.${i}
+        exit_code=$?
+        set +x
+        echo "Completed random with exit code: $exit_code (${node_rundir} / ${i})"
+
+        mkdir -p ${i}
+        mv maclaurin.log maclaurin.dat maclaurin_RadialInfoPrint.txt unitTest* ${i}/
+    done
+    cd ../../
+done
+
+## Use stdbuf to prevent buffered output to stdout/stderr

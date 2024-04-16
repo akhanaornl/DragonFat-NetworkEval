@@ -1,0 +1,4 @@
+# Ignore the LAMMPS repository, if it is cloned within the repository structure
+lammps/
+# Inside any subdirectory, `save` is a directory of files to save but not add to the git repo
+save/
