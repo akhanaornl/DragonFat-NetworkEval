@@ -1,0 +1,4401 @@
+Running "module reset". Resetting modules to system default. The following $MODULEPATH directories have been removed: None
+
+The following have been reloaded with a version change:
+  1) PrgEnv-cray/8.3.3 => PrgEnv-cray/8.5.0
+  2) cce/15.0.0 => cce/17.0.0
+  3) cray-libsci/22.12.1.1 => cray-libsci/23.12.5
+  4) cray-mpich/8.1.23 => cray-mpich/8.1.28
+  5) cray-pmi/6.1.8 => cray-pmi/6.1.13
+  6) craype/2.7.19 => craype/2.7.30
+  7) perftools-base/22.12.0 => perftools-base/23.12.0
+
+craype-x86-trento
+libfabric/1.15.2.0
+craype-network-ofi
+xpmem/2.6.2-2.5_2.22__gd067c3f.shasta
+PrgEnv-cray/8.5.0
+cce/17.0.0
+darshan-runtime/3.4.0
+hsi/default
+DefApps/default
+cray-dsmml/0.2.2
+cray-libsci/23.12.5
+cray-mpich/8.1.28
+cray-pmi/6.1.13
+craype/2.7.30
+perftools-base/23.12.0
+cpe/23.12
+rocm/5.7.1
+craype-accel-amd-gfx90a
++ export OMP_NUM_THREADS=7
++ OMP_NUM_THREADS=7
++ export MPICH_GPU_SUPPORT_ENABLED=1
++ MPICH_GPU_SUPPORT_ENABLED=1
++ export MPICH_VERSION_DISPLAY=1
++ MPICH_VERSION_DISPLAY=1
++ ulimit -c 0
++ NODES=8192
++ TASKS=65536
++ ldd ../../fishfry/fishfry
+	linux-vdso.so.1 (0x00007fffed9d7000)
+	libhipfft.so.0 => /opt/rocm-5.7.1/lib/libhipfft.so.0 (0x00007fffed9c5000)
+	libamdhip64.so.5 => /opt/rocm-5.7.1/lib/libamdhip64.so.5 (0x00007fffec2f9000)
+	libdarshan.so.0 => /sw/frontier/spack-envs/base/opt/cray-sles15-zen3/cce-15.0.0/darshan-runtime-3.4.0-t6el25xrwgfg5j65rdrhrs3qjp4ojssp/lib/libdarshan.so.0 (0x00007fffec29d000)
+	libz.so.1 => /lib64/libz.so.1 (0x00007fffec266000)
+	libmpi_cray.so.12 => /opt/cray/pe/mpich/8.1.28/ofi/crayclang/17.0/lib/libmpi_cray.so.12 (0x00007fffe9d9f000)
+	libmpi_gtl_hsa.so.0 => /opt/cray/pe/mpich/8.1.28/gtl/lib/libmpi_gtl_hsa.so.0 (0x00007fffe9a00000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007fffe9d9a000)
+	libxpmem.so.0 => /opt/cray/xpmem/default/lib64/libxpmem.so.0 (0x00007fffe9d97000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00007fffe97bb000)
+	libquadmath.so.0 => /opt/cray/pe/lib64/cce/libquadmath.so.0 (0x00007fffe9400000)
+	libmodules.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libmodules.so.2 (0x00007fffe9d7d000)
+	libfi.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libfi.so.2 (0x00007fffe8e39000)
+	libcraymath.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libcraymath.so.2 (0x00007fffe9c97000)
+	libf.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libf.so.2 (0x00007fffe9727000)
+	libu.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libu.so.2 (0x00007fffe8d2b000)
+	libcsup.so.1 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libcsup.so.1 (0x00007fffe9c8d000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007fffe8bdf000)
+	libunwind.so.1 => /opt/cray/pe/cce/17.0.0/cce-clang/x86_64/lib/libunwind.so.1 (0x00007fffe9c82000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007fffe89e8000)
+	librocfft.so.0 => /opt/rocm-5.7.1/lib/librocfft.so.0 (0x00007fffe8321000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007fffe9703000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00007fffe96df000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007fffe96d5000)
+	libamd_comgr.so.2 => /opt/rocm-5.7.1/lib/libamd_comgr.so.2 (0x00007fffdff47000)
+	libhsa-runtime64.so.1 => /opt/rocm-5.7.1/lib/libhsa-runtime64.so.1 (0x00007fffdfca5000)
+	libnuma.so.1 => /usr/lib64/libnuma.so.1 (0x00007fffdfa00000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fffed9d9000)
+	libmodules.so.1 => /opt/cray/pe/lib64/cce/libmodules.so.1 (0x00007fffe96bc000)
+	libfi.so.1 => /opt/cray/pe/lib64/cce/libfi.so.1 (0x00007fffdf45b000)
+	libcraymath.so.1 => /opt/cray/pe/lib64/cce/libcraymath.so.1 (0x00007fffdf374000)
+	libf.so.1 => /opt/cray/pe/lib64/cce/libf.so.1 (0x00007fffdfc12000)
+	libu.so.1 => /opt/cray/pe/lib64/cce/libu.so.1 (0x00007fffdf26b000)
+	libfabric.so.1 => /opt/cray/libfabric/1.15.2.0/lib64/libfabric.so.1 (0x00007fffdee00000)
+	libatomic.so.1 => /usr/lib64/libatomic.so.1 (0x00007fffe96b2000)
+	libpmi.so.0 => /opt/cray/pe/pmi/6.1.13/lib/libpmi.so.0 (0x00007fffdea00000)
+	libpmi2.so.0 => /opt/cray/pe/pmi/6.1.13/lib/libpmi2.so.0 (0x00007fffde600000)
+	libgfortran.so.5 => /usr/lib64/libgfortran.so.5 (0x00007fffde32c000)
+	libhiprtc.so.5 => /opt/rocm-5.7.1/lib/libhiprtc.so.5 (0x00007fffdec6a000)
+	libzstd.so.1 => /usr/lib64/libzstd.so.1 (0x00007fffdf13a000)
+	libtinfo.so.6 => /lib64/libtinfo.so.6 (0x00007fffe9683000)
+	libelf.so.1 => /usr/lib64/libelf.so.1 (0x00007fffde000000)
+	libdrm.so.2 => /opt/amdgpu/lib64/libdrm.so.2 (0x00007fffddc00000)
+	libdrm_amdgpu.so.1 => /opt/amdgpu/lib64/libdrm_amdgpu.so.1 (0x00007fffdd800000)
+	libcxi.so.1 => /usr/lib64/libcxi.so.1 (0x00007fffdd400000)
+	libcurl.so.4 => /usr/lib64/libcurl.so.4 (0x00007fffde956000)
+	libjson-c.so.3 => /usr/lib64/libjson-c.so.3 (0x00007fffdd000000)
+	libpals.so.0 => /opt/cray/pe/lib64/libpals.so.0 (0x00007fffdcc00000)
+	libnl-3.so.200 => /usr/lib64/libnl-3.so.200 (0x00007fffdc800000)
+	libnghttp2.so.14 => /usr/lib64/libnghttp2.so.14 (0x00007fffe9656000)
+	libidn2.so.0 => /usr/lib64/libidn2.so.0 (0x00007fffdc400000)
+	libssh.so.4 => /usr/lib64/libssh.so.4 (0x00007fffdc000000)
+	libpsl.so.5 => /usr/lib64/libpsl.so.5 (0x00007fffdbc00000)
+	libssl.so.1.1 => /usr/lib64/libssl.so.1.1 (0x00007fffde8b7000)
+	libcrypto.so.1.1 => /usr/lib64/libcrypto.so.1.1 (0x00007fffdb8c1000)
+	libgssapi_krb5.so.2 => /usr/lib64/libgssapi_krb5.so.2 (0x00007fffde864000)
+	libldap_r-2.4.so.2 => /usr/lib64/libldap_r-2.4.so.2 (0x00007fffde2d7000)
+	liblber-2.4.so.2 => /usr/lib64/liblber-2.4.so.2 (0x00007fffdf12a000)
+	libbrotlidec.so.1 => /usr/lib64/libbrotlidec.so.1 (0x00007fffdb600000)
+	libunistring.so.2 => /usr/lib64/libunistring.so.2 (0x00007fffdb200000)
+	libjitterentropy.so.3 => /usr/lib64/libjitterentropy.so.3 (0x00007fffdae00000)
+	libkrb5.so.3 => /usr/lib64/libkrb5.so.3 (0x00007fffddf26000)
+	libk5crypto.so.3 => /usr/lib64/libk5crypto.so.3 (0x00007fffdf112000)
+	libcom_err.so.2 => /lib64/libcom_err.so.2 (0x00007fffdaa00000)
+	libkrb5support.so.0 => /usr/lib64/libkrb5support.so.0 (0x00007fffdf103000)
+	libresolv.so.2 => /lib64/libresolv.so.2 (0x00007fffdec52000)
+	libsasl2.so.3 => /usr/lib64/libsasl2.so.3 (0x00007fffda600000)
+	libbrotlicommon.so.1 => /usr/lib64/libbrotlicommon.so.1 (0x00007fffda200000)
+	libkeyutils.so.1 => /usr/lib64/libkeyutils.so.1 (0x00007fffd9e00000)
+	libselinux.so.1 => /lib64/libselinux.so.1 (0x00007fffd9a00000)
+	libpcre.so.1 => /usr/lib64/libpcre.so.1 (0x00007fffd9600000)
++ ldd ./all
+	linux-vdso.so.1 (0x00007fffed9d7000)
+	libmpi_cray.so.12 => /opt/cray/pe/mpich/8.1.28/ofi/crayclang/17.0/lib/libmpi_cray.so.12 (0x00007fffeb50a000)
+	libmpi_gtl_hsa.so.0 => /opt/cray/pe/mpich/8.1.28/gtl/lib/libmpi_gtl_hsa.so.0 (0x00007fffeb200000)
+	libamdhip64.so.5 => /opt/rocm-5.7.1/lib/libamdhip64.so.5 (0x00007fffe9b34000)
+	libstdc++.so.6 => /usr/lib64/libstdc++.so.6 (0x00007fffe98ef000)
+	libm.so.6 => /lib64/libm.so.6 (0x00007fffe97a3000)
+	libomp.so => /opt/cray/pe/cce/17.0.0/cce-clang/x86_64/lib/libomp.so (0x00007fffe968a000)
+	libgcc_s.so.1 => /lib64/libgcc_s.so.1 (0x00007fffeb4c5000)
+	libpthread.so.0 => /lib64/libpthread.so.0 (0x00007fffeb4a1000)
+	libc.so.6 => /lib64/libc.so.6 (0x00007fffe9493000)
+	libfabric.so.1 => /opt/cray/libfabric/1.15.2.0/lib64/libfabric.so.1 (0x00007fffe9000000)
+	libatomic.so.1 => /usr/lib64/libatomic.so.1 (0x00007fffeb495000)
+	libdl.so.2 => /lib64/libdl.so.2 (0x00007fffeb490000)
+	librt.so.1 => /lib64/librt.so.1 (0x00007fffeb486000)
+	libpmi.so.0 => /opt/cray/pe/pmi/6.1.13/lib/libpmi.so.0 (0x00007fffe8c00000)
+	libpmi2.so.0 => /opt/cray/pe/pmi/6.1.13/lib/libpmi2.so.0 (0x00007fffe8800000)
+	libquadmath.so.0 => /opt/cray/pe/lib64/cce/libquadmath.so.0 (0x00007fffe8400000)
+	libmodules.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libmodules.so.2 (0x00007fffe947b000)
+	libfi.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libfi.so.2 (0x00007fffe7e39000)
+	libcraymath.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libcraymath.so.2 (0x00007fffe9395000)
+	libf.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libf.so.2 (0x00007fffe9301000)
+	libu.so.2 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libu.so.2 (0x00007fffe8ef2000)
+	libcsup.so.1 => /opt/cray/pe/cce/17.0.0/cce/x86_64/lib/libcsup.so.1 (0x00007fffeb47a000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007fffed9d9000)
+	libhsa-runtime64.so.1 => /opt/rocm-5.7.1/lib/libhsa-runtime64.so.1 (0x00007fffe7b97000)
+	libamd_comgr.so.2 => /opt/rocm-5.7.1/lib/libamd_comgr.so.2 (0x00007fffdf7bd000)
+	libnuma.so.1 => /usr/lib64/libnuma.so.1 (0x00007fffdf400000)
+	libcxi.so.1 => /usr/lib64/libcxi.so.1 (0x00007fffdf000000)
+	libcurl.so.4 => /usr/lib64/libcurl.so.4 (0x00007fffe8e48000)
+	libjson-c.so.3 => /usr/lib64/libjson-c.so.3 (0x00007fffdec00000)
+	libpals.so.0 => /opt/cray/pe/lib64/libpals.so.0 (0x00007fffde800000)
+	libgfortran.so.5 => /usr/lib64/libgfortran.so.5 (0x00007fffde52c000)
+	libelf.so.1 => /usr/lib64/libelf.so.1 (0x00007fffde200000)
+	libdrm.so.2 => /opt/amdgpu/lib64/libdrm.so.2 (0x00007fffdde00000)
+	libdrm_amdgpu.so.1 => /opt/amdgpu/lib64/libdrm_amdgpu.so.1 (0x00007fffdda00000)
+	libz.so.1 => /lib64/libz.so.1 (0x00007fffe8e2e000)
+	libzstd.so.1 => /usr/lib64/libzstd.so.1 (0x00007fffe8acf000)
+	libtinfo.so.6 => /lib64/libtinfo.so.6 (0x00007fffe8aa0000)
+	libnl-3.so.200 => /usr/lib64/libnl-3.so.200 (0x00007fffdd600000)
+	libnghttp2.so.14 => /usr/lib64/libnghttp2.so.14 (0x00007fffe8a77000)
+	libidn2.so.0 => /usr/lib64/libidn2.so.0 (0x00007fffdd200000)
+	libssh.so.4 => /usr/lib64/libssh.so.4 (0x00007fffdce00000)
+	libpsl.so.5 => /usr/lib64/libpsl.so.5 (0x00007fffdca00000)
+	libssl.so.1.1 => /usr/lib64/libssl.so.1.1 (0x00007fffe8761000)
+	libcrypto.so.1.1 => /usr/lib64/libcrypto.so.1.1 (0x00007fffdc6c1000)
+	libgssapi_krb5.so.2 => /usr/lib64/libgssapi_krb5.so.2 (0x00007fffe8a24000)
+	libldap_r-2.4.so.2 => /usr/lib64/libldap_r-2.4.so.2 (0x00007fffe870c000)
+	liblber-2.4.so.2 => /usr/lib64/liblber-2.4.so.2 (0x00007fffe86fc000)
+	libbrotlidec.so.1 => /usr/lib64/libbrotlidec.so.1 (0x00007fffdc400000)
+	libunistring.so.2 => /usr/lib64/libunistring.so.2 (0x00007fffdc000000)
+	libjitterentropy.so.3 => /usr/lib64/libjitterentropy.so.3 (0x00007fffdbc00000)
+	libkrb5.so.3 => /usr/lib64/libkrb5.so.3 (0x00007fffdf6e3000)
+	libk5crypto.so.3 => /usr/lib64/libk5crypto.so.3 (0x00007fffe86e4000)
+	libcom_err.so.2 => /lib64/libcom_err.so.2 (0x00007fffdb800000)
+	libkrb5support.so.0 => /usr/lib64/libkrb5support.so.0 (0x00007fffe86d5000)
+	libresolv.so.2 => /lib64/libresolv.so.2 (0x00007fffe86bd000)
+	libsasl2.so.3 => /usr/lib64/libsasl2.so.3 (0x00007fffdb400000)
+	libbrotlicommon.so.1 => /usr/lib64/libbrotlicommon.so.1 (0x00007fffdb000000)
+	libkeyutils.so.1 => /usr/lib64/libkeyutils.so.1 (0x00007fffdac00000)
+	libselinux.so.1 => /lib64/libselinux.so.1 (0x00007fffda800000)
+	libpcre.so.1 => /usr/lib64/libpcre.so.1 (0x00007fffda400000)
++ date
+Sun 24 Mar 2024 06:19:24 AM EDT
++ srun -n65536 -N8192 -c7 --gpus-per-task=1 --gpu-bind=closest --unbuffered ./all
+MPI VERSION    : CRAY MPICH version 8.1.28.29 (ANL base 3.4a2)
+MPI BUILD INFO : Wed Nov 15 20:28 2023 (git hash 1cde46f) (CH4)
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.74315 (warmup, ignored)
+### 1 time 4.40963
+### 2 time 4.41015
+### 3 time 4.42762
+1 65536 32768 32 4.40963 4.4158 4.42762 7.22735 7.2467 7.25684
+### 0 time 3.8938 (warmup, ignored)
+### 1 time 3.36426
+### 2 time 3.25372
+### 3 time 3.22399
+1 65536 16384 16 3.22399 3.28066 3.36426 4.75587 4.87707 4.96279
+### 0 time 3.77891 (warmup, ignored)
+### 1 time 3.34612
+### 2 time 3.24534
+### 3 time 3.22643
+1 65536 8192 8 3.22643 3.27263 3.34612 2.39083 2.44452 2.47952
+### 0 time 3.3793 (warmup, ignored)
+### 1 time 3.22914
+### 2 time 3.22208
+### 3 time 3.21972
+1 65536 4096 4 3.21972 3.22365 3.22914 1.23872 1.24083 1.24234
+### 0 time 3.55727 (warmup, ignored)
+### 1 time 3.46123
+### 2 time 3.43092
+### 3 time 3.4381
+1 65536 2048 2 3.43092 3.44342 3.46123 0.577829 0.580818 0.582933
+### 0 time 3.38684 (warmup, ignored)
+### 1 time 3.35855
+### 2 time 3.33489
+### 3 time 3.34983
+1 65536 1024 1 3.33489 3.34776 3.35855 0.297747 0.298707 0.29986
+### 0 time 3.31877 (warmup, ignored)
+### 1 time 3.28283
+### 2 time 3.30494
+### 3 time 3.2994
+1 65536 512 0.5 3.28283 3.29572 3.30494 0.151289 0.151712 0.152308
+### 0 time 3.30316 (warmup, ignored)
+### 1 time 3.31817
+### 2 time 3.2892
+### 3 time 3.29926
+1 65536 256 0.25 3.2892 3.30221 3.31817 0.0753428 0.0757069 0.0760062
+### 0 time 3.27574 (warmup, ignored)
+### 1 time 3.27501
+### 2 time 3.26164
+### 3 time 3.29809
+1 65536 128 0.125 3.26164 3.27825 3.29809 0.0379008 0.0381301 0.0383243
+### 0 time 3.30732 (warmup, ignored)
+### 1 time 3.28503
+### 2 time 3.29849
+### 3 time 3.31026
+1 65536 64 0.0625 3.28503 3.29793 3.31026 0.0188807 0.0189513 0.0190257
+### 0 time 0.0859822 (warmup, ignored)
+### 1 time 0.0760594
+### 2 time 0.0758231
+### 3 time 0.0762746
+1 65536 32 0.03125 0.0758231 0.0760524 0.0762746 0.409704 0.410901 0.412144
+### 0 time 0.0487476 (warmup, ignored)
+### 1 time 0.0428559
+### 2 time 0.0427585
+### 3 time 0.0424828
+1 65536 16 0.015625 0.0424828 0.042699 0.0428559 0.364594 0.365933 0.367796
+### 0 time 0.0337842 (warmup, ignored)
+### 1 time 0.0337326
+### 2 time 0.0333968
+### 3 time 0.0331467
+1 65536 8 0.0078125 0.0331467 0.0334254 0.0337326 0.231601 0.23373 0.235695
+### 0 time 0.0292588 (warmup, ignored)
+### 1 time 0.0291258
+### 2 time 0.0292022
+### 3 time 0.0293322
+1 65536 4 0.00390625 0.0291258 0.0292201 0.0293322 0.133173 0.133684 0.134116
+### 0 time 0.0264229 (warmup, ignored)
+### 1 time 0.0264368
+### 2 time 0.0263191
+### 3 time 0.0262917
+1 65536 2 0.00195312 0.0262917 0.0263492 0.0264368 0.073879 0.0741246 0.0742867
+### 0 time 0.0257399 (warmup, ignored)
+### 1 time 0.0256478
+### 2 time 0.0255473
+### 3 time 0.0256245
+1 65536 1 0.000976562 0.0255473 0.0256065 0.0256478 0.0380759 0.0381373 0.0382257
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.11697 (warmup, ignored)
+### 1 time 4.11627
+### 2 time 4.12244
+### 3 time 4.12155
+2 32768 65536 32 4.11627 4.12009 4.12244 7.76239 7.76682 7.77403
+### 0 time 2.17675 (warmup, ignored)
+### 1 time 2.17037
+### 2 time 2.1722
+### 3 time 2.17449
+2 32768 32768 16 2.17037 2.17235 2.17449 7.35804 7.36528 7.37201
+### 0 time 1.09775 (warmup, ignored)
+### 1 time 1.10193
+### 2 time 1.09906
+### 3 time 1.10909
+2 32768 16384 8 1.09906 1.10336 1.10909 7.2131 7.25057 7.27898
+### 0 time 0.834869 (warmup, ignored)
+### 1 time 0.819075
+### 2 time 0.81826
+### 3 time 0.818607
+2 32768 8192 4 0.81826 0.818647 0.819075 4.88355 4.88611 4.88842
+### 0 time 0.819532 (warmup, ignored)
+### 1 time 0.817359
+### 2 time 0.817384
+### 3 time 0.819192
+2 32768 4096 2 0.817359 0.817978 0.819192 2.44143 2.44505 2.44691
+### 0 time 0.908716 (warmup, ignored)
+### 1 time 0.907709
+### 2 time 0.907504
+### 3 time 0.907702
+2 32768 2048 1 0.907504 0.907638 0.907709 1.10167 1.10176 1.10192
+### 0 time 0.870316 (warmup, ignored)
+### 1 time 0.869995
+### 2 time 0.87018
+### 3 time 0.870791
+2 32768 1024 0.5 0.869995 0.870322 0.870791 0.574191 0.5745 0.574716
+### 0 time 0.842292 (warmup, ignored)
+### 1 time 0.84168
+### 2 time 0.844361
+### 3 time 0.840977
+2 32768 512 0.25 0.840977 0.842339 0.844361 0.296082 0.296793 0.297273
+### 0 time 0.834739 (warmup, ignored)
+### 1 time 0.834177
+### 2 time 0.834617
+### 3 time 0.834079
+2 32768 256 0.125 0.834079 0.834291 0.834617 0.149769 0.149828 0.149866
+### 0 time 0.829622 (warmup, ignored)
+### 1 time 0.830244
+### 2 time 0.83079
+### 3 time 0.830846
+2 32768 128 0.0625 0.830244 0.830626 0.830846 0.0752246 0.0752444 0.0752791
+### 0 time 0.82892 (warmup, ignored)
+### 1 time 0.830356
+### 2 time 0.82869
+### 3 time 0.827667
+2 32768 64 0.03125 0.827667 0.828904 0.830356 0.0376345 0.0377004 0.0377567
+### 0 time 0.0347332 (warmup, ignored)
+### 1 time 0.0305984
+### 2 time 0.0306655
+### 3 time 0.0303172
+2 32768 32 0.015625 0.0303172 0.0305271 0.0306655 0.50953 0.511841 0.515384
+### 0 time 0.0212039 (warmup, ignored)
+### 1 time 0.0201122
+### 2 time 0.0198103
+### 3 time 0.0196476
+2 32768 16 0.0078125 0.0196476 0.0198567 0.0201122 0.388446 0.393444 0.397631
+### 0 time 0.01597 (warmup, ignored)
+### 1 time 0.0159425
+### 2 time 0.0158879
+### 3 time 0.0157347
+2 32768 8 0.00390625 0.0157347 0.015855 0.0159425 0.245022 0.246373 0.248257
+### 0 time 0.0140499 (warmup, ignored)
+### 1 time 0.0140636
+### 2 time 0.0141425
+### 3 time 0.0141366
+2 32768 4 0.00195312 0.0140636 0.0141143 0.0141425 0.138103 0.13838 0.138878
+### 0 time 0.0125991 (warmup, ignored)
+### 1 time 0.0125803
+### 2 time 0.0127052
+### 3 time 0.012525
+2 32768 2 0.000976562 0.012525 0.0126035 0.0127052 0.0768629 0.0774833 0.0779689
+### 0 time 0.0122426 (warmup, ignored)
+### 1 time 0.0124212
+### 2 time 0.0122678
+### 3 time 0.0123106
+2 32768 1 0.000488281 0.0122678 0.0123332 0.0124212 0.0393102 0.0395908 0.0398018
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.98128 (warmup, ignored)
+### 1 time 3.97855
+### 2 time 3.97226
+### 3 time 3.97352
+4 16384 131072 32 3.97226 3.97477 3.97855 8.04314 8.05077 8.05587
+### 0 time 1.97852 (warmup, ignored)
+### 1 time 1.98035
+### 2 time 1.98294
+### 3 time 1.97678
+4 16384 65536 16 1.97678 1.98002 1.98294 8.06883 8.08071 8.09396
+### 0 time 1.07996 (warmup, ignored)
+### 1 time 1.08174
+### 2 time 1.08889
+### 3 time 1.09066
+4 16384 32768 8 1.08174 1.08709 1.09066 7.33502 7.35906 7.39551
+### 0 time 0.544584 (warmup, ignored)
+### 1 time 0.542083
+### 2 time 0.545625
+### 3 time 0.548334
+4 16384 16384 4 0.542083 0.545347 0.548334 7.29482 7.33478 7.37895
+### 0 time 0.2721 (warmup, ignored)
+### 1 time 0.268628
+### 2 time 0.276874
+### 3 time 0.271289
+4 16384 8192 2 0.268628 0.272263 0.276874 7.22351 7.34583 7.44524
+### 0 time 0.211236 (warmup, ignored)
+### 1 time 0.211134
+### 2 time 0.211112
+### 3 time 0.211106
+4 16384 4096 1 0.211106 0.211117 0.211134 4.73633 4.7367 4.73696
+### 0 time 0.252798 (warmup, ignored)
+### 1 time 0.253368
+### 2 time 0.252607
+### 3 time 0.253085
+4 16384 2048 0.5 0.252607 0.25302 0.253368 1.97341 1.97613 1.97936
+### 0 time 0.235469 (warmup, ignored)
+### 1 time 0.235308
+### 2 time 0.235788
+### 3 time 0.235868
+4 16384 1024 0.25 0.235308 0.235655 0.235868 1.05991 1.06087 1.06244
+### 0 time 0.222151 (warmup, ignored)
+### 1 time 0.221148
+### 2 time 0.221636
+### 3 time 0.221716
+4 16384 512 0.125 0.221148 0.2215 0.221716 0.563785 0.564334 0.565233
+### 0 time 0.218273 (warmup, ignored)
+### 1 time 0.21816
+### 2 time 0.218187
+### 3 time 0.218102
+4 16384 256 0.0625 0.218102 0.21815 0.218187 0.286451 0.2865 0.286563
+### 0 time 0.216019 (warmup, ignored)
+### 1 time 0.216056
+### 2 time 0.216112
+### 3 time 0.216295
+4 16384 128 0.03125 0.216056 0.216154 0.216295 0.144479 0.144573 0.144638
+### 0 time 0.215039 (warmup, ignored)
+### 1 time 0.215337
+### 2 time 0.215222
+### 3 time 0.214957
+4 16384 64 0.015625 0.214957 0.215172 0.215337 0.0725606 0.0726162 0.0726889
+### 0 time 0.0169532 (warmup, ignored)
+### 1 time 0.0145207
+### 2 time 0.0142149
+### 3 time 0.0137904
+4 16384 32 0.0078125 0.0137904 0.0141753 0.0145207 0.538024 0.551134 0.566519
+### 0 time 0.00985762 (warmup, ignored)
+### 1 time 0.00926312
+### 2 time 0.00940574
+### 3 time 0.00936696
+4 16384 16 0.00390625 0.00926312 0.00934527 0.00940574 0.415305 0.417992 0.421699
+### 0 time 0.00777789 (warmup, ignored)
+### 1 time 0.00757564
+### 2 time 0.00761352
+### 3 time 0.00761457
+4 16384 8 0.00195312 0.00757564 0.00760124 0.00761457 0.256498 0.256948 0.257817
+### 0 time 0.00683807 (warmup, ignored)
+### 1 time 0.00682847
+### 2 time 0.00672194
+### 3 time 0.00672199
+4 16384 4 0.000976562 0.00672194 0.00675747 0.00682847 0.143013 0.144516 0.14528
+### 0 time 0.00605215 (warmup, ignored)
+### 1 time 0.00597884
+### 2 time 0.00604662
+### 3 time 0.00606478
+4 16384 2 0.000488281 0.00597884 0.00603008 0.00606478 0.0805109 0.0809743 0.0816682
+### 0 time 0.0058422 (warmup, ignored)
+### 1 time 0.00588846
+### 2 time 0.00602065
+### 3 time 0.00594473
+4 16384 1 0.000244141 0.00588846 0.00595128 0.00602065 0.0405506 0.0410232 0.0414608
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.83265 (warmup, ignored)
+### 1 time 3.83621
+### 2 time 3.83558
+### 3 time 3.84053
+8 8192 262144 32 3.83558 3.83744 3.84053 8.33219 8.33889 8.34294
+### 0 time 1.91069 (warmup, ignored)
+### 1 time 1.90682
+### 2 time 1.91107
+### 3 time 1.90911
+8 8192 131072 16 1.90682 1.909 1.91107 8.37226 8.38134 8.39092
+### 0 time 0.945948 (warmup, ignored)
+### 1 time 0.94654
+### 2 time 0.94531
+### 3 time 0.946738
+8 8192 65536 8 0.94531 0.946196 0.946738 8.45006 8.45491 8.46283
+### 0 time 0.562116 (warmup, ignored)
+### 1 time 0.547924
+### 2 time 0.558145
+### 3 time 0.548908
+8 8192 32768 4 0.547924 0.551659 0.558145 7.1666 7.25086 7.30028
+### 0 time 0.281765 (warmup, ignored)
+### 1 time 0.282142
+### 2 time 0.276869
+### 3 time 0.281789
+8 8192 16384 2 0.276869 0.280266 0.282142 7.08864 7.13607 7.22364
+### 0 time 0.129472 (warmup, ignored)
+### 1 time 0.131336
+### 2 time 0.132616
+### 3 time 0.136029
+8 8192 8192 1 0.131336 0.133327 0.136029 7.35135 7.50036 7.61408
+### 0 time 0.0621047 (warmup, ignored)
+### 1 time 0.0611525
+### 2 time 0.0628903
+### 3 time 0.0632606
+8 8192 4096 0.5 0.0611525 0.0624345 0.0632606 7.90381 8.0084 8.17628
+### 0 time 0.0776967 (warmup, ignored)
+### 1 time 0.0776378
+### 2 time 0.0777722
+### 3 time 0.077623
+8 8192 2048 0.25 0.077623 0.0776776 0.0777722 3.21452 3.21843 3.2207
+### 0 time 0.069495 (warmup, ignored)
+### 1 time 0.0692025
+### 2 time 0.0692162
+### 3 time 0.0692338
+8 8192 1024 0.125 0.0692025 0.0692175 0.0692338 1.80548 1.8059 1.80629
+### 0 time 0.0612856 (warmup, ignored)
+### 1 time 0.0615832
+### 2 time 0.0615122
+### 3 time 0.0612445
+8 8192 512 0.0625 0.0612445 0.0614466 0.0615832 1.01489 1.01714 1.0205
+### 0 time 0.0595871 (warmup, ignored)
+### 1 time 0.0596604
+### 2 time 0.0595614
+### 3 time 0.0596914
+8 8192 256 0.03125 0.0595614 0.0596377 0.0596914 0.523526 0.523997 0.524669
+### 0 time 0.0585524 (warmup, ignored)
+### 1 time 0.0586556
+### 2 time 0.0585272
+### 3 time 0.058788
+8 8192 128 0.015625 0.0585272 0.0586569 0.058788 0.265786 0.266379 0.26697
+### 0 time 0.0580078 (warmup, ignored)
+### 1 time 0.0580396
+### 2 time 0.0578748
+### 3 time 0.0580035
+8 8192 64 0.0078125 0.0578748 0.0579726 0.0580396 0.134606 0.134762 0.13499
+### 0 time 0.00824895 (warmup, ignored)
+### 1 time 0.00685617
+### 2 time 0.00670457
+### 3 time 0.00671578
+8 8192 32 0.00390625 0.00670457 0.00675884 0.00685617 0.569742 0.577947 0.582625
+### 0 time 0.00474409 (warmup, ignored)
+### 1 time 0.00448316
+### 2 time 0.00448241
+### 3 time 0.00455548
+8 8192 16 0.00195312 0.00448241 0.00450701 0.00455548 0.428742 0.433352 0.435731
+### 0 time 0.00375275 (warmup, ignored)
+### 1 time 0.00363606
+### 2 time 0.00365053
+### 3 time 0.0036111
+8 8192 8 0.000976562 0.0036111 0.00363256 0.00365053 0.267513 0.268836 0.270434
+### 0 time 0.00329889 (warmup, ignored)
+### 1 time 0.00325338
+### 2 time 0.00323724
+### 3 time 0.00323535
+8 8192 4 0.000488281 0.00323535 0.00324199 0.00325338 0.150084 0.150612 0.150921
+### 0 time 0.00292641 (warmup, ignored)
+### 1 time 0.00292939
+### 2 time 0.00295267
+### 3 time 0.00293674
+8 8192 2 0.000244141 0.00292939 0.0029396 0.00295267 0.0826846 0.0830523 0.0833417
+### 0 time 0.0028006 (warmup, ignored)
+### 1 time 0.00282888
+### 2 time 0.00283955
+### 3 time 0.00284995
+8 8192 1 0.00012207 0.00282888 0.00283946 0.00284995 0.0428325 0.0429907 0.0431515
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.53381 (warmup, ignored)
+### 1 time 3.52798
+### 2 time 3.52435
+### 3 time 3.52719
+16 4096 524288 32 3.52435 3.52651 3.52798 9.07035 9.07414 9.07968
+### 0 time 1.74921 (warmup, ignored)
+### 1 time 1.74935
+### 2 time 1.75006
+### 3 time 1.75013
+16 4096 262144 16 1.74935 1.74985 1.75013 9.14218 9.14365 9.14624
+### 0 time 0.864374 (warmup, ignored)
+### 1 time 0.864978
+### 2 time 0.864611
+### 3 time 0.864231
+16 4096 131072 8 0.864231 0.864607 0.864978 9.24879 9.25276 9.25679
+### 0 time 0.430418 (warmup, ignored)
+### 1 time 0.430043
+### 2 time 0.430366
+### 3 time 0.430346
+16 4096 65536 4 0.430043 0.430252 0.430366 9.29442 9.29688 9.30139
+### 0 time 0.278757 (warmup, ignored)
+### 1 time 0.279028
+### 2 time 0.270393
+### 3 time 0.279883
+16 4096 32768 2 0.270393 0.276434 0.279883 7.14585 7.23499 7.39665
+### 0 time 0.136586 (warmup, ignored)
+### 1 time 0.138294
+### 2 time 0.134964
+### 3 time 0.135691
+16 4096 16384 1 0.134964 0.136316 0.138294 7.23098 7.33588 7.4094
+### 0 time 0.0689664 (warmup, ignored)
+### 1 time 0.0689407
+### 2 time 0.069714
+### 3 time 0.0694708
+16 4096 8192 0.5 0.0689407 0.0693751 0.069714 7.17216 7.20719 7.25261
+### 0 time 0.0297394 (warmup, ignored)
+### 1 time 0.0296068
+### 2 time 0.0303792
+### 3 time 0.0312374
+16 4096 4096 0.25 0.0296068 0.0304078 0.0312374 8.00323 8.22157 8.444
+### 0 time 0.0248417 (warmup, ignored)
+### 1 time 0.0247752
+### 2 time 0.0246134
+### 3 time 0.024699
+16 4096 2048 0.125 0.0246134 0.0246959 0.0247752 5.04536 5.06158 5.07853
+### 0 time 0.022157 (warmup, ignored)
+### 1 time 0.0223116
+### 2 time 0.0222772
+### 3 time 0.0221924
+16 4096 1024 0.0625 0.0221924 0.0222604 0.0223116 2.80124 2.80767 2.81628
+### 0 time 0.0186681 (warmup, ignored)
+### 1 time 0.0186377
+### 2 time 0.0186445
+### 3 time 0.0186289
+16 4096 512 0.03125 0.0186289 0.018637 0.0186445 1.67609 1.67677 1.6775
+### 0 time 0.0177527 (warmup, ignored)
+### 1 time 0.0177932
+### 2 time 0.0176534
+### 3 time 0.0177477
+16 4096 256 0.015625 0.0176534 0.0177314 0.0177932 0.878145 0.881203 0.885098
+### 0 time 0.0172173 (warmup, ignored)
+### 1 time 0.0169528
+### 2 time 0.0171297
+### 3 time 0.0171325
+16 4096 128 0.0078125 0.0169528 0.0170717 0.0171325 0.456004 0.457629 0.460837
+### 0 time 0.0166727 (warmup, ignored)
+### 1 time 0.0167022
+### 2 time 0.0164721
+### 3 time 0.0165413
+16 4096 64 0.00390625 0.0164721 0.0165719 0.0167022 0.233876 0.235716 0.237144
+### 0 time 0.0040503 (warmup, ignored)
+### 1 time 0.00332349
+### 2 time 0.00327496
+### 3 time 0.0032518
+16 4096 32 0.00195312 0.0032518 0.00328342 0.00332349 0.587673 0.594845 0.600629
+### 0 time 0.00270056 (warmup, ignored)
+### 1 time 0.00218427
+### 2 time 0.00216807
+### 3 time 0.00217632
+16 4096 16 0.000976562 0.00216807 0.00217622 0.00218427 0.447088 0.448743 0.450429
+### 0 time 0.00181246 (warmup, ignored)
+### 1 time 0.001793
+### 2 time 0.00179932
+### 3 time 0.00179945
+16 4096 8 0.000488281 0.001793 0.00179726 0.00179945 0.27135 0.271682 0.272327
+### 0 time 0.00162759 (warmup, ignored)
+### 1 time 0.00161456
+### 2 time 0.00161281
+### 3 time 0.00161399
+16 4096 4 0.000244141 0.00161281 0.00161379 0.00161456 0.151212 0.151284 0.151376
+### 0 time 0.00144041 (warmup, ignored)
+### 1 time 0.00142798
+### 2 time 0.00142935
+### 3 time 0.00143182
+16 4096 2 0.00012207 0.00142798 0.00142972 0.00143182 0.0852553 0.0853807 0.0854844
+### 0 time 0.00133013 (warmup, ignored)
+### 1 time 0.00132594
+### 2 time 0.00132731
+### 3 time 0.00132496
+16 4096 1 6.10352e-05 0.00132496 0.00132607 0.00132731 0.0459841 0.0460271 0.0460657
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 2.9439 (warmup, ignored)
+### 1 time 2.94979
+### 2 time 2.9439
+### 3 time 2.94209
+32 2048 1048576 32 2.94209 2.94526 2.94979 10.8482 10.8649 10.8766
+### 0 time 1.47792 (warmup, ignored)
+### 1 time 1.47708
+### 2 time 1.47485
+### 3 time 1.47167
+32 2048 524288 16 1.47167 1.47454 1.47708 10.8322 10.8509 10.872
+### 0 time 0.744071 (warmup, ignored)
+### 1 time 0.743188
+### 2 time 0.74283
+### 3 time 0.742939
+32 2048 262144 8 0.74283 0.742986 0.743188 10.7644 10.7674 10.7696
+### 0 time 0.376807 (warmup, ignored)
+### 1 time 0.377891
+### 2 time 0.377464
+### 3 time 0.377608
+32 2048 131072 4 0.377464 0.377654 0.377891 10.5851 10.5917 10.597
+### 0 time 0.194322 (warmup, ignored)
+### 1 time 0.194588
+### 2 time 0.194357
+### 3 time 0.194407
+32 2048 65536 2 0.194357 0.194451 0.194588 10.2781 10.2854 10.2903
+### 0 time 0.120931 (warmup, ignored)
+### 1 time 0.123582
+### 2 time 0.126065
+### 3 time 0.119643
+32 2048 32768 1 0.119643 0.123097 0.126065 7.9324 8.12368 8.35818
+### 0 time 0.0557347 (warmup, ignored)
+### 1 time 0.0598721
+### 2 time 0.0598493
+### 3 time 0.0608392
+32 2048 16384 0.5 0.0598493 0.0601869 0.0608392 8.21839 8.30746 8.35432
+### 0 time 0.0296931 (warmup, ignored)
+### 1 time 0.0299167
+### 2 time 0.0299775
+### 3 time 0.0284103
+32 2048 8192 0.25 0.0284103 0.0294349 0.0299775 8.33958 8.49333 8.79963
+### 0 time 0.0142282 (warmup, ignored)
+### 1 time 0.0137924
+### 2 time 0.0134455
+### 3 time 0.0137047
+32 2048 4096 0.125 0.0134455 0.0136475 0.0137924 9.06295 9.15918 9.29681
+### 0 time 0.00636635 (warmup, ignored)
+### 1 time 0.00639063
+### 2 time 0.0063841
+### 3 time 0.00651909
+32 2048 2048 0.0625 0.0063841 0.00643127 0.00651909 9.58722 9.71814 9.78995
+### 0 time 0.00673345 (warmup, ignored)
+### 1 time 0.00692034
+### 2 time 0.006989
+### 3 time 0.00695535
+32 2048 1024 0.03125 0.00692034 0.0069549 0.006989 4.47131 4.49324 4.51567
+### 0 time 0.00677753 (warmup, ignored)
+### 1 time 0.00673662
+### 2 time 0.00683228
+### 3 time 0.00675828
+32 2048 512 0.015625 0.00673662 0.00677573 0.00683228 2.28694 2.30603 2.31941
+### 0 time 0.00617896 (warmup, ignored)
+### 1 time 0.00626954
+### 2 time 0.00617321
+### 3 time 0.00617231
+32 2048 256 0.0078125 0.00617231 0.00620502 0.00626954 1.2461 1.25906 1.26573
+### 0 time 0.00586475 (warmup, ignored)
+### 1 time 0.00584731
+### 2 time 0.00580428
+### 3 time 0.00588031
+32 2048 128 0.00390625 0.00580428 0.00584397 0.00588031 0.664293 0.668424 0.672994
+### 0 time 0.00539165 (warmup, ignored)
+### 1 time 0.00536709
+### 2 time 0.0053843
+### 3 time 0.00546304
+32 2048 64 0.00195312 0.00536709 0.00540481 0.00546304 0.357516 0.361368 0.363908
+### 0 time 0.00260851 (warmup, ignored)
+### 1 time 0.00162227
+### 2 time 0.00158616
+### 3 time 0.00157344
+32 2048 32 0.000976562 0.00157344 0.00159396 0.00162227 0.601971 0.612665 0.620655
+### 0 time 0.00112051 (warmup, ignored)
+### 1 time 0.00108144
+### 2 time 0.00107258
+### 3 time 0.00107536
+32 2048 16 0.000488281 0.00107258 0.00107646 0.00108144 0.451509 0.453599 0.455242
+### 0 time 0.000904372 (warmup, ignored)
+### 1 time 0.000882246
+### 2 time 0.000885786
+### 3 time 0.000887254
+32 2048 8 0.000244141 0.000882246 0.000885095 0.000887254 0.275164 0.275835 0.276726
+### 0 time 0.000827811 (warmup, ignored)
+### 1 time 0.000804769
+### 2 time 0.00080015
+### 3 time 0.000801613
+32 2048 4 0.00012207 0.00080015 0.000802177 0.000804769 0.151684 0.152174 0.152559
+### 0 time 0.000676322 (warmup, ignored)
+### 1 time 0.00065921
+### 2 time 0.000658924
+### 3 time 0.000658375
+32 2048 2 6.10352e-05 0.000658375 0.000658836 0.00065921 0.0925883 0.0926408 0.0927058
+### 0 time 0.000650903 (warmup, ignored)
+### 1 time 0.000641526
+### 2 time 0.000637812
+### 3 time 0.000637559
+32 2048 1 3.05176e-05 0.000637559 0.000638966 0.000641526 0.0475703 0.0477609 0.0478663
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 2.48913 (warmup, ignored)
+### 1 time 2.48689
+### 2 time 2.49777
+### 3 time 2.49218
+64 1024 2097152 32 2.48689 2.49228 2.49777 12.8114 12.8397 12.8675
+### 0 time 1.23773 (warmup, ignored)
+### 1 time 1.2381
+### 2 time 1.24004
+### 3 time 1.23869
+64 1024 1048576 16 1.2381 1.23894 1.24004 12.9028 12.9142 12.923
+### 0 time 0.614402 (warmup, ignored)
+### 1 time 0.613994
+### 2 time 0.614958
+### 3 time 0.614025
+64 1024 524288 8 0.613994 0.614325 0.614958 13.009 13.0224 13.0294
+### 0 time 0.304256 (warmup, ignored)
+### 1 time 0.304095
+### 2 time 0.30468
+### 3 time 0.304533
+64 1024 262144 4 0.304095 0.304436 0.30468 13.1285 13.1391 13.1538
+### 0 time 0.152672 (warmup, ignored)
+### 1 time 0.152319
+### 2 time 0.152511
+### 3 time 0.152437
+64 1024 131072 2 0.152319 0.152422 0.152511 13.1138 13.1214 13.1304
+### 0 time 0.0770882 (warmup, ignored)
+### 1 time 0.0767578
+### 2 time 0.0769495
+### 3 time 0.0769219
+64 1024 65536 1 0.0767578 0.0768764 0.0769495 12.9955 13.0079 13.028
+### 0 time 0.0373761 (warmup, ignored)
+### 1 time 0.0377878
+### 2 time 0.0395079
+### 3 time 0.0392447
+64 1024 32768 0.5 0.0377878 0.0388468 0.0395079 12.6557 12.8711 13.2318
+### 0 time 0.0177733 (warmup, ignored)
+### 1 time 0.018459
+### 2 time 0.0179839
+### 3 time 0.0180755
+64 1024 16384 0.25 0.0179839 0.0181728 0.018459 13.5435 13.7568 13.9014
+### 0 time 0.00942647 (warmup, ignored)
+### 1 time 0.00955856
+### 2 time 0.00942927
+### 3 time 0.00933567
+64 1024 8192 0.125 0.00933567 0.00944116 0.00955856 13.0773 13.2399 13.3895
+### 0 time 0.00501144 (warmup, ignored)
+### 1 time 0.00498585
+### 2 time 0.00497907
+### 3 time 0.00506035
+64 1024 4096 0.0625 0.00497907 0.00500842 0.00506035 12.3509 12.479 12.5525
+### 0 time 0.00278243 (warmup, ignored)
+### 1 time 0.00289759
+### 2 time 0.0029098
+### 3 time 0.00287882
+64 1024 2048 0.03125 0.00287882 0.0028954 0.0029098 10.7396 10.793 10.8552
+### 0 time 0.00233077 (warmup, ignored)
+### 1 time 0.00233437
+### 2 time 0.00260849
+### 3 time 0.00264236
+64 1024 1024 0.015625 0.00233437 0.0025284 0.00264236 5.91328 6.17979 6.69347
+### 0 time 0.00235409 (warmup, ignored)
+### 1 time 0.00240777
+### 2 time 0.00237376
+### 3 time 0.00236434
+64 1024 512 0.0078125 0.00236434 0.00238196 0.00240777 3.2447 3.27986 3.3043
+### 0 time 0.00219916 (warmup, ignored)
+### 1 time 0.00220483
+### 2 time 0.00221115
+### 3 time 0.00220957
+64 1024 256 0.00390625 0.00220483 0.00220852 0.00221115 1.76662 1.76872 1.77168
+### 0 time 0.002075 (warmup, ignored)
+### 1 time 0.00208533
+### 2 time 0.00208298
+### 3 time 0.00210234
+64 1024 128 0.00195312 0.00208298 0.00209022 0.00210234 0.929022 0.934412 0.937658
+### 0 time 0.00206517 (warmup, ignored)
+### 1 time 0.00120404
+### 2 time 0.00117998
+### 3 time 0.00114144
+64 1024 64 0.000976562 0.00114144 0.00117516 0.00120404 0.811069 0.831006 0.855551
+### 0 time 0.000775973 (warmup, ignored)
+### 1 time 0.000750309
+### 2 time 0.000751667
+### 3 time 0.000751216
+64 1024 32 0.000488281 0.000750309 0.000751064 0.000751667 0.649598 0.650119 0.650774
+### 0 time 0.000527381 (warmup, ignored)
+### 1 time 0.000518763
+### 2 time 0.000521051
+### 3 time 0.000517569
+64 1024 16 0.000244141 0.000517569 0.000519128 0.000521051 0.468554 0.47029 0.471706
+### 0 time 0.000446114 (warmup, ignored)
+### 1 time 0.000447837
+### 2 time 0.000447848
+### 3 time 0.000443796
+64 1024 8 0.00012207 0.000443796 0.000446494 0.000447848 0.272571 0.273398 0.27506
+### 0 time 0.000390407 (warmup, ignored)
+### 1 time 0.000372512
+### 2 time 0.000370898
+### 3 time 0.000370414
+64 1024 4 6.10352e-05 0.000370414 0.000371275 0.000372512 0.163847 0.164394 0.164776
+### 0 time 0.000360839 (warmup, ignored)
+### 1 time 0.00033612
+### 2 time 0.000332472
+### 3 time 0.000330158
+64 1024 2 3.05176e-05 0.000330158 0.000332917 0.00033612 0.0907937 0.0916673 0.0924333
+### 0 time 0.000347662 (warmup, ignored)
+### 1 time 0.000319627
+### 2 time 0.000318575
+### 3 time 0.000318117
+64 1024 1 1.52588e-05 0.000318117 0.000318773 0.000319627 0.0477394 0.0478673 0.047966
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 2.12499 (warmup, ignored)
+### 1 time 2.12076
+### 2 time 2.11927
+### 3 time 2.12301
+128 512 4194304 32 2.11927 2.12101 2.12301 15.0729 15.0871 15.0996
+### 0 time 1.05689 (warmup, ignored)
+### 1 time 1.05771
+### 2 time 1.05653
+### 3 time 1.05556
+128 512 2097152 16 1.05556 1.0566 1.05771 15.1271 15.1429 15.1578
+### 0 time 0.524128 (warmup, ignored)
+### 1 time 0.524694
+### 2 time 0.524475
+### 3 time 0.525421
+128 512 1048576 8 0.524475 0.524863 0.525421 15.2259 15.2421 15.2533
+### 0 time 0.260783 (warmup, ignored)
+### 1 time 0.260679
+### 2 time 0.260602
+### 3 time 0.260918
+128 512 524288 4 0.260602 0.260733 0.260918 15.3305 15.3414 15.3491
+### 0 time 0.13197 (warmup, ignored)
+### 1 time 0.131809
+### 2 time 0.131489
+### 3 time 0.131899
+128 512 262144 2 0.131489 0.131732 0.131899 15.1631 15.1823 15.2104
+### 0 time 0.0707112 (warmup, ignored)
+### 1 time 0.0704345
+### 2 time 0.0705612
+### 3 time 0.0704392
+128 512 131072 1 0.0704345 0.0704783 0.0705612 14.1721 14.1888 14.1976
+### 0 time 0.0429339 (warmup, ignored)
+### 1 time 0.0423822
+### 2 time 0.0422897
+### 3 time 0.0423351
+128 512 65536 0.5 0.0422897 0.0423357 0.0423822 11.7974 11.8104 11.8232
+### 0 time 0.0165632 (warmup, ignored)
+### 1 time 0.016684
+### 2 time 0.0169274
+### 3 time 0.0166556
+128 512 32768 0.25 0.0166556 0.0167557 0.0169274 14.7689 14.9203 15.01
+### 0 time 0.00667833 (warmup, ignored)
+### 1 time 0.0070727
+### 2 time 0.00741999
+### 3 time 0.00682125
+128 512 16384 0.125 0.00682125 0.00710465 0.00741999 16.8464 17.5941 18.3251
+### 0 time 0.00373234 (warmup, ignored)
+### 1 time 0.00371448
+### 2 time 0.00330252
+### 3 time 0.0032668
+128 512 8192 0.0625 0.0032668 0.00342793 0.00371448 16.826 18.2326 19.1319
+### 0 time 0.00178527 (warmup, ignored)
+### 1 time 0.00166223
+### 2 time 0.00214338
+### 3 time 0.00215434
+128 512 4096 0.03125 0.00166223 0.00198665 0.00215434 14.5056 15.73 18.8
+### 0 time 0.000821254 (warmup, ignored)
+### 1 time 0.00132991
+### 2 time 0.0012878
+### 3 time 0.00127353
+128 512 2048 0.015625 0.00127353 0.00129708 0.00132991 11.7489 12.0463 12.269
+### 0 time 0.0012092 (warmup, ignored)
+### 1 time 0.00111266
+### 2 time 0.00115273
+### 3 time 0.00112789
+128 512 1024 0.0078125 0.00111266 0.00113109 0.00115273 6.77738 6.90703 7.02146
+### 0 time 0.000745031 (warmup, ignored)
+### 1 time 0.000780344
+### 2 time 0.000748395
+### 3 time 0.000924962
+128 512 512 0.00390625 0.000748395 0.0008179 0.000924962 4.22315 4.77595 5.2195
+### 0 time 0.000745292 (warmup, ignored)
+### 1 time 0.000787988
+### 2 time 0.000816224
+### 3 time 0.00078929
+128 512 256 0.00195312 0.000787988 0.000797834 0.000816224 2.39288 2.44803 2.47862
+### 0 time 0.000782174 (warmup, ignored)
+### 1 time 0.000790105
+### 2 time 0.000772473
+### 3 time 0.000785452
+128 512 128 0.000976562 0.000772473 0.000782677 0.000790105 1.23599 1.24772 1.2642
+### 0 time 0.00128444 (warmup, ignored)
+### 1 time 0.000585503
+### 2 time 0.000575172
+### 3 time 0.00056714
+128 512 64 0.000488281 0.00056714 0.000575938 0.000585503 0.833952 0.847801 0.860954
+### 0 time 0.000405917 (warmup, ignored)
+### 1 time 0.00038434
+### 2 time 0.000376268
+### 3 time 0.000374055
+128 512 32 0.000244141 0.000374055 0.000378221 0.00038434 0.63522 0.645497 0.652686
+### 0 time 0.000296787 (warmup, ignored)
+### 1 time 0.000269574
+### 2 time 0.000267259
+### 3 time 0.000266849
+128 512 16 0.00012207 0.000266849 0.000267894 0.000269574 0.452827 0.455666 0.457451
+### 0 time 0.000229818 (warmup, ignored)
+### 1 time 0.000211792
+### 2 time 0.000211238
+### 3 time 0.000210559
+128 512 8 6.10352e-05 0.000210559 0.000211196 0.000211792 0.288184 0.288997 0.289872
+### 0 time 0.000219686 (warmup, ignored)
+### 1 time 0.000196272
+### 2 time 0.000194577
+### 3 time 0.000197083
+128 512 4 3.05176e-05 0.000194577 0.000195977 0.000197083 0.154846 0.15572 0.156841
+### 0 time 0.000195451 (warmup, ignored)
+### 1 time 0.000174858
+### 2 time 0.000174918
+### 3 time 0.000171767
+128 512 2 1.52588e-05 0.000171767 0.000173848 0.000174918 0.087234 0.087771 0.0888342
+### 0 time 0.000182393 (warmup, ignored)
+### 1 time 0.000163745
+### 2 time 0.000156567
+### 3 time 0.000160761
+128 512 1 7.62939e-06 0.000156567 0.000160358 0.000163745 0.0465931 0.0475774 0.0487293
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 2.08425 (warmup, ignored)
+### 1 time 2.09017
+### 2 time 2.08815
+### 3 time 2.08502
+256 256 8388608 32 2.08502 2.08778 2.09017 15.3098 15.3273 15.3476
+### 0 time 1.04082 (warmup, ignored)
+### 1 time 1.03956
+### 2 time 1.03982
+### 3 time 1.04188
+256 256 4194304 16 1.03956 1.04042 1.04188 15.3568 15.3784 15.3911
+### 0 time 0.518105 (warmup, ignored)
+### 1 time 0.517326
+### 2 time 0.518796
+### 3 time 0.517668
+256 256 2097152 8 0.517326 0.51793 0.518796 15.4203 15.4461 15.4641
+### 0 time 0.258213 (warmup, ignored)
+### 1 time 0.258783
+### 2 time 0.258366
+### 3 time 0.257936
+256 256 1048576 4 0.257936 0.258362 0.258783 15.457 15.4822 15.5077
+### 0 time 0.129194 (warmup, ignored)
+### 1 time 0.129191
+### 2 time 0.129494
+### 3 time 0.129032
+256 256 524288 2 0.129032 0.129239 0.129494 15.4447 15.4752 15.5001
+### 0 time 0.0654755 (warmup, ignored)
+### 1 time 0.0654632
+### 2 time 0.0654048
+### 3 time 0.065259
+256 256 262144 1 0.065259 0.0653756 0.0654632 15.2758 15.2962 15.3236
+### 0 time 0.0341006 (warmup, ignored)
+### 1 time 0.0341194
+### 2 time 0.0340664
+### 3 time 0.0342124
+256 256 131072 0.5 0.0340664 0.0341327 0.0342124 14.6146 14.6487 14.6772
+### 0 time 0.0194469 (warmup, ignored)
+### 1 time 0.018028
+### 2 time 0.0182813
+### 3 time 0.0178654
+256 256 65536 0.25 0.0178654 0.0180583 0.0182813 13.6751 13.8441 13.9935
+### 0 time 0.00774064 (warmup, ignored)
+### 1 time 0.00740702
+### 2 time 0.00754996
+### 3 time 0.00751078
+256 256 32768 0.125 0.00740702 0.00748926 0.00754996 16.5564 16.6906 16.8759
+### 0 time 0.00309595 (warmup, ignored)
+### 1 time 0.00336674
+### 2 time 0.00334693
+### 3 time 0.00381664
+256 256 16384 0.0625 0.00334693 0.0035101 0.00381664 16.3757 17.8058 18.6739
+### 0 time 0.00200679 (warmup, ignored)
+### 1 time 0.00203121
+### 2 time 0.00202393
+### 3 time 0.00201426
+256 256 8192 0.03125 0.00201426 0.00202313 0.00203121 15.3849 15.4463 15.5144
+### 0 time 0.00122446 (warmup, ignored)
+### 1 time 0.0012277
+### 2 time 0.00121567
+### 3 time 0.00122351
+256 256 4096 0.015625 0.00121567 0.00122229 0.0012277 12.727 12.7834 12.853
+### 0 time 0.000889407 (warmup, ignored)
+### 1 time 0.000882208
+### 2 time 0.000858258
+### 3 time 0.000871248
+256 256 2048 0.0078125 0.000858258 0.000870571 0.000882208 8.85562 8.97399 9.10274
+### 0 time 0.000660116 (warmup, ignored)
+### 1 time 0.000607026
+### 2 time 0.000473559
+### 3 time 0.000479479
+256 256 1024 0.00390625 0.000473559 0.000520021 0.000607026 6.43506 7.51171 8.24871
+### 0 time 0.00043967 (warmup, ignored)
+### 1 time 0.000393473
+### 2 time 0.000420297
+### 3 time 0.000424905
+256 256 512 0.00195312 0.000393473 0.000412892 0.000424905 4.59662 4.73036 4.96381
+### 0 time 0.000420908 (warmup, ignored)
+### 1 time 0.000390489
+### 2 time 0.000410002
+### 3 time 0.000420878
+256 256 256 0.000976562 0.000390489 0.000407123 0.000420878 2.3203 2.39869 2.50087
+### 0 time 0.00042464 (warmup, ignored)
+### 1 time 0.000410824
+### 2 time 0.000412169
+### 3 time 0.000417523
+256 256 128 0.000488281 0.000410824 0.000413505 0.000417523 1.16947 1.18083 1.18854
+### 0 time 0.000935281 (warmup, ignored)
+### 1 time 0.000275653
+### 2 time 0.000271443
+### 3 time 0.000269691
+256 256 64 0.000244141 0.000269691 0.000272262 0.000275653 0.885681 0.896711 0.905261
+### 0 time 0.000207955 (warmup, ignored)
+### 1 time 0.000179709
+### 2 time 0.000187346
+### 3 time 0.000196281
+256 256 32 0.00012207 0.000179709 0.000187779 0.000196281 0.621916 0.650076 0.679267
+### 0 time 0.000141147 (warmup, ignored)
+### 1 time 0.000128799
+### 2 time 0.000131731
+### 3 time 0.000132086
+256 256 16 6.10352e-05 0.000128799 0.000130872 0.000132086 0.462086 0.466373 0.473879
+### 0 time 0.000142891 (warmup, ignored)
+### 1 time 0.000121034
+### 2 time 0.000118234
+### 3 time 0.000114962
+256 256 8 3.05176e-05 0.000114962 0.000118077 0.000121034 0.252141 0.258456 0.265458
+### 0 time 0.000134035 (warmup, ignored)
+### 1 time 0.000112223
+### 2 time 0.000113551
+### 3 time 0.000112177
+256 256 4 1.52588e-05 0.000112177 0.00011265 0.000113551 0.134378 0.135453 0.136024
+### 0 time 0.000104312 (warmup, ignored)
+### 1 time 9.6196e-05
+### 2 time 9.5816e-05
+### 3 time 9.5545e-05
+256 256 2 7.62939e-06 9.5545e-05 9.58523e-05 9.6196e-05 0.0793109 0.0795953 0.0798513
+### 0 time 9.3197e-05 (warmup, ignored)
+### 1 time 9.1477e-05
+### 2 time 8.9784e-05
+### 3 time 9.0251e-05
+256 256 1 3.8147e-06 8.9784e-05 9.0504e-05 9.1477e-05 0.0417012 0.0421495 0.0424875
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 2.0111 (warmup, ignored)
+### 1 time 2.01194
+### 2 time 2.01928
+### 3 time 2.02399
+512 128 16777216 32 2.01194 2.0184 2.02399 15.8103 15.8541 15.905
+### 0 time 1.011 (warmup, ignored)
+### 1 time 1.00459
+### 2 time 1.00533
+### 3 time 1.00246
+512 128 8388608 16 1.00246 1.00413 1.00533 15.9152 15.9342 15.9607
+### 0 time 0.502612 (warmup, ignored)
+### 1 time 0.503117
+### 2 time 0.500265
+### 3 time 0.504736
+512 128 4194304 8 0.500265 0.502706 0.504736 15.8499 15.9139 15.9915
+### 0 time 0.251374 (warmup, ignored)
+### 1 time 0.251329
+### 2 time 0.25149
+### 3 time 0.251327
+512 128 2097152 4 0.251327 0.251382 0.25149 15.9052 15.9121 15.9155
+### 0 time 0.125224 (warmup, ignored)
+### 1 time 0.124687
+### 2 time 0.125415
+### 3 time 0.125758
+512 128 1048576 2 0.124687 0.125287 0.125758 15.9036 15.9634 16.0401
+### 0 time 0.0628457 (warmup, ignored)
+### 1 time 0.0627692
+### 2 time 0.0625555
+### 3 time 0.0625873
+512 128 524288 1 0.0625555 0.0626374 0.0627692 15.9314 15.9649 15.9858
+### 0 time 0.0315277 (warmup, ignored)
+### 1 time 0.0314218
+### 2 time 0.0314599
+### 3 time 0.0313913
+512 128 262144 0.5 0.0313913 0.0314243 0.0314599 15.8932 15.9112 15.928
+### 0 time 0.0158238 (warmup, ignored)
+### 1 time 0.0155704
+### 2 time 0.0156054
+### 3 time 0.0155803
+512 128 131072 0.25 0.0155704 0.0155854 0.0156054 16.0201 16.0407 16.0561
+### 0 time 0.00788283 (warmup, ignored)
+### 1 time 0.00709801
+### 2 time 0.00710902
+### 3 time 0.00711284
+512 128 65536 0.125 0.00709801 0.00710662 0.00711284 17.5738 17.5892 17.6106
+### 0 time 0.00342742 (warmup, ignored)
+### 1 time 0.00343856
+### 2 time 0.00361615
+### 3 time 0.0033955
+512 128 32768 0.0625 0.0033955 0.0034834 0.00361615 17.2836 17.9422 18.4067
+### 0 time 0.00146884 (warmup, ignored)
+### 1 time 0.00147651
+### 2 time 0.00146913
+### 3 time 0.00147319
+512 128 16384 0.03125 0.00146913 0.00147294 0.00147651 21.1648 21.216 21.2711
+### 0 time 0.000722077 (warmup, ignored)
+### 1 time 0.00071497
+### 2 time 0.000723906
+### 3 time 0.00072663
+512 128 8192 0.015625 0.00071497 0.000721835 0.00072663 21.5034 21.6462 21.8541
+### 0 time 0.000371997 (warmup, ignored)
+### 1 time 0.000374224
+### 2 time 0.000371548
+### 3 time 0.000374005
+512 128 4096 0.0078125 0.000371548 0.000373259 0.000374224 20.8765 20.9305 21.0269
+### 0 time 0.000226699 (warmup, ignored)
+### 1 time 0.000245093
+### 2 time 0.00024286
+### 3 time 0.000242861
+512 128 2048 0.00390625 0.00024286 0.000243605 0.000245093 15.9378 16.0352 16.0844
+### 0 time 0.000247278 (warmup, ignored)
+### 1 time 0.000246265
+### 2 time 0.000245545
+### 3 time 0.000246988
+512 128 1024 0.00195312 0.000245545 0.000246266 0.000246988 7.90777 7.93096 7.95424
+### 0 time 0.000221086 (warmup, ignored)
+### 1 time 0.000216879
+### 2 time 0.00021566
+### 3 time 0.000214837
+512 128 512 0.000976562 0.000214837 0.000215792 0.000216879 4.5028 4.52548 4.5456
+### 0 time 0.00021342 (warmup, ignored)
+### 1 time 0.000212773
+### 2 time 0.000210677
+### 3 time 0.000209505
+512 128 256 0.000488281 0.000209505 0.000210985 0.000212773 2.29485 2.31429 2.33064
+### 0 time 0.000217029 (warmup, ignored)
+### 1 time 0.000210948
+### 2 time 0.000214026
+### 3 time 0.000210459
+512 128 128 0.000244141 0.000210459 0.000211811 0.000214026 1.14071 1.15263 1.16004
+### 0 time 0.000795675 (warmup, ignored)
+### 1 time 0.000145251
+### 2 time 0.00014463
+### 3 time 0.000142165
+512 128 64 0.00012207 0.000142165 0.000144015 0.000145251 0.840409 0.84762 0.858652
+### 0 time 0.000112327 (warmup, ignored)
+### 1 time 9.5252e-05
+### 2 time 9.5001e-05
+### 3 time 9.7939e-05
+512 128 32 6.10352e-05 9.5001e-05 9.6064e-05 9.7939e-05 0.623196 0.635359 0.642469
+### 0 time 8.1027e-05 (warmup, ignored)
+### 1 time 8.0135e-05
+### 2 time 7.7938e-05
+### 3 time 7.8232e-05
+512 128 16 3.05176e-05 7.7938e-05 7.87683e-05 8.0135e-05 0.380827 0.387435 0.391562
+### 0 time 9.0194e-05 (warmup, ignored)
+### 1 time 7.4031e-05
+### 2 time 7.2408e-05
+### 3 time 7.1789e-05
+512 128 8 1.52588e-05 7.1789e-05 7.27427e-05 7.4031e-05 0.206114 0.209764 0.212551
+### 0 time 7.37e-05 (warmup, ignored)
+### 1 time 6.247e-05
+### 2 time 6.3673e-05
+### 3 time 6.276e-05
+512 128 4 7.62939e-06 6.247e-05 6.29677e-05 6.3673e-05 0.119822 0.121164 0.122129
+### 0 time 6.1028e-05 (warmup, ignored)
+### 1 time 5.7772e-05
+### 2 time 5.72e-05
+### 3 time 5.5305e-05
+512 128 2 3.8147e-06 5.5305e-05 5.6759e-05 5.7772e-05 0.0660302 0.0672087 0.0689756
+### 0 time 7.2741e-05 (warmup, ignored)
+### 1 time 4.8472e-05
+### 2 time 4.8393e-05
+### 3 time 4.7372e-05
+512 128 1 1.90735e-06 4.7372e-05 4.8079e-05 4.8472e-05 0.0393495 0.0396711 0.0402632
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 1.87698 (warmup, ignored)
+### 1 time 1.87186
+### 2 time 1.87747
+### 3 time 1.88163
+1024 64 33554432 32 1.87186 1.87699 1.88163 17.0065 17.0486 17.0953
+### 0 time 0.938061 (warmup, ignored)
+### 1 time 0.938086
+### 2 time 0.934365
+### 3 time 0.936663
+1024 64 16777216 16 0.934365 0.936371 0.938086 17.056 17.0872 17.1239
+### 0 time 0.470019 (warmup, ignored)
+### 1 time 0.46778
+### 2 time 0.468655
+### 3 time 0.468844
+1024 64 8388608 8 0.46778 0.468426 0.468844 17.0633 17.0785 17.1021
+### 0 time 0.235126 (warmup, ignored)
+### 1 time 0.233476
+### 2 time 0.235463
+### 3 time 0.23442
+1024 64 4194304 4 0.233476 0.234453 0.235463 16.9878 17.061 17.1324
+### 0 time 0.117442 (warmup, ignored)
+### 1 time 0.117212
+### 2 time 0.117818
+### 3 time 0.118015
+1024 64 2097152 2 0.117212 0.117682 0.118015 16.947 16.995 17.0631
+### 0 time 0.0590916 (warmup, ignored)
+### 1 time 0.0590481
+### 2 time 0.0591053
+### 3 time 0.0592491
+1024 64 1048576 1 0.0590481 0.0591341 0.0592491 16.8779 16.9107 16.9354
+### 0 time 0.0294308 (warmup, ignored)
+### 1 time 0.0292941
+### 2 time 0.0293846
+### 3 time 0.0292434
+1024 64 524288 0.5 0.0292434 0.0293074 0.0293846 17.0157 17.0606 17.0979
+### 0 time 0.0146495 (warmup, ignored)
+### 1 time 0.0144165
+### 2 time 0.0144477
+### 3 time 0.0144442
+1024 64 262144 0.25 0.0144165 0.0144361 0.0144477 17.3038 17.3177 17.3412
+### 0 time 0.00713933 (warmup, ignored)
+### 1 time 0.00672781
+### 2 time 0.0067516
+### 3 time 0.00671009
+1024 64 131072 0.125 0.00671009 0.00672983 0.0067516 18.5141 18.574 18.6287
+### 0 time 0.00332764 (warmup, ignored)
+### 1 time 0.00333495
+### 2 time 0.00334291
+### 3 time 0.00332158
+1024 64 65536 0.0625 0.00332158 0.00333314 0.00334291 18.6963 18.7511 18.8164
+### 0 time 0.00152137 (warmup, ignored)
+### 1 time 0.00159671
+### 2 time 0.00230702
+### 3 time 0.00152256
+1024 64 32768 0.03125 0.00152256 0.00180876 0.00230702 13.5456 17.277 20.5246
+### 0 time 0.00066615 (warmup, ignored)
+### 1 time 0.000671565
+### 2 time 0.000662262
+### 3 time 0.000663421
+1024 64 16384 0.015625 0.000662262 0.000665749 0.000671565 23.2665 23.4698 23.5934
+### 0 time 0.000342262 (warmup, ignored)
+### 1 time 0.000339648
+### 2 time 0.000338252
+### 3 time 0.000690825
+1024 64 8192 0.0078125 0.000338252 0.000456242 0.000690825 11.3089 17.1236 23.0967
+### 0 time 0.00052573 (warmup, ignored)
+### 1 time 0.000554808
+### 2 time 0.000521728
+### 3 time 0.000522496
+1024 64 4096 0.00390625 0.000521728 0.000533011 0.000554808 7.04072 7.32865 7.48714
+### 0 time 0.000511828 (warmup, ignored)
+### 1 time 0.000482775
+### 2 time 0.000149129
+### 3 time 0.000148609
+1024 64 2048 0.00195312 0.000148609 0.000260171 0.000482775 4.04562 7.50708 13.1427
+### 0 time 0.000148802 (warmup, ignored)
+### 1 time 0.000151565
+### 2 time 0.000147286
+### 3 time 0.00014797
+1024 64 1024 0.000976562 0.000147286 0.00014894 0.000151565 6.44319 6.55674 6.63038
+### 0 time 0.000122146 (warmup, ignored)
+### 1 time 0.000118996
+### 2 time 0.00011867
+### 3 time 0.000119071
+1024 64 512 0.000488281 0.00011867 0.000118912 0.000119071 4.10076 4.10623 4.11461
+### 0 time 0.000118696 (warmup, ignored)
+### 1 time 0.00011424
+### 2 time 0.000115469
+### 3 time 0.000115844
+1024 64 256 0.000244141 0.00011424 0.000115184 0.000115844 2.10749 2.11956 2.13709
+### 0 time 0.00011604 (warmup, ignored)
+### 1 time 0.00011568
+### 2 time 0.000115765
+### 3 time 0.000117027
+1024 64 128 0.00012207 0.00011568 0.000116157 0.000117027 1.0431 1.0509 1.05524
+### 0 time 0.000696406 (warmup, ignored)
+### 1 time 7.6748e-05
+### 2 time 7.364e-05
+### 3 time 7.1727e-05
+1024 64 64 6.10352e-05 7.1727e-05 7.40383e-05 7.6748e-05 0.795267 0.824372 0.850937
+### 0 time 7.0336e-05 (warmup, ignored)
+### 1 time 6.206e-05
+### 2 time 6.0888e-05
+### 3 time 6.1298e-05
+1024 64 32 3.05176e-05 6.0888e-05 6.14153e-05 6.206e-05 0.491743 0.496905 0.501208
+### 0 time 5.3383e-05 (warmup, ignored)
+### 1 time 5.3681e-05
+### 2 time 5.3013e-05
+### 3 time 5.2369e-05
+1024 64 16 1.52588e-05 5.2369e-05 5.3021e-05 5.3681e-05 0.284249 0.287788 0.291371
+### 0 time 4.7632e-05 (warmup, ignored)
+### 1 time 4.4145e-05
+### 2 time 4.3222e-05
+### 3 time 4.3292e-05
+1024 64 8 7.62939e-06 4.3222e-05 4.3553e-05 4.4145e-05 0.172826 0.175175 0.176516
+### 0 time 4.4917e-05 (warmup, ignored)
+### 1 time 4.2112e-05
+### 2 time 4.1311e-05
+### 3 time 4.0689e-05
+1024 64 4 3.8147e-06 4.0689e-05 4.13707e-05 4.2112e-05 0.0905846 0.0922078 0.0937525
+### 0 time 3.638e-05 (warmup, ignored)
+### 1 time 3.2953e-05
+### 2 time 3.2753e-05
+### 3 time 3.2653e-05
+1024 64 2 1.90735e-06 3.2653e-05 3.27863e-05 3.2953e-05 0.0578809 0.0581751 0.0584127
+### 0 time 5.4976e-05 (warmup, ignored)
+### 1 time 3.3384e-05
+### 2 time 3.2452e-05
+### 3 time 3.2433e-05
+1024 64 1 9.53674e-07 3.2433e-05 3.27563e-05 3.3384e-05 0.0285668 0.0291142 0.0294044
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 1.63845 (warmup, ignored)
+### 1 time 1.64421
+### 2 time 1.63065
+### 3 time 1.6466
+2048 32 67108864 32 1.63065 1.64049 1.6466 19.4339 19.5064 19.624
+### 0 time 0.812923 (warmup, ignored)
+### 1 time 0.816155
+### 2 time 0.819715
+### 3 time 0.817083
+2048 32 33554432 16 0.816155 0.817651 0.819715 19.519 19.5683 19.6041
+### 0 time 0.409137 (warmup, ignored)
+### 1 time 0.412587
+### 2 time 0.409672
+### 3 time 0.411787
+2048 32 16777216 8 0.409672 0.411349 0.412587 19.3898 19.4482 19.5278
+### 0 time 0.202205 (warmup, ignored)
+### 1 time 0.204704
+### 2 time 0.204661
+### 3 time 0.206792
+2048 32 8388608 4 0.204661 0.205386 0.206792 19.3431 19.4755 19.5445
+### 0 time 0.103495 (warmup, ignored)
+### 1 time 0.101952
+### 2 time 0.102915
+### 3 time 0.101776
+2048 32 4194304 2 0.101776 0.102215 0.102915 19.4335 19.5667 19.6509
+### 0 time 0.0520664 (warmup, ignored)
+### 1 time 0.051882
+### 2 time 0.051891
+### 3 time 0.0517523
+2048 32 2097152 1 0.0517523 0.0518418 0.051891 19.2712 19.2895 19.3228
+### 0 time 0.0257874 (warmup, ignored)
+### 1 time 0.0259742
+### 2 time 0.0261494
+### 3 time 0.025712
+2048 32 1048576 0.5 0.025712 0.0259452 0.0261494 19.1209 19.2714 19.4462
+### 0 time 0.0128091 (warmup, ignored)
+### 1 time 0.0126298
+### 2 time 0.0125773
+### 3 time 0.0124749
+2048 32 524288 0.25 0.0124749 0.0125607 0.0126298 19.7944 19.9034 20.0402
+### 0 time 0.00639484 (warmup, ignored)
+### 1 time 0.00613497
+### 2 time 0.00616155
+### 3 time 0.00615348
+2048 32 262144 0.125 0.00613497 0.00615 0.00616155 20.2871 20.3252 20.375
+### 0 time 0.0031869 (warmup, ignored)
+### 1 time 0.00300253
+### 2 time 0.00299445
+### 3 time 0.00298438
+2048 32 131072 0.0625 0.00298438 0.00299378 0.00300253 20.8158 20.8766 20.9424
+### 0 time 0.00150523 (warmup, ignored)
+### 1 time 0.00149672
+### 2 time 0.00149269
+### 3 time 0.00148808
+2048 32 65536 0.03125 0.00148808 0.0014925 0.00149672 20.8789 20.938 21.0002
+### 0 time 0.000600538 (warmup, ignored)
+### 1 time 0.00059505
+### 2 time 0.000591961
+### 3 time 0.000607197
+2048 32 32768 0.015625 0.000591961 0.000598069 0.000607197 25.733 26.1257 26.3953
+### 0 time 0.000283307 (warmup, ignored)
+### 1 time 0.000281696
+### 2 time 0.000287186
+### 3 time 0.000281294
+2048 32 16384 0.0078125 0.000281294 0.000283392 0.000287186 27.2036 27.5678 27.7734
+### 0 time 0.000154108 (warmup, ignored)
+### 1 time 0.000150926
+### 2 time 0.000149405
+### 3 time 0.000151664
+2048 32 8192 0.00390625 0.000149405 0.000150665 0.000151664 25.7559 25.9267 26.1454
+### 0 time 0.000104509 (warmup, ignored)
+### 1 time 0.000104318
+### 2 time 0.000105525
+### 3 time 0.000103992
+2048 32 4096 0.00195312 0.000103992 0.000104612 0.000105525 18.5086 18.6702 18.7815
+### 0 time 0.000103639 (warmup, ignored)
+### 1 time 0.000105
+### 2 time 0.000102264
+### 3 time 0.000102023
+2048 32 2048 0.000976562 0.000102023 0.000103096 0.000105 9.3006 9.47239 9.57198
+### 0 time 9.9502e-05 (warmup, ignored)
+### 1 time 0.000100043
+### 2 time 9.9773e-05
+### 3 time 9.9088e-05
+2048 32 1024 0.000488281 9.9088e-05 9.96347e-05 0.000100043 4.88071 4.90072 4.92775
+### 0 time 7.1055e-05 (warmup, ignored)
+### 1 time 6.7891e-05
+### 2 time 6.7688e-05
+### 3 time 6.7731e-05
+2048 32 512 0.000244141 6.7688e-05 6.777e-05 6.7891e-05 3.59607 3.60249 3.60685
+### 0 time 6.5607e-05 (warmup, ignored)
+### 1 time 6.4131e-05
+### 2 time 6.4505e-05
+### 3 time 6.6296e-05
+2048 32 256 0.00012207 6.4131e-05 6.49773e-05 6.6296e-05 1.84129 1.87866 1.90345
+### 0 time 6.4245e-05 (warmup, ignored)
+### 1 time 6.3671e-05
+### 2 time 6.3353e-05
+### 3 time 6.4425e-05
+2048 32 128 6.10352e-05 6.3353e-05 6.38163e-05 6.4425e-05 0.947383 0.956419 0.963414
+### 0 time 0.000258683 (warmup, ignored)
+### 1 time 5.4886e-05
+### 2 time 4.8704e-05
+### 3 time 4.8263e-05
+2048 32 64 3.05176e-05 4.8263e-05 5.06177e-05 5.4886e-05 0.556018 0.602904 0.632318
+### 0 time 4.8694e-05 (warmup, ignored)
+### 1 time 4.4204e-05
+### 2 time 4.2763e-05
+### 3 time 4.2853e-05
+2048 32 32 1.52588e-05 4.2763e-05 4.32733e-05 4.4204e-05 0.34519 0.352614 0.356822
+### 0 time 3.4757e-05 (warmup, ignored)
+### 1 time 3.2912e-05
+### 2 time 3.155e-05
+### 3 time 3.12e-05
+2048 32 16 7.62939e-06 3.12e-05 3.18873e-05 3.2912e-05 0.231812 0.239261 0.244532
+### 0 time 3.116e-05 (warmup, ignored)
+### 1 time 3.0147e-05
+### 2 time 3.0297e-05
+### 3 time 2.9576e-05
+2048 32 8 3.8147e-06 2.9576e-05 3.00067e-05 3.0297e-05 0.12591 0.127128 0.128979
+### 0 time 2.5811e-05 (warmup, ignored)
+### 1 time 2.3576e-05
+### 2 time 2.3426e-05
+### 3 time 2.3234e-05
+2048 32 4 1.90735e-06 2.3234e-05 2.3412e-05 2.3576e-05 0.0809021 0.0814688 0.082093
+### 0 time 2.4548e-05 (warmup, ignored)
+### 1 time 2.2784e-05
+### 2 time 2.2955e-05
+### 3 time 2.2302e-05
+2048 32 2 9.53674e-07 2.2302e-05 2.26803e-05 2.2955e-05 0.0415454 0.0420485 0.0427618
+### 0 time 4.0689e-05 (warmup, ignored)
+### 1 time 1.7614e-05
+### 2 time 1.6723e-05
+### 3 time 1.6882e-05
+2048 32 1 4.76837e-07 1.6723e-05 1.7073e-05 1.7614e-05 0.0270715 0.0279293 0.0285139
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 1.18385 (warmup, ignored)
+### 1 time 1.18437
+### 2 time 1.17937
+### 3 time 1.18235
+4096 16 134217728 32 1.17937 1.18203 1.18437 27.0187 27.0721 27.1332
+### 0 time 0.592825 (warmup, ignored)
+### 1 time 0.590619
+### 2 time 0.592748
+### 3 time 0.592152
+4096 16 67108864 16 0.590619 0.59184 0.592748 26.9929 27.0344 27.0902
+### 0 time 0.297314 (warmup, ignored)
+### 1 time 0.298374
+### 2 time 0.297339
+### 3 time 0.29589
+4096 16 33554432 8 0.29589 0.297201 0.298374 26.812 26.9178 27.0371
+### 0 time 0.150348 (warmup, ignored)
+### 1 time 0.149935
+### 2 time 0.149696
+### 3 time 0.148888
+4096 16 16777216 4 0.148888 0.149506 0.149935 26.6782 26.7547 26.8658
+### 0 time 0.0750644 (warmup, ignored)
+### 1 time 0.0752598
+### 2 time 0.0746431
+### 3 time 0.0753326
+4096 16 8388608 2 0.0746431 0.0750785 0.0753326 26.5489 26.6388 26.7942
+### 0 time 0.0381945 (warmup, ignored)
+### 1 time 0.0381265
+### 2 time 0.0380147
+### 3 time 0.0377834
+4096 16 4194304 1 0.0377834 0.0379748 0.0381265 26.2285 26.3332 26.4667
+### 0 time 0.0189557 (warmup, ignored)
+### 1 time 0.0189778
+### 2 time 0.0190028
+### 3 time 0.0189679
+4096 16 2097152 0.5 0.0189679 0.0189828 0.0190028 26.312 26.3396 26.3603
+### 0 time 0.00968116 (warmup, ignored)
+### 1 time 0.00928805
+### 2 time 0.00923517
+### 3 time 0.00923059
+4096 16 1048576 0.25 0.00923059 0.00925127 0.00928805 26.9163 27.0233 27.0838
+### 0 time 0.00478007 (warmup, ignored)
+### 1 time 0.00452718
+### 2 time 0.00460559
+### 3 time 0.00464794
+4096 16 524288 0.125 0.00452718 0.00459357 0.00464794 26.8936 27.2119 27.611
+### 0 time 0.00231249 (warmup, ignored)
+### 1 time 0.00230774
+### 2 time 0.00232203
+### 3 time 0.00232395
+4096 16 262144 0.0625 0.00230774 0.0023179 0.00232395 26.8939 26.964 27.0828
+### 0 time 0.00116758 (warmup, ignored)
+### 1 time 0.00115601
+### 2 time 0.00116703
+### 3 time 0.00116244
+4096 16 131072 0.03125 0.00115601 0.00116183 0.00116703 26.7774 26.8973 27.0327
+### 0 time 0.000593386 (warmup, ignored)
+### 1 time 0.000588327
+### 2 time 0.000590211
+### 3 time 0.000594569
+4096 16 65536 0.015625 0.000588327 0.000591036 0.000594569 26.2795 26.4366 26.5584
+### 0 time 0.000231146 (warmup, ignored)
+### 1 time 0.000223544
+### 2 time 0.000227211
+### 3 time 0.000226009
+4096 16 32768 0.0078125 0.000223544 0.000225588 0.000227211 34.3843 34.6317 34.9484
+### 0 time 0.000106231 (warmup, ignored)
+### 1 time 0.000104932
+### 2 time 0.000449615
+### 3 time 0.000102373
+4096 16 16384 0.00390625 0.000102373 0.000218973 0.000449615 8.68799 17.8389 38.157
+### 0 time 8.325e-05 (warmup, ignored)
+### 1 time 8.5806e-05
+### 2 time 8.4945e-05
+### 3 time 8.5787e-05
+4096 16 8192 0.00195312 8.4945e-05 8.55127e-05 8.5806e-05 22.7621 22.8402 22.9928
+### 0 time 7.8051e-05 (warmup, ignored)
+### 1 time 8.1217e-05
+### 2 time 8.0793e-05
+### 3 time 8.0306e-05
+4096 16 4096 0.000976562 8.0306e-05 8.0772e-05 8.1217e-05 12.0241 12.0904 12.1605
+### 0 time 7.4221e-05 (warmup, ignored)
+### 1 time 7.26e-05
+### 2 time 7.2872e-05
+### 3 time 7.1997e-05
+4096 16 2048 0.000488281 7.1997e-05 7.24897e-05 7.2872e-05 6.70053 6.73587 6.78197
+### 0 time 7.2268e-05 (warmup, ignored)
+### 1 time 7.0884e-05
+### 2 time 6.9982e-05
+### 3 time 7.1077e-05
+4096 16 1024 0.000244141 6.9982e-05 7.06477e-05 7.1077e-05 3.43488 3.45575 3.48862
+### 0 time 4.2522e-05 (warmup, ignored)
+### 1 time 4.1048e-05
+### 2 time 4.127e-05
+### 3 time 4.205e-05
+4096 16 512 0.00012207 4.1048e-05 4.1456e-05 4.205e-05 2.90298 2.94458 2.97384
+### 0 time 3.8895e-05 (warmup, ignored)
+### 1 time 3.7562e-05
+### 2 time 3.7993e-05
+### 3 time 3.7933e-05
+4096 16 256 6.10352e-05 3.7562e-05 3.78293e-05 3.7993e-05 1.60648 1.61343 1.62492
+### 0 time 3.7081e-05 (warmup, ignored)
+### 1 time 3.6751e-05
+### 2 time 3.8355e-05
+### 3 time 3.679e-05
+4096 16 128 3.05176e-05 3.6751e-05 3.72987e-05 3.8355e-05 0.795661 0.818195 0.830388
+### 0 time 0.000179947 (warmup, ignored)
+### 1 time 3.7461e-05
+### 2 time 3.4345e-05
+### 3 time 3.3393e-05
+4096 16 64 1.52588e-05 3.3393e-05 3.50663e-05 3.7461e-05 0.407325 0.435141 0.456946
+### 0 time 2.6392e-05 (warmup, ignored)
+### 1 time 2.4917e-05
+### 2 time 2.3806e-05
+### 3 time 2.4838e-05
+4096 16 32 7.62939e-06 2.3806e-05 2.45203e-05 2.4917e-05 0.306192 0.311146 0.320482
+### 0 time 2.2804e-05 (warmup, ignored)
+### 1 time 2.1762e-05
+### 2 time 2.1641e-05
+### 3 time 2.1512e-05
+4096 16 16 3.8147e-06 2.1512e-05 2.16383e-05 2.1762e-05 0.175292 0.176293 0.177329
+### 0 time 1.9928e-05 (warmup, ignored)
+### 1 time 1.7103e-05
+### 2 time 1.6692e-05
+### 3 time 1.6892e-05
+4096 16 8 1.90735e-06 1.6692e-05 1.68957e-05 1.7103e-05 0.111521 0.11289 0.114267
+### 0 time 2.2193e-05 (warmup, ignored)
+### 1 time 1.6763e-05
+### 2 time 1.6362e-05
+### 3 time 1.6241e-05
+4096 16 4 9.53674e-07 1.6241e-05 1.64553e-05 1.6763e-05 0.0568916 0.0579553 0.0587202
+### 0 time 1.2615e-05 (warmup, ignored)
+### 1 time 1.1672e-05
+### 2 time 1.1161e-05
+### 3 time 1.1091e-05
+4096 16 2 4.76837e-07 1.1091e-05 1.1308e-05 1.1672e-05 0.0408531 0.0421681 0.0429932
+### 0 time 1.2103e-05 (warmup, ignored)
+### 1 time 1.1582e-05
+### 2 time 1.1111e-05
+### 3 time 1.1152e-05
+4096 16 1 2.38419e-07 1.1111e-05 1.12817e-05 1.1582e-05 0.0205853 0.0211333 0.0214579
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 0.508895 (warmup, ignored)
+### 1 time 0.509548
+### 2 time 0.508984
+### 3 time 0.509312
+8192 8 268435456 32 0.508984 0.509281 0.509548 62.8008 62.8336 62.8703
+### 0 time 0.254993 (warmup, ignored)
+### 1 time 0.25487
+### 2 time 0.254948
+### 3 time 0.25521
+8192 8 134217728 16 0.25487 0.25501 0.25521 62.6934 62.7428 62.777
+### 0 time 0.128081 (warmup, ignored)
+### 1 time 0.127846
+### 2 time 0.127937
+### 3 time 0.127879
+8192 8 67108864 8 0.127846 0.127888 0.127937 62.5307 62.555 62.5751
+### 0 time 0.0645558 (warmup, ignored)
+### 1 time 0.0643252
+### 2 time 0.0643141
+### 3 time 0.0644101
+8192 8 33554432 4 0.0643141 0.0643498 0.0644101 62.1021 62.1603 62.1948
+### 0 time 0.0323866 (warmup, ignored)
+### 1 time 0.0323696
+### 2 time 0.032384
+### 3 time 0.0324007
+8192 8 16777216 2 0.0323696 0.0323848 0.0324007 61.7271 61.7574 61.7864
+### 0 time 0.0165046 (warmup, ignored)
+### 1 time 0.0165006
+### 2 time 0.0164895
+### 3 time 0.0164834
+8192 8 8388608 1 0.0164834 0.0164911 0.0165006 60.604 60.6386 60.6672
+### 0 time 0.00846986 (warmup, ignored)
+### 1 time 0.00830207
+### 2 time 0.00830656
+### 3 time 0.00830226
+8192 8 4194304 0.5 0.00830207 0.00830363 0.00830656 60.1934 60.2146 60.226
+### 0 time 0.00411811 (warmup, ignored)
+### 1 time 0.00407326
+### 2 time 0.00407798
+### 3 time 0.00408493
+8192 8 2097152 0.25 0.00407326 0.00407872 0.00408493 61.2006 61.2937 61.3759
+### 0 time 0.00208392 (warmup, ignored)
+### 1 time 0.00209628
+### 2 time 0.00209722
+### 3 time 0.00209617
+8192 8 1048576 0.125 0.00209617 0.00209656 0.00209722 59.6027 59.6215 59.6324
+### 0 time 0.00110288 (warmup, ignored)
+### 1 time 0.00110328
+### 2 time 0.00110347
+### 3 time 0.00110496
+8192 8 524288 0.0625 0.00110328 0.0011039 0.00110496 56.5631 56.6173 56.6491
+### 0 time 0.000609749 (warmup, ignored)
+### 1 time 0.000609977
+### 2 time 0.00060473
+### 3 time 0.000603958
+8192 8 262144 0.03125 0.000603958 0.000606222 0.000609977 51.2314 51.5488 51.742
+### 0 time 0.000359786 (warmup, ignored)
+### 1 time 0.000357842
+### 2 time 0.000359846
+### 3 time 0.000357642
+8192 8 131072 0.015625 0.000357642 0.000358443 0.000359846 43.4214 43.5913 43.6889
+### 0 time 0.000251387 (warmup, ignored)
+### 1 time 0.00024845
+### 2 time 0.000247729
+### 3 time 0.000248491
+8192 8 65536 0.0078125 0.000247729 0.000248223 0.000248491 31.4398 31.4737 31.5365
+### 0 time 0.000177904 (warmup, ignored)
+### 1 time 0.000177432
+### 2 time 0.000176551
+### 3 time 0.000176301
+8192 8 32768 0.00390625 0.000176301 0.000176761 0.000177432 22.0155 22.099 22.1567
+### 0 time 0.000132727 (warmup, ignored)
+### 1 time 0.000130828
+### 2 time 0.000131219
+### 3 time 0.000131644
+8192 8 16384 0.00195312 0.000130828 0.00013123 0.000131644 14.8364 14.8832 14.929
+### 0 time 9.9163e-05 (warmup, ignored)
+### 1 time 9.7999e-05
+### 2 time 9.804e-05
+### 3 time 9.8581e-05
+8192 8 8192 0.000976562 9.7999e-05 9.82067e-05 9.8581e-05 9.90619 9.94395 9.96503
+### 0 time 7.6087e-05 (warmup, ignored)
+### 1 time 7.5884e-05
+### 2 time 7.5626e-05
+### 3 time 7.5617e-05
+8192 8 4096 0.000488281 7.5617e-05 7.5709e-05 7.5884e-05 6.43457 6.44945 6.45729
+### 0 time 6.1429e-05 (warmup, ignored)
+### 1 time 6.3092e-05
+### 2 time 6.3433e-05
+### 3 time 6.3139e-05
+8192 8 2048 0.000244141 6.3092e-05 6.32213e-05 6.3433e-05 3.8488 3.86168 3.8696
+### 0 time 6.0758e-05 (warmup, ignored)
+### 1 time 5.9866e-05
+### 2 time 5.9964e-05
+### 3 time 6.0336e-05
+8192 8 1024 0.00012207 5.9866e-05 6.00553e-05 6.0336e-05 2.02318 2.03263 2.03906
+### 0 time 2.9185e-05 (warmup, ignored)
+### 1 time 2.7914e-05
+### 2 time 2.7794e-05
+### 3 time 2.7413e-05
+8192 8 512 6.10352e-05 2.7413e-05 2.7707e-05 2.7914e-05 2.18654 2.20288 2.2265
+### 0 time 2.3676e-05 (warmup, ignored)
+### 1 time 2.3885e-05
+### 2 time 2.3856e-05
+### 3 time 2.3495e-05
+8192 8 256 3.05176e-05 2.3495e-05 2.37453e-05 2.3885e-05 1.27769 1.2852 1.2989
+### 0 time 2.2242e-05 (warmup, ignored)
+### 1 time 2.2264e-05
+### 2 time 2.2143e-05
+### 3 time 2.2253e-05
+8192 8 128 1.52588e-05 2.2143e-05 2.222e-05 2.2264e-05 0.685357 0.686714 0.689102
+### 0 time 8.4604e-05 (warmup, ignored)
+### 1 time 1.8355e-05
+### 2 time 1.6782e-05
+### 3 time 1.6251e-05
+8192 8 64 7.62939e-06 1.6251e-05 1.71293e-05 1.8355e-05 0.415658 0.445399 0.469472
+### 0 time 1.557e-05 (warmup, ignored)
+### 1 time 1.5079e-05
+### 2 time 1.4999e-05
+### 3 time 1.4648e-05
+8192 8 32 3.8147e-06 1.4648e-05 1.49087e-05 1.5079e-05 0.252981 0.255871 0.260424
+### 0 time 9.047e-06 (warmup, ignored)
+### 1 time 7.955e-06
+### 2 time 8.126e-06
+### 3 time 7.605e-06
+8192 8 16 1.90735e-06 7.605e-06 7.89533e-06 8.126e-06 0.234722 0.241579 0.250802
+### 0 time 7.294e-06 (warmup, ignored)
+### 1 time 7.113e-06
+### 2 time 7.003e-06
+### 3 time 6.933e-06
+8192 8 8 9.53674e-07 6.933e-06 7.01633e-06 7.113e-06 0.134075 0.135922 0.137556
+### 0 time 5.921e-06 (warmup, ignored)
+### 1 time 6.152e-06
+### 2 time 5.46e-06
+### 3 time 5.661e-06
+8192 8 4 4.76837e-07 5.46e-06 5.75767e-06 6.152e-06 0.0775093 0.0828178 0.0873328
+### 0 time 5.851e-06 (warmup, ignored)
+### 1 time 5.65e-06
+### 2 time 5.43e-06
+### 3 time 5.481e-06
+8192 8 2 2.38419e-07 5.43e-06 5.52033e-06 5.65e-06 0.042198 0.0431892 0.0439077
+### 0 time 6.292e-06 (warmup, ignored)
+### 1 time 5.671e-06
+### 2 time 5.561e-06
+### 3 time 5.561e-06
+8192 8 1 1.19209e-07 5.561e-06 5.59767e-06 5.671e-06 0.0210209 0.0212962 0.0214367
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 0.365589 (warmup, ignored)
+### 1 time 0.365675
+### 2 time 0.365437
+### 3 time 0.365149
+16384 4 536870912 32 0.365149 0.365421 0.365675 87.5094 87.5703 87.6355
+### 0 time 0.182829 (warmup, ignored)
+### 1 time 0.182722
+### 2 time 0.183028
+### 3 time 0.183203
+16384 4 268435456 16 0.182722 0.182984 0.183203 87.3349 87.4393 87.5649
+### 0 time 0.0918061 (warmup, ignored)
+### 1 time 0.0917378
+### 2 time 0.0917842
+### 3 time 0.0919241
+16384 4 134217728 8 0.0917378 0.0918154 0.0919241 87.0283 87.1314 87.2051
+### 0 time 0.0460964 (warmup, ignored)
+### 1 time 0.0461821
+### 2 time 0.046223
+### 3 time 0.0461741
+16384 4 67108864 4 0.0461741 0.046193 0.046223 86.537 86.5931 86.6287
+### 0 time 0.0232847 (warmup, ignored)
+### 1 time 0.0231495
+### 2 time 0.0230937
+### 3 time 0.0231737
+16384 4 33554432 2 0.0230937 0.023139 0.0231737 86.3049 86.4343 86.6037
+### 0 time 0.0116595 (warmup, ignored)
+### 1 time 0.011517
+### 2 time 0.0115142
+### 3 time 0.0115517
+16384 4 16777216 1 0.0115142 0.0115276 0.0115517 86.567 86.7481 86.8496
+### 0 time 0.00581985 (warmup, ignored)
+### 1 time 0.00582809
+### 2 time 0.00581582
+### 3 time 0.00583774
+16384 4 8388608 0.5 0.00581582 0.00582722 0.00583774 85.6496 85.8042 85.9724
+### 0 time 0.00294464 (warmup, ignored)
+### 1 time 0.00294215
+### 2 time 0.00294356
+### 3 time 0.00294138
+16384 4 4194304 0.25 0.00294138 0.00294237 0.00294356 84.9311 84.9656 84.994
+### 0 time 0.00149577 (warmup, ignored)
+### 1 time 0.00149492
+### 2 time 0.0014968
+### 3 time 0.00149762
+16384 4 2097152 0.125 0.00149492 0.00149644 0.00149762 83.4659 83.5313 83.6167
+### 0 time 0.000773334 (warmup, ignored)
+### 1 time 0.000773538
+### 2 time 0.000772336
+### 3 time 0.000772195
+16384 4 1048576 0.0625 0.000772195 0.00077269 0.000773538 80.7976 80.8863 80.9381
+### 0 time 0.000407167 (warmup, ignored)
+### 1 time 0.000405203
+### 2 time 0.000402859
+### 3 time 0.000405453
+16384 4 524288 0.03125 0.000402859 0.000404505 0.000405453 77.0743 77.2549 77.5706
+### 0 time 0.000226828 (warmup, ignored)
+### 1 time 0.000228491
+### 2 time 0.000227609
+### 3 time 0.000228922
+16384 4 262144 0.015625 0.000227609 0.000228341 0.000228922 68.2547 68.4285 68.6484
+### 0 time 0.000145226 (warmup, ignored)
+### 1 time 0.00014457
+### 2 time 0.000143617
+### 3 time 0.000143868
+16384 4 131072 0.0078125 0.000143617 0.000144018 0.00014457 54.0396 54.2466 54.3982
+### 0 time 0.000109742 (warmup, ignored)
+### 1 time 0.00010883
+### 2 time 0.000110684
+### 3 time 0.00010868
+16384 4 65536 0.00390625 0.00010868 0.000109398 0.000110684 35.2919 35.7068 35.9427
+### 0 time 8.4724e-05 (warmup, ignored)
+### 1 time 8.4653e-05
+### 2 time 8.5465e-05
+### 3 time 8.4824e-05
+16384 4 32768 0.00195312 8.4653e-05 8.49807e-05 8.5465e-05 22.8529 22.9832 23.0721
+### 0 time 5.9435e-05 (warmup, ignored)
+### 1 time 5.9615e-05
+### 2 time 5.8874e-05
+### 3 time 5.9966e-05
+16384 4 16384 0.000976562 5.8874e-05 5.9485e-05 5.9966e-05 16.2853 16.417 16.5873
+### 0 time 4.0118e-05 (warmup, ignored)
+### 1 time 4.0228e-05
+### 2 time 4.0128e-05
+### 3 time 4.0096e-05
+16384 4 8192 0.000488281 4.0096e-05 4.01507e-05 4.0228e-05 12.1378 12.1612 12.1778
+### 0 time 2.9898e-05 (warmup, ignored)
+### 1 time 2.9417e-05
+### 2 time 3.0119e-05
+### 3 time 2.9907e-05
+16384 4 4096 0.000244141 2.9417e-05 2.98143e-05 3.0119e-05 8.10587 8.1887 8.2993
+### 0 time 2.7572e-05 (warmup, ignored)
+### 1 time 2.7994e-05
+### 2 time 2.7952e-05
+### 3 time 2.8084e-05
+16384 4 2048 0.00012207 2.7952e-05 2.801e-05 2.8084e-05 4.34661 4.3581 4.36714
+### 0 time 2.7163e-05 (warmup, ignored)
+### 1 time 2.7112e-05
+### 2 time 2.7022e-05
+### 3 time 2.6872e-05
+16384 4 1024 6.10352e-05 2.6872e-05 2.7002e-05 2.7112e-05 2.25122 2.26039 2.27133
+### 0 time 1.2193e-05 (warmup, ignored)
+### 1 time 1.1543e-05
+### 2 time 1.1402e-05
+### 3 time 1.1522e-05
+16384 4 512 3.05176e-05 1.1402e-05 1.1489e-05 1.1543e-05 2.64382 2.65624 2.67651
+### 0 time 9.358e-06 (warmup, ignored)
+### 1 time 9.719e-06
+### 2 time 9.719e-06
+### 3 time 9.778e-06
+16384 4 256 1.52588e-05 9.719e-06 9.73867e-06 9.778e-06 1.56052 1.56683 1.57
+### 0 time 9.017e-06 (warmup, ignored)
+### 1 time 9.168e-06
+### 2 time 9.088e-06
+### 3 time 9.158e-06
+16384 4 128 7.62939e-06 9.088e-06 9.138e-06 9.168e-06 0.832177 0.834909 0.839502
+### 0 time 7.004e-06 (warmup, ignored)
+### 1 time 5.451e-06
+### 2 time 5.631e-06
+### 3 time 5.491e-06
+16384 4 64 3.8147e-06 5.451e-06 5.52433e-06 5.631e-06 0.677446 0.690526 0.699816
+### 0 time 5.16e-06 (warmup, ignored)
+### 1 time 5.13e-06
+### 2 time 5.18e-06
+### 3 time 5.11e-06
+16384 4 32 1.90735e-06 5.11e-06 5.14e-06 5.18e-06 0.368214 0.37108 0.373258
+### 0 time 2.986e-06 (warmup, ignored)
+### 1 time 3.116e-06
+### 2 time 2.985e-06
+### 3 time 3.076e-06
+16384 4 16 9.53674e-07 2.985e-06 3.059e-06 3.116e-06 0.306057 0.31176 0.319489
+### 0 time 2.775e-06 (warmup, ignored)
+### 1 time 2.725e-06
+### 2 time 2.756e-06
+### 3 time 2.745e-06
+16384 4 8 4.76837e-07 2.725e-06 2.742e-06 2.756e-06 0.173018 0.173901 0.174986
+### 0 time 2.725e-06 (warmup, ignored)
+### 1 time 2.685e-06
+### 2 time 2.655e-06
+### 3 time 2.605e-06
+16384 4 4 2.38419e-07 2.605e-06 2.64833e-06 2.685e-06 0.0887965 0.0900259 0.0915234
+### 0 time 2.465e-06 (warmup, ignored)
+### 1 time 2.465e-06
+### 2 time 2.504e-06
+### 3 time 2.545e-06
+16384 4 2 1.19209e-07 2.465e-06 2.50467e-06 2.545e-06 0.0468406 0.0475949 0.0483608
+### 0 time 2.565e-06 (warmup, ignored)
+### 1 time 2.554e-06
+### 2 time 2.535e-06
+### 3 time 2.575e-06
+16384 4 1 5.96046e-08 2.535e-06 2.55467e-06 2.575e-06 0.0231474 0.0233317 0.0235127
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 0.184197 (warmup, ignored)
+### 1 time 0.184353
+### 2 time 0.184365
+### 3 time 0.184404
+32768 2 1073741824 32 0.184353 0.184374 0.184404 173.532 173.561 173.58
+### 0 time 0.0922488 (warmup, ignored)
+### 1 time 0.0922348
+### 2 time 0.0922137
+### 3 time 0.0922106
+32768 2 536870912 16 0.0922106 0.0922197 0.0922348 173.47 173.499 173.516
+### 0 time 0.0461901 (warmup, ignored)
+### 1 time 0.0461838
+### 2 time 0.0461839
+### 3 time 0.0461697
+32768 2 268435456 8 0.0461697 0.0461791 0.0461839 173.22 173.238 173.274
+### 0 time 0.0231664 (warmup, ignored)
+### 1 time 0.0231742
+### 2 time 0.0231637
+### 3 time 0.0231951
+32768 2 134217728 4 0.0231637 0.0231777 0.0231951 172.45 172.58 172.684
+### 0 time 0.0115064 (warmup, ignored)
+### 1 time 0.0115088
+### 2 time 0.0115047
+### 3 time 0.0115057
+32768 2 67108864 2 0.0115047 0.0115064 0.0115088 173.78 173.816 173.841
+### 0 time 0.00576082 (warmup, ignored)
+### 1 time 0.00576367
+### 2 time 0.00576339
+### 3 time 0.00575889
+32768 2 33554432 1 0.00575889 0.00576198 0.00576367 173.501 173.551 173.645
+### 0 time 0.00288809 (warmup, ignored)
+### 1 time 0.00289138
+### 2 time 0.00288839
+### 3 time 0.00289033
+32768 2 16777216 0.5 0.00288839 0.00289003 0.00289138 172.928 173.009 173.107
+### 0 time 0.00145774 (warmup, ignored)
+### 1 time 0.00146074
+### 2 time 0.00146164
+### 3 time 0.0014572
+32768 2 8388608 0.25 0.0014572 0.00145986 0.00146164 171.041 171.249 171.562
+### 0 time 0.000744005 (warmup, ignored)
+### 1 time 0.000741901
+### 2 time 0.000743314
+### 3 time 0.00074647
+32768 2 4194304 0.125 0.000741901 0.000743895 0.00074647 167.455 168.034 168.486
+### 0 time 0.000386926 (warmup, ignored)
+### 1 time 0.000387147
+### 2 time 0.000386285
+### 3 time 0.000386656
+32768 2 2097152 0.0625 0.000386285 0.000386696 0.000387147 161.437 161.626 161.798
+### 0 time 0.000211357 (warmup, ignored)
+### 1 time 0.0002071
+### 2 time 0.000208302
+### 3 time 0.000208462
+32768 2 1048576 0.03125 0.0002071 0.000207955 0.000208462 149.907 150.273 150.893
+### 0 time 0.00011917 (warmup, ignored)
+### 1 time 0.000118478
+### 2 time 0.00011922
+### 3 time 0.000118759
+32768 2 524288 0.015625 0.000118478 0.000118819 0.00011922 131.06 131.503 131.881
+### 0 time 7.4443e-05 (warmup, ignored)
+### 1 time 7.3983e-05
+### 2 time 7.3912e-05
+### 3 time 7.3763e-05
+32768 2 262144 0.0078125 7.3763e-05 7.3886e-05 7.3983e-05 105.599 105.737 105.914
+### 0 time 5.198e-05 (warmup, ignored)
+### 1 time 5.175e-05
+### 2 time 5.2e-05
+### 3 time 5.169e-05
+32768 2 131072 0.00390625 5.169e-05 5.18133e-05 5.2e-05 75.1202 75.3908 75.5707
+### 0 time 3.9846e-05 (warmup, ignored)
+### 1 time 3.9005e-05
+### 2 time 3.8785e-05
+### 3 time 3.9426e-05
+32768 2 65536 0.00195312 3.8785e-05 3.9072e-05 3.9426e-05 49.539 49.9878 50.3577
+### 0 time 2.8796e-05 (warmup, ignored)
+### 1 time 2.8275e-05
+### 2 time 2.8745e-05
+### 3 time 2.8354e-05
+32768 2 32768 0.000976562 2.8275e-05 2.8458e-05 2.8745e-05 33.9733 34.3159 34.538
+### 0 time 2.1e-05 (warmup, ignored)
+### 1 time 2.11e-05
+### 2 time 2.102e-05
+### 3 time 2.117e-05
+32768 2 16384 0.000488281 2.102e-05 2.10967e-05 2.117e-05 23.0648 23.1449 23.2294
+### 0 time 1.4649e-05 (warmup, ignored)
+### 1 time 1.4708e-05
+### 2 time 1.4658e-05
+### 3 time 1.4788e-05
+32768 2 8192 0.000244141 1.4658e-05 1.4718e-05 1.4788e-05 16.5094 16.5879 16.6558
+### 0 time 1.3035e-05 (warmup, ignored)
+### 1 time 1.2784e-05
+### 2 time 1.2715e-05
+### 3 time 1.2634e-05
+32768 2 4096 0.00012207 1.2634e-05 1.2711e-05 1.2784e-05 9.54868 9.60352 9.66205
+### 0 time 1.1962e-05 (warmup, ignored)
+### 1 time 1.2103e-05
+### 2 time 1.2204e-05
+### 3 time 1.2334e-05
+32768 2 2048 6.10352e-05 1.2103e-05 1.22137e-05 1.2334e-05 4.94853 4.99728 5.04298
+### 0 time 1.1563e-05 (warmup, ignored)
+### 1 time 1.1572e-05
+### 2 time 1.1662e-05
+### 3 time 1.1793e-05
+32768 2 1024 3.05176e-05 1.1572e-05 1.16757e-05 1.1793e-05 2.58777 2.61378 2.63719
+### 0 time 4.329e-06 (warmup, ignored)
+### 1 time 4.028e-06
+### 2 time 4.218e-06
+### 3 time 4.037e-06
+32768 2 512 1.52588e-05 4.028e-06 4.09433e-06 4.218e-06 3.61754 3.72681 3.78818
+### 0 time 3.286e-06 (warmup, ignored)
+### 1 time 3.176e-06
+### 2 time 3.116e-06
+### 3 time 3.106e-06
+32768 2 256 7.62939e-06 3.106e-06 3.13267e-06 3.176e-06 2.4022 2.43543 2.45634
+### 0 time 3.006e-06 (warmup, ignored)
+### 1 time 3.076e-06
+### 2 time 3.006e-06
+### 3 time 3.046e-06
+32768 2 128 3.8147e-06 3.006e-06 3.04267e-06 3.076e-06 1.24015 1.25373 1.26903
+### 0 time 2.344e-06 (warmup, ignored)
+### 1 time 1.924e-06
+### 2 time 1.814e-06
+### 3 time 1.784e-06
+32768 2 64 1.90735e-06 1.784e-06 1.84067e-06 1.924e-06 0.991345 1.03623 1.06914
+### 0 time 1.713e-06 (warmup, ignored)
+### 1 time 1.683e-06
+### 2 time 1.683e-06
+### 3 time 1.683e-06
+32768 2 32 9.53674e-07 1.683e-06 1.683e-06 1.683e-06 0.566651 0.566651 0.566651
+### 0 time 9.82e-07 (warmup, ignored)
+### 1 time 8.51e-07
+### 2 time 8.52e-07
+### 3 time 8.62e-07
+32768 2 16 4.76837e-07 8.51e-07 8.55e-07 8.62e-07 0.553175 0.557704 0.560326
+### 0 time 8.31e-07 (warmup, ignored)
+### 1 time 8.21e-07
+### 2 time 8.31e-07
+### 3 time 8.11e-07
+32768 2 8 2.38419e-07 8.11e-07 8.21e-07 8.31e-07 0.286906 0.2904 0.293981
+### 0 time 8.32e-07 (warmup, ignored)
+### 1 time 8.21e-07
+### 2 time 8.21e-07
+### 3 time 8.11e-07
+32768 2 4 1.19209e-07 8.11e-07 8.17667e-07 8.21e-07 0.1452 0.145792 0.14699
+### 0 time 8.11e-07 (warmup, ignored)
+### 1 time 8.01e-07
+### 2 time 8.01e-07
+### 3 time 8.01e-07
+32768 2 2 5.96046e-08 8.01e-07 8.01e-07 8.01e-07 0.0744128 0.0744128 0.0744128
+### 0 time 8.31e-07 (warmup, ignored)
+### 1 time 8.21e-07
+### 2 time 8.12e-07
+### 3 time 8.12e-07
+32768 2 1 2.98023e-08 8.12e-07 8.15e-07 8.21e-07 0.0363 0.0365673 0.0367024
+
+
+# Contiguous Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 0.0322542 (warmup, ignored)
+### 1 time 0.0328311
+### 2 time 0.032954
+### 3 time 0.0329521
+65536 1 2147483647 32 0.0328311 0.0329124 0.032954 971.051 972.278 974.685
+### 0 time 0.0163597 (warmup, ignored)
+### 1 time 0.0163445
+### 2 time 0.016369
+### 3 time 0.0163649
+65536 1 1073741823 16 0.0163445 0.0163595 0.016369 977.456 978.028 978.925
+### 0 time 0.00813531 (warmup, ignored)
+### 1 time 0.00814411
+### 2 time 0.00812998
+### 3 time 0.00812848
+65536 1 536870911 8 0.00812848 0.00813419 0.00814411 982.306 983.503 984.194
+### 0 time 0.00404305 (warmup, ignored)
+### 1 time 0.00403849
+### 2 time 0.00403176
+### 3 time 0.00404278
+65536 1 268435455 4 0.00403176 0.00403768 0.00404278 989.419 990.669 992.122
+### 0 time 0.00199132 (warmup, ignored)
+### 1 time 0.00198979
+### 2 time 0.00199225
+### 3 time 0.00199268
+65536 1 134217727 2 0.00198979 0.00199157 0.00199268 1003.68 1004.23 1005.13
+### 0 time 0.000982638 (warmup, ignored)
+### 1 time 0.000977435
+### 2 time 0.000980571
+### 3 time 0.000982197
+65536 1 67108863 1 0.000977435 0.000980068 0.000982197 1018.13 1020.34 1023.09
+### 0 time 0.000485408 (warmup, ignored)
+### 1 time 0.000485241
+### 2 time 0.00048392
+### 3 time 0.00048491
+65536 1 33554431 0.5 0.00048392 0.00048469 0.000485241 1030.42 1031.59 1033.23
+### 0 time 0.000243141 (warmup, ignored)
+### 1 time 0.000243533
+### 2 time 0.000244201
+### 3 time 0.000242578
+65536 1 16777215 0.25 0.000242578 0.000243437 0.000244201 1023.75 1026.96 1030.6
+### 0 time 0.000126365 (warmup, ignored)
+### 1 time 0.000126354
+### 2 time 0.000126445
+### 3 time 0.00012585
+65536 1 8388607 0.125 0.00012585 0.000126216 0.000126445 988.572 990.363 993.246
+### 0 time 6.9044e-05 (warmup, ignored)
+### 1 time 6.8152e-05
+### 2 time 6.8603e-05
+### 3 time 6.8633e-05
+65536 1 4194303 0.0625 6.8152e-05 6.84627e-05 6.8633e-05 910.64 912.906 917.068
+### 0 time 4.0327e-05 (warmup, ignored)
+### 1 time 4.0336e-05
+### 2 time 3.9665e-05
+### 3 time 4.0077e-05
+65536 1 2097151 0.03125 3.9665e-05 4.0026e-05 4.0336e-05 774.742 780.742 787.848
+### 0 time 2.7452e-05 (warmup, ignored)
+### 1 time 2.7463e-05
+### 2 time 2.7393e-05
+### 3 time 2.7483e-05
+65536 1 1048575 0.015625 2.7393e-05 2.74463e-05 2.7483e-05 568.533 569.292 570.401
+### 0 time 1.9878e-05 (warmup, ignored)
+### 1 time 1.9938e-05
+### 2 time 2.0158e-05
+### 3 time 2.0168e-05
+65536 1 524287 0.00781249 1.9938e-05 2.0088e-05 2.0168e-05 387.37 388.913 391.839
+### 0 time 1.6812e-05 (warmup, ignored)
+### 1 time 1.6401e-05
+### 2 time 1.57e-05
+### 3 time 1.6732e-05
+65536 1 262143 0.00390624 1.57e-05 1.62777e-05 1.6732e-05 233.459 239.975 248.805
+### 0 time 2.5348e-05 (warmup, ignored)
+### 1 time 2.5188e-05
+### 2 time 2.5158e-05
+### 3 time 2.5129e-05
+65536 1 131071 0.00195311 2.5129e-05 2.51583e-05 2.5188e-05 77.5413 77.6327 77.7234
+### 0 time 1.4949e-05 (warmup, ignored)
+### 1 time 1.4989e-05
+### 2 time 1.4989e-05
+### 3 time 1.4909e-05
+65536 1 65535 0.000976548 1.4909e-05 1.49623e-05 1.4989e-05 65.151 65.2671 65.5005
+### 0 time 9.669e-06 (warmup, ignored)
+### 1 time 9.708e-06
+### 2 time 9.688e-06
+### 3 time 9.659e-06
+65536 1 32767 0.000488266 9.659e-06 9.685e-06 9.708e-06 50.2953 50.4147 50.5504
+### 0 time 6.983e-06 (warmup, ignored)
+### 1 time 6.933e-06
+### 2 time 6.923e-06
+### 3 time 6.963e-06
+65536 1 16383 0.000244126 6.923e-06 6.93967e-06 6.963e-06 35.0604 35.1783 35.263
+### 0 time 5.62e-06 (warmup, ignored)
+### 1 time 5.611e-06
+### 2 time 5.641e-06
+### 3 time 5.611e-06
+65536 1 8191 0.000122055 5.611e-06 5.621e-06 5.641e-06 21.6372 21.7142 21.7529
+### 0 time 4.819e-06 (warmup, ignored)
+### 1 time 4.809e-06
+### 2 time 4.809e-06
+### 3 time 4.839e-06
+65536 1 4095 6.10203e-05 4.809e-06 4.819e-06 4.839e-06 12.6101 12.6624 12.6888
+### 0 time 4.409e-06 (warmup, ignored)
+### 1 time 4.508e-06
+### 2 time 4.499e-06
+### 3 time 4.488e-06
+65536 1 2047 3.05027e-05 4.488e-06 4.49833e-06 4.508e-06 6.76634 6.78088 6.7965
+### 0 time 4.288e-06 (warmup, ignored)
+### 1 time 4.168e-06
+### 2 time 4.178e-06
+### 3 time 4.188e-06
+65536 1 1023 1.52439e-05 4.168e-06 4.178e-06 4.188e-06 3.6399 3.64861 3.65736
+### 0 time 7.52e-07 (warmup, ignored)
+### 1 time 7.41e-07
+### 2 time 7.31e-07
+### 3 time 7.31e-07
+65536 1 511 7.61449e-06 7.31e-07 7.34333e-07 7.41e-07 10.276 10.3693 10.4165
+### 0 time 4.5e-07 (warmup, ignored)
+### 1 time 4.3e-07
+### 2 time 4.3e-07
+### 3 time 4.3e-07
+65536 1 255 3.7998e-06 4.3e-07 4.3e-07 4.3e-07 8.83674 8.83674 8.83674
+### 0 time 4e-07 (warmup, ignored)
+### 1 time 4e-07
+### 2 time 4e-07
+### 3 time 4e-07
+65536 1 127 1.89245e-06 4e-07 4e-07 4e-07 4.73112 4.73112 4.73112
+### 0 time 1.2e-07 (warmup, ignored)
+### 1 time 9.99999e-08
+### 2 time 9.99999e-08
+### 3 time 9.99999e-08
+65536 1 63 9.38773e-07 9.99999e-08 9.99999e-08 9.99999e-08 9.38775 9.38775 9.38775
+### 0 time 9.99999e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 9e-08
+### 3 time 9e-08
+65536 1 31 4.61936e-07 9e-08 9e-08 9e-08 5.13262 5.13262 5.13262
+### 0 time 9.99999e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 9e-08
+### 3 time 9e-08
+65536 1 15 2.23517e-07 9e-08 9e-08 9e-08 2.48353 2.48353 2.48353
+### 0 time 9.99999e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 9e-08
+### 3 time 9e-08
+65536 1 7 1.04308e-07 9e-08 9e-08 9e-08 1.15898 1.15898 1.15898
+### 0 time 9.99999e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 9e-08
+### 3 time 9e-08
+65536 1 3 4.47035e-08 9e-08 9e-08 9e-08 0.496706 0.496706 0.496706
+### 0 time 9e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 8.00001e-08
+### 3 time 9e-08
+65536 1 1 1.49012e-08 8.00001e-08 8.66667e-08 9e-08 0.165569 0.171936 0.186264
+# Done
+
+MPICH Slingshot Network Summary: 829 network timeouts
+
++ date
+Sun 24 Mar 2024 06:31:09 AM EDT
++ sleep 5
++ date
+Sun 24 Mar 2024 06:31:14 AM EDT
++ srun -n65536 -N8192 -c7 --gpus-per-task=1 --gpu-bind=closest --unbuffered ./all strided
+MPI VERSION    : CRAY MPICH version 8.1.28.29 (ANL base 3.4a2)
+MPI BUILD INFO : Wed Nov 15 20:28 2023 (git hash 1cde46f) (CH4)
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 5.64993 (warmup, ignored)
+### 1 time 4.39909
+### 2 time 4.42293
+### 3 time 4.39553
+1 65536 32768 32 4.39553 4.40585 4.42293 7.23502 7.26307 7.28013
+### 0 time 3.86334 (warmup, ignored)
+### 1 time 3.3429
+### 2 time 3.24531
+### 3 time 3.22736
+1 65536 16384 16 3.22736 3.27186 3.3429 4.78626 4.89019 4.95761
+### 0 time 3.77864 (warmup, ignored)
+### 1 time 3.30647
+### 2 time 3.23632
+### 3 time 3.22863
+1 65536 8192 8 3.22863 3.25714 3.30647 2.4195 2.45614 2.47783
+### 0 time 3.3877 (warmup, ignored)
+### 1 time 3.23324
+### 2 time 3.23697
+### 3 time 3.22641
+1 65536 4096 4 3.22641 3.23221 3.23697 1.23572 1.23755 1.23977
+### 0 time 3.56557 (warmup, ignored)
+### 1 time 3.45874
+### 2 time 3.47998
+### 3 time 3.42757
+1 65536 2048 2 3.42757 3.45543 3.47998 0.574716 0.578799 0.583504
+### 0 time 3.34666 (warmup, ignored)
+### 1 time 3.34516
+### 2 time 3.33866
+### 3 time 3.33675
+1 65536 1024 1 3.33675 3.34019 3.34516 0.298939 0.299384 0.299693
+### 0 time 3.3173 (warmup, ignored)
+### 1 time 3.30949
+### 2 time 3.3097
+### 3 time 3.33553
+1 65536 512 0.5 3.30949 3.31824 3.33553 0.149901 0.150682 0.151081
+### 0 time 3.28686 (warmup, ignored)
+### 1 time 3.30995
+### 2 time 3.29968
+### 3 time 3.28563
+1 65536 256 0.25 3.28563 3.29842 3.30995 0.0755298 0.0757939 0.076089
+### 0 time 3.2751 (warmup, ignored)
+### 1 time 3.29635
+### 2 time 3.29285
+### 3 time 3.28445
+1 65536 128 0.125 3.28445 3.29122 3.29635 0.0379208 0.0379799 0.0380581
+### 0 time 3.30061 (warmup, ignored)
+### 1 time 3.29944
+### 2 time 3.28421
+### 3 time 3.30952
+1 65536 64 0.0625 3.28421 3.29772 3.30952 0.0188849 0.0189525 0.0190305
+### 0 time 0.086268 (warmup, ignored)
+### 1 time 0.0761917
+### 2 time 0.0761873
+### 3 time 0.0761566
+1 65536 32 0.03125 0.0761566 0.0761785 0.0761917 0.41015 0.410221 0.410339
+### 0 time 0.048532 (warmup, ignored)
+### 1 time 0.0426406
+### 2 time 0.0425651
+### 3 time 0.0424613
+1 65536 16 0.015625 0.0424613 0.0425556 0.0426406 0.366435 0.367166 0.367982
+### 0 time 0.0337807 (warmup, ignored)
+### 1 time 0.0336204
+### 2 time 0.0334881
+### 3 time 0.0331223
+1 65536 8 0.0078125 0.0331223 0.0334103 0.0336204 0.232374 0.233835 0.235868
+### 0 time 0.0293044 (warmup, ignored)
+### 1 time 0.0292371
+### 2 time 0.0292028
+### 3 time 0.0292022
+1 65536 4 0.00390625 0.0292022 0.029214 0.0292371 0.133606 0.133712 0.133766
+### 0 time 0.0263232 (warmup, ignored)
+### 1 time 0.0262953
+### 2 time 0.0263394
+### 3 time 0.0263208
+1 65536 2 0.00195312 0.0262953 0.0263185 0.0263394 0.0741522 0.0742112 0.0742767
+### 0 time 0.0258106 (warmup, ignored)
+### 1 time 0.0256799
+### 2 time 0.0256658
+### 3 time 0.0258076
+1 65536 1 0.000976562 0.0256658 0.0257178 0.0258076 0.0378401 0.0379723 0.0380492
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.38856 (warmup, ignored)
+### 1 time 4.36209
+### 2 time 4.37666
+### 3 time 4.26413
+2 32768 65536 32 4.26413 4.33429 4.37666 7.31151 7.38298 7.50446
+### 0 time 2.26209 (warmup, ignored)
+### 1 time 2.29494
+### 2 time 2.29115
+### 3 time 2.24796
+2 32768 32768 16 2.24796 2.27802 2.29494 6.97186 7.02365 7.11755
+### 0 time 1.11424 (warmup, ignored)
+### 1 time 1.1211
+### 2 time 1.10442
+### 3 time 1.12227
+2 32768 16384 8 1.10442 1.11593 1.12227 7.12838 7.16891 7.24364
+### 0 time 0.836773 (warmup, ignored)
+### 1 time 0.820211
+### 2 time 0.81889
+### 3 time 0.818427
+2 32768 8192 4 0.818427 0.819176 0.820211 4.87679 4.88296 4.88742
+### 0 time 0.821044 (warmup, ignored)
+### 1 time 0.819071
+### 2 time 0.819415
+### 3 time 0.818731
+2 32768 4096 2 0.818731 0.819073 0.819415 2.44076 2.44179 2.4428
+### 0 time 0.996963 (warmup, ignored)
+### 1 time 0.910507
+### 2 time 0.909983
+### 3 time 0.910587
+2 32768 2048 1 0.909983 0.910359 0.910587 1.09819 1.09847 1.09892
+### 0 time 0.873032 (warmup, ignored)
+### 1 time 0.87153
+### 2 time 0.871833
+### 3 time 0.872568
+2 32768 1024 0.5 0.87153 0.871977 0.872568 0.573021 0.57341 0.573704
+### 0 time 0.847576 (warmup, ignored)
+### 1 time 0.845385
+### 2 time 0.848065
+### 3 time 0.846136
+2 32768 512 0.25 0.845385 0.846529 0.848065 0.294789 0.295324 0.295723
+### 0 time 0.839394 (warmup, ignored)
+### 1 time 0.843709
+### 2 time 0.836903
+### 3 time 0.838528
+2 32768 256 0.125 0.836903 0.839713 0.843709 0.148155 0.14886 0.14936
+### 0 time 0.832035 (warmup, ignored)
+### 1 time 0.835201
+### 2 time 0.832931
+### 3 time 0.831509
+2 32768 128 0.0625 0.831509 0.833214 0.835201 0.0748323 0.0750108 0.0751646
+### 0 time 0.831128 (warmup, ignored)
+### 1 time 0.830783
+### 2 time 0.829778
+### 3 time 0.829905
+2 32768 64 0.03125 0.829778 0.830155 0.830783 0.0376151 0.0376436 0.0376607
+### 0 time 0.0332377 (warmup, ignored)
+### 1 time 0.0299142
+### 2 time 0.0295305
+### 3 time 0.0295187
+2 32768 32 0.015625 0.0295187 0.0296545 0.0299142 0.522328 0.526902 0.529326
+### 0 time 0.0203943 (warmup, ignored)
+### 1 time 0.0194744
+### 2 time 0.0192189
+### 3 time 0.0191338
+2 32768 16 0.0078125 0.0191338 0.0192757 0.0194744 0.401168 0.405303 0.408308
+### 0 time 0.0153474 (warmup, ignored)
+### 1 time 0.0153265
+### 2 time 0.0153206
+### 3 time 0.0151761
+2 32768 8 0.00390625 0.0151761 0.0152744 0.0153265 0.254868 0.255738 0.257394
+### 0 time 0.0134503 (warmup, ignored)
+### 1 time 0.0135402
+### 2 time 0.0135559
+### 3 time 0.0135459
+2 32768 4 0.00195312 0.0135402 0.0135474 0.0135559 0.144079 0.14417 0.144246
+### 0 time 0.012362 (warmup, ignored)
+### 1 time 0.0122333
+### 2 time 0.0123586
+### 3 time 0.0122144
+2 32768 2 0.000976562 0.0122144 0.0122688 0.0123586 0.079019 0.0795975 0.0799519
+### 0 time 0.012061 (warmup, ignored)
+### 1 time 0.0122512
+### 2 time 0.0121204
+### 3 time 0.0121792
+2 32768 1 0.000488281 0.0121204 0.0121836 0.0122512 0.0398558 0.040077 0.0402859
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.9338 (warmup, ignored)
+### 1 time 3.933
+### 2 time 3.92741
+### 3 time 3.91987
+4 16384 131072 32 3.91987 3.92676 3.933 8.13628 8.14921 8.16353
+### 0 time 1.71629 (warmup, ignored)
+### 1 time 1.72495
+### 2 time 1.71735
+### 3 time 1.70713
+4 16384 65536 16 1.70713 1.71648 1.72495 9.27563 9.32142 9.37245
+### 0 time 1.12148 (warmup, ignored)
+### 1 time 1.14848
+### 2 time 1.13526
+### 3 time 1.14022
+4 16384 32768 8 1.13526 1.14132 1.14848 6.96575 7.00942 7.04682
+### 0 time 0.57375 (warmup, ignored)
+### 1 time 0.573278
+### 2 time 0.565368
+### 3 time 0.576858
+4 16384 16384 4 0.565368 0.571834 0.576858 6.93411 6.99503 7.07504
+### 0 time 0.262767 (warmup, ignored)
+### 1 time 0.259047
+### 2 time 0.267897
+### 3 time 0.262082
+4 16384 8192 2 0.259047 0.263009 0.267897 7.46557 7.60431 7.72059
+### 0 time 0.211807 (warmup, ignored)
+### 1 time 0.211198
+### 2 time 0.211711
+### 3 time 0.211642
+4 16384 4096 1 0.211198 0.211517 0.211711 4.72342 4.72775 4.73489
+### 0 time 0.253612 (warmup, ignored)
+### 1 time 0.253562
+### 2 time 0.254171
+### 3 time 0.252934
+4 16384 2048 0.5 0.252934 0.253555 0.254171 1.96718 1.97196 1.9768
+### 0 time 0.236359 (warmup, ignored)
+### 1 time 0.236691
+### 2 time 0.236576
+### 3 time 0.235941
+4 16384 1024 0.25 0.235941 0.236403 0.236691 1.05623 1.05752 1.05959
+### 0 time 0.221767 (warmup, ignored)
+### 1 time 0.22205
+### 2 time 0.221946
+### 3 time 0.221606
+4 16384 512 0.125 0.221606 0.221867 0.22205 0.562936 0.5634 0.564065
+### 0 time 0.217854 (warmup, ignored)
+### 1 time 0.218666
+### 2 time 0.218787
+### 3 time 0.21867
+4 16384 256 0.0625 0.218666 0.218707 0.218787 0.285666 0.28577 0.285824
+### 0 time 0.216806 (warmup, ignored)
+### 1 time 0.216578
+### 2 time 0.216528
+### 3 time 0.217098
+4 16384 128 0.03125 0.216528 0.216735 0.217098 0.143944 0.144185 0.144323
+### 0 time 0.215814 (warmup, ignored)
+### 1 time 0.215995
+### 2 time 0.215381
+### 3 time 0.216145
+4 16384 64 0.015625 0.215381 0.215841 0.216145 0.0722893 0.0723914 0.0725457
+### 0 time 0.0159345 (warmup, ignored)
+### 1 time 0.0132102
+### 2 time 0.0127443
+### 3 time 0.0126299
+4 16384 32 0.0078125 0.0126299 0.0128615 0.0132102 0.5914 0.607434 0.61857
+### 0 time 0.00913141 (warmup, ignored)
+### 1 time 0.00886195
+### 2 time 0.00879084
+### 3 time 0.00879781
+4 16384 16 0.00390625 0.00879084 0.00881687 0.00886195 0.440789 0.443043 0.444355
+### 0 time 0.00702017 (warmup, ignored)
+### 1 time 0.00689174
+### 2 time 0.00694159
+### 3 time 0.00692342
+4 16384 8 0.00195312 0.00689174 0.00691892 0.00694159 0.281366 0.282288 0.283401
+### 0 time 0.00618445 (warmup, ignored)
+### 1 time 0.00614475
+### 2 time 0.0060159
+### 3 time 0.00603785
+4 16384 4 0.000976562 0.0060159 0.00606617 0.00614475 0.158926 0.160985 0.16233
+### 0 time 0.00572381 (warmup, ignored)
+### 1 time 0.00568897
+### 2 time 0.00568217
+### 3 time 0.00575582
+4 16384 2 0.000488281 0.00568217 0.00570899 0.00575582 0.0848327 0.0855285 0.0859322
+### 0 time 0.0057042 (warmup, ignored)
+### 1 time 0.00576212
+### 2 time 0.00589774
+### 3 time 0.00576095
+4 16384 1 0.000244141 0.00576095 0.00580694 0.00589774 0.0413956 0.0420429 0.0423785
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.43292 (warmup, ignored)
+### 1 time 4.45835
+### 2 time 4.45263
+### 3 time 4.42854
+8 8192 262144 32 4.42854 4.44651 4.45835 7.17754 7.19666 7.22586
+### 0 time 1.93411 (warmup, ignored)
+### 1 time 1.95767
+### 2 time 1.95059
+### 3 time 1.95512
+8 8192 131072 16 1.95059 1.95446 1.95767 8.17298 8.18641 8.20263
+### 0 time 0.839481 (warmup, ignored)
+### 1 time 0.85283
+### 2 time 0.847477
+### 3 time 0.849528
+8 8192 65536 8 0.847477 0.849945 0.85283 9.38053 9.41237 9.43978
+### 0 time 0.592478 (warmup, ignored)
+### 1 time 0.603714
+### 2 time 0.580194
+### 3 time 0.595373
+8 8192 32768 4 0.580194 0.593094 0.603714 6.62565 6.7443 6.89425
+### 0 time 0.301085 (warmup, ignored)
+### 1 time 0.300606
+### 2 time 0.290864
+### 3 time 0.297968
+8 8192 16384 2 0.290864 0.296479 0.300606 6.65322 6.74583 6.87607
+### 0 time 0.144774 (warmup, ignored)
+### 1 time 0.143333
+### 2 time 0.14393
+### 3 time 0.14295
+8 8192 8192 1 0.14295 0.143404 0.14393 6.9478 6.97329 6.99547
+### 0 time 0.0642086 (warmup, ignored)
+### 1 time 0.0641045
+### 2 time 0.063986
+### 3 time 0.0643139
+8 8192 4096 0.5 0.063986 0.0641348 0.0643139 7.77437 7.79608 7.81421
+### 0 time 0.0771266 (warmup, ignored)
+### 1 time 0.07763
+### 2 time 0.0773783
+### 3 time 0.0776204
+8 8192 2048 0.25 0.0773783 0.0775429 0.07763 3.2204 3.22402 3.23088
+### 0 time 0.069266 (warmup, ignored)
+### 1 time 0.069165
+### 2 time 0.0689826
+### 3 time 0.0692973
+8 8192 1024 0.125 0.0689826 0.0691483 0.0692973 1.80382 1.80771 1.81205
+### 0 time 0.0608832 (warmup, ignored)
+### 1 time 0.0608318
+### 2 time 0.0608082
+### 3 time 0.0606671
+8 8192 512 0.0625 0.0606671 0.060769 0.0608318 1.02742 1.02848 1.03021
+### 0 time 0.0593926 (warmup, ignored)
+### 1 time 0.059233
+### 2 time 0.0593057
+### 3 time 0.0595825
+8 8192 256 0.03125 0.059233 0.0593737 0.0595825 0.524483 0.526327 0.527577
+### 0 time 0.0584346 (warmup, ignored)
+### 1 time 0.05877
+### 2 time 0.0584434
+### 3 time 0.0586102
+8 8192 128 0.015625 0.0584434 0.0586078 0.05877 0.265867 0.266603 0.267353
+### 0 time 0.0582525 (warmup, ignored)
+### 1 time 0.0584151
+### 2 time 0.0583748
+### 3 time 0.0585023
+8 8192 64 0.0078125 0.0583748 0.0584307 0.0585023 0.133542 0.133705 0.133834
+### 0 time 0.00775419 (warmup, ignored)
+### 1 time 0.00638034
+### 2 time 0.00634045
+### 3 time 0.00624107
+8 8192 32 0.00390625 0.00624107 0.00632062 0.00638034 0.612232 0.618017 0.625894
+### 0 time 0.00452799 (warmup, ignored)
+### 1 time 0.00434393
+### 2 time 0.00436502
+### 3 time 0.00431693
+8 8192 16 0.00195312 0.00431693 0.00434196 0.00436502 0.447449 0.449826 0.452434
+### 0 time 0.00345658 (warmup, ignored)
+### 1 time 0.00332694
+### 2 time 0.00332883
+### 3 time 0.00337602
+8 8192 8 0.000976562 0.00332694 0.00334393 0.00337602 0.289264 0.292041 0.293532
+### 0 time 0.00294439 (warmup, ignored)
+### 1 time 0.00295385
+### 2 time 0.00296543
+### 3 time 0.0029513
+8 8192 4 0.000488281 0.0029513 0.00295686 0.00296543 0.164658 0.165135 0.165446
+### 0 time 0.00279665 (warmup, ignored)
+### 1 time 0.00281859
+### 2 time 0.00283323
+### 3 time 0.00282871
+8 8192 2 0.000244141 0.00281859 0.00282685 0.00283323 0.0861703 0.086365 0.0866179
+### 0 time 0.00275586 (warmup, ignored)
+### 1 time 0.00283447
+### 2 time 0.00281824
+### 3 time 0.00283671
+8 8192 1 0.00012207 0.00281824 0.00282981 0.00283671 0.0430324 0.0431373 0.0433144
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.5017 (warmup, ignored)
+### 1 time 4.53966
+### 2 time 4.52052
+### 3 time 4.48707
+16 4096 524288 32 4.48707 4.51575 4.53966 7.04898 7.08631 7.1316
+### 0 time 2.14579 (warmup, ignored)
+### 1 time 2.16167
+### 2 time 2.13863
+### 3 time 2.15674
+16 4096 262144 16 2.13863 2.15234 2.16167 7.4017 7.43375 7.48142
+### 0 time 0.956246 (warmup, ignored)
+### 1 time 0.962532
+### 2 time 0.956285
+### 3 time 0.954879
+16 4096 131072 8 0.954879 0.957899 0.962532 8.31141 8.35161 8.37803
+### 0 time 0.418457 (warmup, ignored)
+### 1 time 0.417986
+### 2 time 0.418563
+### 3 time 0.419604
+16 4096 65536 4 0.417986 0.418718 0.419604 9.53281 9.55298 9.5697
+### 0 time 0.327471 (warmup, ignored)
+### 1 time 0.322269
+### 2 time 0.331886
+### 3 time 0.327321
+16 4096 32768 2 0.322269 0.327159 0.331886 6.02616 6.11324 6.206
+### 0 time 0.155704 (warmup, ignored)
+### 1 time 0.153308
+### 2 time 0.152166
+### 3 time 0.157894
+16 4096 16384 1 0.152166 0.154456 0.157894 6.33338 6.47435 6.57178
+### 0 time 0.0755872 (warmup, ignored)
+### 1 time 0.0748101
+### 2 time 0.07563
+### 3 time 0.074912
+16 4096 8192 0.5 0.0748101 0.0751174 0.07563 6.61113 6.65625 6.68359
+### 0 time 0.0352416 (warmup, ignored)
+### 1 time 0.036113
+### 2 time 0.0355318
+### 3 time 0.0362409
+16 4096 4096 0.25 0.0355318 0.0359619 0.0362409 6.89828 6.9518 7.03594
+### 0 time 0.0258373 (warmup, ignored)
+### 1 time 0.0256236
+### 2 time 0.0256883
+### 3 time 0.0254963
+16 4096 2048 0.125 0.0254963 0.0256028 0.0256883 4.86603 4.88229 4.90267
+### 0 time 0.0222791 (warmup, ignored)
+### 1 time 0.0222106
+### 2 time 0.0221416
+### 3 time 0.0219795
+16 4096 1024 0.0625 0.0219795 0.0221106 0.0222106 2.81397 2.8267 2.84356
+### 0 time 0.0180892 (warmup, ignored)
+### 1 time 0.0180797
+### 2 time 0.0181116
+### 3 time 0.0180629
+16 4096 512 0.03125 0.0180629 0.0180848 0.0181116 1.72541 1.72797 1.73006
+### 0 time 0.0174441 (warmup, ignored)
+### 1 time 0.0174636
+### 2 time 0.0175039
+### 3 time 0.0174539
+16 4096 256 0.015625 0.0174539 0.0174738 0.0175039 0.892656 0.894194 0.895214
+### 0 time 0.0169882 (warmup, ignored)
+### 1 time 0.0168679
+### 2 time 0.016989
+### 3 time 0.017056
+16 4096 128 0.0078125 0.0168679 0.016971 0.017056 0.458049 0.460345 0.463157
+### 0 time 0.0169718 (warmup, ignored)
+### 1 time 0.0169642
+### 2 time 0.0168265
+### 3 time 0.0169305
+16 4096 64 0.00390625 0.0168265 0.0169071 0.0169642 0.230264 0.231042 0.232149
+### 0 time 0.00371909 (warmup, ignored)
+### 1 time 0.00307069
+### 2 time 0.00304478
+### 3 time 0.00303026
+16 4096 32 0.00195312 0.00303026 0.00304858 0.00307069 0.636054 0.640668 0.64454
+### 0 time 0.00254242 (warmup, ignored)
+### 1 time 0.00206746
+### 2 time 0.0020765
+### 3 time 0.00206694
+16 4096 16 0.000976562 0.00206694 0.0020703 0.0020765 0.470292 0.471701 0.472467
+### 0 time 0.00167131 (warmup, ignored)
+### 1 time 0.00165393
+### 2 time 0.00165423
+### 3 time 0.00165211
+16 4096 8 0.000488281 0.00165211 0.00165342 0.00165423 0.295171 0.295315 0.29555
+### 0 time 0.0014567 (warmup, ignored)
+### 1 time 0.001456
+### 2 time 0.00145909
+### 3 time 0.00145988
+16 4096 4 0.000244141 0.001456 0.00145832 0.00145988 0.167234 0.167412 0.167679
+### 0 time 0.0013746 (warmup, ignored)
+### 1 time 0.00136963
+### 2 time 0.00139249
+### 3 time 0.00139634
+16 4096 2 0.00012207 0.00136963 0.00138615 0.00139634 0.0874217 0.088064 0.0891262
+### 0 time 0.00128675 (warmup, ignored)
+### 1 time 0.00129163
+### 2 time 0.00130731
+### 3 time 0.001308
+16 4096 1 6.10352e-05 0.00129163 0.00130231 0.001308 0.0466631 0.0468669 0.0472545
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.65841 (warmup, ignored)
+### 1 time 4.64392
+### 2 time 4.67711
+### 3 time 4.67888
+32 2048 1048576 32 4.64392 4.66664 4.67888 6.83924 6.85718 6.89073
+### 0 time 2.23146 (warmup, ignored)
+### 1 time 2.23637
+### 2 time 2.24887
+### 3 time 2.23747
+32 2048 524288 16 2.23637 2.2409 2.24887 7.11468 7.13998 7.15444
+### 0 time 1.05794 (warmup, ignored)
+### 1 time 1.05654
+### 2 time 1.053
+### 3 time 1.05701
+32 2048 262144 8 1.053 1.05552 1.05701 7.56854 7.57923 7.59737
+### 0 time 0.466205 (warmup, ignored)
+### 1 time 0.465974
+### 2 time 0.470022
+### 3 time 0.467573
+32 2048 131072 4 0.465974 0.467856 0.470022 8.51024 8.54963 8.58417
+### 0 time 0.206942 (warmup, ignored)
+### 1 time 0.207273
+### 2 time 0.207532
+### 3 time 0.206137
+32 2048 65536 2 0.206137 0.20698 0.207532 9.63708 9.66275 9.70231
+### 0 time 0.153813 (warmup, ignored)
+### 1 time 0.150537
+### 2 time 0.151555
+### 3 time 0.142496
+32 2048 32768 1 0.142496 0.148196 0.151555 6.59825 6.74782 7.01773
+### 0 time 0.0641451 (warmup, ignored)
+### 1 time 0.0721508
+### 2 time 0.0734244
+### 3 time 0.0773471
+32 2048 16384 0.5 0.0721508 0.0743074 0.0773471 6.46436 6.7288 6.92993
+### 0 time 0.0371258 (warmup, ignored)
+### 1 time 0.038346
+### 2 time 0.036549
+### 3 time 0.0370438
+32 2048 8192 0.25 0.036549 0.037313 0.038346 6.51958 6.70008 6.84013
+### 0 time 0.0187432 (warmup, ignored)
+### 1 time 0.0192935
+### 2 time 0.0189701
+### 3 time 0.019104
+32 2048 4096 0.125 0.0189701 0.0191225 0.0192935 6.47887 6.53679 6.58933
+### 0 time 0.00813275 (warmup, ignored)
+### 1 time 0.00813984
+### 2 time 0.00816334
+### 3 time 0.00815563
+32 2048 2048 0.0625 0.00813984 0.00815294 0.00816334 7.65618 7.66595 7.67828
+### 0 time 0.00697103 (warmup, ignored)
+### 1 time 0.00676227
+### 2 time 0.00675826
+### 3 time 0.00675835
+32 2048 1024 0.03125 0.00675826 0.00675963 0.00676227 4.62123 4.62304 4.62397
+### 0 time 0.00624012 (warmup, ignored)
+### 1 time 0.0063675
+### 2 time 0.00632247
+### 3 time 0.0063189
+32 2048 512 0.015625 0.0063189 0.00633629 0.0063675 2.45387 2.46595 2.47274
+### 0 time 0.00587908 (warmup, ignored)
+### 1 time 0.00583709
+### 2 time 0.00585195
+### 3 time 0.00593243
+32 2048 256 0.0078125 0.00583709 0.00587382 0.00593243 1.31692 1.33005 1.33842
+### 0 time 0.00559979 (warmup, ignored)
+### 1 time 0.00561294
+### 2 time 0.0056631
+### 3 time 0.00559778
+32 2048 128 0.00390625 0.00559778 0.00562461 0.0056631 0.689772 0.694493 0.697822
+### 0 time 0.00553279 (warmup, ignored)
+### 1 time 0.00547927
+### 2 time 0.00554994
+### 3 time 0.00555262
+32 2048 64 0.00195312 0.00547927 0.00552728 0.00555262 0.351748 0.353361 0.356457
+### 0 time 0.00230432 (warmup, ignored)
+### 1 time 0.00138947
+### 2 time 0.00140629
+### 3 time 0.00142232
+32 2048 32 0.000976562 0.00138947 0.00140603 0.00142232 0.686599 0.694555 0.70283
+### 0 time 0.00107035 (warmup, ignored)
+### 1 time 0.00101177
+### 2 time 0.00099979
+### 3 time 0.00100211
+32 2048 16 0.000488281 0.00099979 0.00100456 0.00101177 0.482601 0.486066 0.488384
+### 0 time 0.000824606 (warmup, ignored)
+### 1 time 0.000814985
+### 2 time 0.000812516
+### 3 time 0.000814961
+32 2048 8 0.000244141 0.000812516 0.000814154 0.000814985 0.299565 0.29987 0.300475
+### 0 time 0.00074517 (warmup, ignored)
+### 1 time 0.000734559
+### 2 time 0.000734879
+### 3 time 0.000732554
+32 2048 4 0.00012207 0.000732554 0.000733997 0.000734879 0.166109 0.166309 0.166637
+### 0 time 0.00062729 (warmup, ignored)
+### 1 time 0.00061939
+### 2 time 0.00062234
+### 3 time 0.00062082
+32 2048 2 6.10352e-05 0.00061939 0.00062085 0.00062234 0.0980737 0.098309 0.0985408
+### 0 time 0.000633279 (warmup, ignored)
+### 1 time 0.000619444
+### 2 time 0.000620745
+### 3 time 0.000618761
+32 2048 1 3.05176e-05 0.000618761 0.00061965 0.000620745 0.0491628 0.0492497 0.0493205
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.54797 (warmup, ignored)
+### 1 time 4.55415
+### 2 time 4.54755
+### 3 time 4.547
+64 1024 2097152 32 4.547 4.54957 4.55415 7.02656 7.03364 7.03761
+### 0 time 2.25767 (warmup, ignored)
+### 1 time 2.2567
+### 2 time 2.25338
+### 3 time 2.24127
+64 1024 1048576 16 2.24127 2.25045 2.2567 7.09 7.10969 7.13882
+### 0 time 1.08944 (warmup, ignored)
+### 1 time 1.07917
+### 2 time 1.08182
+### 3 time 1.08493
+64 1024 524288 8 1.07917 1.08197 1.08493 7.37375 7.3939 7.41313
+### 0 time 0.502845 (warmup, ignored)
+### 1 time 0.504037
+### 2 time 0.504204
+### 3 time 0.503784
+64 1024 262144 4 0.503784 0.504009 0.504204 7.9333 7.93637 7.9399
+### 0 time 0.227677 (warmup, ignored)
+### 1 time 0.225518
+### 2 time 0.227707
+### 3 time 0.227459
+64 1024 131072 2 0.225518 0.226895 0.227707 8.7832 8.81466 8.86848
+### 0 time 0.105361 (warmup, ignored)
+### 1 time 0.105279
+### 2 time 0.103221
+### 3 time 0.105619
+64 1024 65536 1 0.103221 0.104707 0.105619 9.46796 9.5505 9.68792
+### 0 time 0.0614001 (warmup, ignored)
+### 1 time 0.0596523
+### 2 time 0.0568578
+### 3 time 0.0596091
+64 1024 32768 0.5 0.0568578 0.0587064 0.0596523 8.3819 8.51696 8.79386
+### 0 time 0.0299234 (warmup, ignored)
+### 1 time 0.028118
+### 2 time 0.0288156
+### 3 time 0.0283463
+64 1024 16384 0.25 0.028118 0.0284266 0.0288156 8.67585 8.79457 8.8911
+### 0 time 0.0154014 (warmup, ignored)
+### 1 time 0.0166082
+### 2 time 0.0167618
+### 3 time 0.0161809
+64 1024 8192 0.125 0.0161809 0.016517 0.0167618 7.45744 7.56796 7.72513
+### 0 time 0.00905575 (warmup, ignored)
+### 1 time 0.00903566
+### 2 time 0.00883257
+### 3 time 0.00903013
+64 1024 4096 0.0625 0.00883257 0.00896612 0.00903566 6.91704 6.97068 7.07608
+### 0 time 0.00406028 (warmup, ignored)
+### 1 time 0.00406327
+### 2 time 0.00405123
+### 3 time 0.00404907
+64 1024 2048 0.03125 0.00404907 0.00405452 0.00406327 7.69085 7.70744 7.71781
+### 0 time 0.00212729 (warmup, ignored)
+### 1 time 0.00214183
+### 2 time 0.00214651
+### 3 time 0.00214683
+64 1024 1024 0.015625 0.00214183 0.00214506 0.00214683 7.27817 7.28419 7.29516
+### 0 time 0.00232124 (warmup, ignored)
+### 1 time 0.00230695
+### 2 time 0.00231477
+### 3 time 0.00233256
+64 1024 512 0.0078125 0.00230695 0.00231809 0.00233256 3.34933 3.37023 3.3865
+### 0 time 0.00218146 (warmup, ignored)
+### 1 time 0.00219403
+### 2 time 0.00220035
+### 3 time 0.00220542
+64 1024 256 0.00390625 0.00219403 0.00219993 0.00220542 1.77121 1.77562 1.7804
+### 0 time 0.00207998 (warmup, ignored)
+### 1 time 0.00210202
+### 2 time 0.00210153
+### 3 time 0.00207794
+64 1024 128 0.00195312 0.00207794 0.00209383 0.00210202 0.929168 0.932801 0.939935
+### 0 time 0.0018498 (warmup, ignored)
+### 1 time 0.00106637
+### 2 time 0.00108711
+### 3 time 0.00110821
+64 1024 64 0.000976562 0.00106637 0.00108723 0.00110821 0.881208 0.898211 0.915782
+### 0 time 0.000722957 (warmup, ignored)
+### 1 time 0.000694964
+### 2 time 0.000698553
+### 3 time 0.000687784
+64 1024 32 0.000488281 0.000687784 0.000693767 0.000698553 0.69899 0.703812 0.709934
+### 0 time 0.000513024 (warmup, ignored)
+### 1 time 0.000508856
+### 2 time 0.000509916
+### 3 time 0.00050625
+64 1024 16 0.000244141 0.00050625 0.000508341 0.000509916 0.478786 0.48027 0.482253
+### 0 time 0.000433767 (warmup, ignored)
+### 1 time 0.000424934
+### 2 time 0.000430037
+### 3 time 0.000428096
+64 1024 8 0.00012207 0.000424934 0.000427689 0.000430037 0.28386 0.285418 0.287269
+### 0 time 0.000343615 (warmup, ignored)
+### 1 time 0.000327872
+### 2 time 0.000327701
+### 3 time 0.000328031
+64 1024 4 6.10352e-05 0.000327701 0.000327868 0.000328031 0.186065 0.186158 0.186253
+### 0 time 0.000325997 (warmup, ignored)
+### 1 time 0.000307106
+### 2 time 0.000310093
+### 3 time 0.000310373
+64 1024 2 3.05176e-05 0.000307106 0.000309191 0.000310373 0.0983255 0.0987015 0.0993715
+### 0 time 0.000324769 (warmup, ignored)
+### 1 time 0.000309606
+### 2 time 0.000310237
+### 3 time 0.000306003
+64 1024 1 1.52588e-05 0.000306003 0.000308615 0.000310237 0.0491843 0.0494427 0.0498648
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.33234 (warmup, ignored)
+### 1 time 4.36534
+### 2 time 4.3505
+### 3 time 4.35477
+128 512 4194304 32 4.3505 4.35687 4.36534 7.33047 7.34472 7.35547
+### 0 time 2.14971 (warmup, ignored)
+### 1 time 2.16767
+### 2 time 2.16382
+### 3 time 2.16358
+128 512 2097152 16 2.16358 2.16502 2.16767 7.38119 7.39022 7.39515
+### 0 time 1.06693 (warmup, ignored)
+### 1 time 1.07331
+### 2 time 1.06446
+### 3 time 1.06602
+128 512 1048576 8 1.06446 1.06793 1.07331 7.45356 7.49111 7.51551
+### 0 time 0.512344 (warmup, ignored)
+### 1 time 0.518724
+### 2 time 0.512639
+### 3 time 0.516464
+128 512 524288 4 0.512639 0.515942 0.518724 7.71123 7.7528 7.80276
+### 0 time 0.24037 (warmup, ignored)
+### 1 time 0.240303
+### 2 time 0.239918
+### 3 time 0.240854
+128 512 262144 2 0.239918 0.240358 0.240854 8.3038 8.32091 8.33617
+### 0 time 0.113095 (warmup, ignored)
+### 1 time 0.11485
+### 2 time 0.11427
+### 3 time 0.112819
+128 512 131072 1 0.112819 0.11398 0.11485 8.70701 8.7735 8.86379
+### 0 time 0.0581147 (warmup, ignored)
+### 1 time 0.0589004
+### 2 time 0.0572866
+### 3 time 0.058622
+128 512 65536 0.5 0.0572866 0.0582697 0.0589004 8.48891 8.5808 8.72805
+### 0 time 0.0296595 (warmup, ignored)
+### 1 time 0.0251466
+### 2 time 0.0252117
+### 3 time 0.0249529
+128 512 32768 0.25 0.0249529 0.0251037 0.0252117 9.91603 9.95869 10.0189
+### 0 time 0.0141948 (warmup, ignored)
+### 1 time 0.014946
+### 2 time 0.0144982
+### 3 time 0.0149729
+128 512 16384 0.125 0.0144982 0.0148057 0.0149729 8.34842 8.4427 8.62177
+### 0 time 0.00771191 (warmup, ignored)
+### 1 time 0.00770509
+### 2 time 0.00776522
+### 3 time 0.00784043
+128 512 8192 0.0625 0.00770509 0.00777024 0.00784043 7.9715 8.0435 8.11152
+### 0 time 0.00410261 (warmup, ignored)
+### 1 time 0.00406919
+### 2 time 0.00410088
+### 3 time 0.00403012
+128 512 4096 0.03125 0.00403012 0.00406673 0.00410088 7.62031 7.6843 7.75411
+### 0 time 0.0020837 (warmup, ignored)
+### 1 time 0.00208782
+### 2 time 0.00207781
+### 3 time 0.00208461
+128 512 2048 0.015625 0.00207781 0.00208341 0.00208782 7.48388 7.49971 7.51995
+### 0 time 0.00109754 (warmup, ignored)
+### 1 time 0.00110826
+### 2 time 0.00109985
+### 3 time 0.00110583
+128 512 1024 0.0078125 0.00109985 0.00110465 0.00110826 7.04932 7.07238 7.10323
+### 0 time 0.000800572 (warmup, ignored)
+### 1 time 0.000822702
+### 2 time 0.000831303
+### 3 time 0.000801018
+128 512 512 0.00390625 0.000801018 0.000818341 0.000831303 4.69895 4.77338 4.87661
+### 0 time 0.000802296 (warmup, ignored)
+### 1 time 0.000828929
+### 2 time 0.000818537
+### 3 time 0.000828909
+128 512 256 0.00195312 0.000818537 0.000825458 0.000828929 2.3562 2.36611 2.38612
+### 0 time 0.000817321 (warmup, ignored)
+### 1 time 0.000807485
+### 2 time 0.000828257
+### 3 time 0.000803567
+128 512 128 0.000976562 0.000803567 0.000813103 0.000828257 1.17906 1.20103 1.21528
+### 0 time 0.00115849 (warmup, ignored)
+### 1 time 0.000531039
+### 2 time 0.000488464
+### 3 time 0.00052534
+128 512 64 0.000488281 0.000488464 0.000514948 0.000531039 0.919483 0.948215 0.999626
+### 0 time 0.000379822 (warmup, ignored)
+### 1 time 0.000358224
+### 2 time 0.000360304
+### 3 time 0.00035626
+128 512 32 0.000244141 0.00035626 0.000358263 0.000360304 0.677596 0.681457 0.685288
+### 0 time 0.000286476 (warmup, ignored)
+### 1 time 0.000285614
+### 2 time 0.000280765
+### 3 time 0.000284141
+128 512 16 0.00012207 0.000280765 0.000283507 0.000285614 0.427396 0.430573 0.434778
+### 0 time 0.000202501 (warmup, ignored)
+### 1 time 0.000187987
+### 2 time 0.00019045
+### 3 time 0.000191713
+128 512 8 6.10352e-05 0.000187987 0.00019005 0.000191713 0.318367 0.321153 0.324678
+### 0 time 0.000193204 (warmup, ignored)
+### 1 time 0.000177593
+### 2 time 0.00017422
+### 3 time 0.000173574
+128 512 4 3.05176e-05 0.000173574 0.000175129 0.000177593 0.17184 0.174258 0.175819
+### 0 time 0.000178899 (warmup, ignored)
+### 1 time 0.000166683
+### 2 time 0.000165329
+### 3 time 0.000162154
+128 512 2 1.52588e-05 0.000162154 0.000164722 0.000166683 0.0915438 0.0926336 0.0941006
+### 0 time 0.00018154 (warmup, ignored)
+### 1 time 0.000157794
+### 2 time 0.000160139
+### 3 time 0.000159858
+128 512 1 7.62939e-06 0.000157794 0.000159264 0.000160139 0.0476423 0.0479042 0.0483503
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.97759 (warmup, ignored)
+### 1 time 3.98758
+### 2 time 3.97708
+### 3 time 3.98673
+256 256 8388608 32 3.97708 3.98379 3.98758 8.02491 8.03254 8.04611
+### 0 time 1.97883 (warmup, ignored)
+### 1 time 1.99356
+### 2 time 1.99214
+### 3 time 1.99096
+256 256 4194304 16 1.99096 1.99222 1.99356 8.02585 8.03124 8.03631
+### 0 time 0.986994 (warmup, ignored)
+### 1 time 0.985171
+### 2 time 0.992202
+### 3 time 0.987865
+256 256 2097152 8 0.985171 0.988413 0.992202 8.06287 8.09379 8.12042
+### 0 time 0.489368 (warmup, ignored)
+### 1 time 0.490275
+### 2 time 0.491114
+### 3 time 0.491534
+256 256 1048576 4 0.490275 0.490974 0.491534 8.1378 8.14707 8.15869
+### 0 time 0.243704 (warmup, ignored)
+### 1 time 0.241973
+### 2 time 0.239877
+### 3 time 0.242893
+256 256 524288 2 0.239877 0.241581 0.242893 8.23409 8.27881 8.33761
+### 0 time 0.122119 (warmup, ignored)
+### 1 time 0.122717
+### 2 time 0.122856
+### 3 time 0.122818
+256 256 262144 1 0.122717 0.122797 0.122856 8.13959 8.14351 8.14884
+### 0 time 0.0614269 (warmup, ignored)
+### 1 time 0.0616582
+### 2 time 0.0611817
+### 3 time 0.0611107
+256 256 131072 0.5 0.0611107 0.0613169 0.0616582 8.10922 8.15436 8.18187
+### 0 time 0.0302621 (warmup, ignored)
+### 1 time 0.0300916
+### 2 time 0.0305174
+### 3 time 0.030387
+256 256 65536 0.25 0.0300916 0.030332 0.0305174 8.19206 8.24212 8.30797
+### 0 time 0.0129521 (warmup, ignored)
+### 1 time 0.0134284
+### 2 time 0.0135916
+### 3 time 0.0131301
+256 256 32768 0.125 0.0131301 0.0133834 0.0135916 9.19684 9.33995 9.52015
+### 0 time 0.00666061 (warmup, ignored)
+### 1 time 0.00684124
+### 2 time 0.00697935
+### 3 time 0.0068858
+256 256 16384 0.0625 0.00684124 0.00690213 0.00697935 8.95499 9.05518 9.13577
+### 0 time 0.0036892 (warmup, ignored)
+### 1 time 0.0036544
+### 2 time 0.0037262
+### 3 time 0.003611
+256 256 8192 0.03125 0.003611 0.00366386 0.0037262 8.38656 8.52925 8.65412
+### 0 time 0.00199089 (warmup, ignored)
+### 1 time 0.00192351
+### 2 time 0.00192677
+### 3 time 0.00187369
+256 256 4096 0.015625 0.00187369 0.00190799 0.00192677 8.10942 8.18924 8.33918
+### 0 time 0.00103895 (warmup, ignored)
+### 1 time 0.00105265
+### 2 time 0.00104998
+### 3 time 0.00104626
+256 256 2048 0.0078125 0.00104626 0.00104963 0.00105265 7.42171 7.44308 7.46705
+### 0 time 0.000556586 (warmup, ignored)
+### 1 time 0.000564884
+### 2 time 0.000563931
+### 3 time 0.000554906
+256 256 1024 0.00390625 0.000554906 0.00056124 0.000564884 6.91514 6.96003 7.03948
+### 0 time 0.000417996 (warmup, ignored)
+### 1 time 0.000418322
+### 2 time 0.000419219
+### 3 time 0.000412417
+256 256 512 0.00195312 0.000412417 0.000416653 0.000419219 4.65896 4.68766 4.7358
+### 0 time 0.000410294 (warmup, ignored)
+### 1 time 0.0004146
+### 2 time 0.000414382
+### 3 time 0.000415068
+256 256 256 0.000976562 0.000414382 0.000414683 0.000415068 2.35278 2.35496 2.35667
+### 0 time 0.000416633 (warmup, ignored)
+### 1 time 0.000417374
+### 2 time 0.000415721
+### 3 time 0.000412813
+256 256 128 0.000488281 0.000412813 0.000415303 0.000417374 1.16989 1.17572 1.18281
+### 0 time 0.00092319 (warmup, ignored)
+### 1 time 0.000283377
+### 2 time 0.000273409
+### 3 time 0.000274751
+256 256 64 0.000244141 0.000273409 0.000277179 0.000283377 0.86154 0.880805 0.89295
+### 0 time 0.000209107 (warmup, ignored)
+### 1 time 0.000200097
+### 2 time 0.000199299
+### 3 time 0.000211329
+256 256 32 0.00012207 0.000199299 0.000203575 0.000211329 0.577632 0.599633 0.612498
+### 0 time 0.000138649 (warmup, ignored)
+### 1 time 0.000129199
+### 2 time 0.000131544
+### 3 time 0.000131384
+256 256 16 6.10352e-05 0.000129199 0.000130709 0.000131544 0.46399 0.466955 0.472412
+### 0 time 0.000128909 (warmup, ignored)
+### 1 time 0.000118299
+### 2 time 0.000115943
+### 3 time 0.000115464
+256 256 8 3.05176e-05 0.000115464 0.000116569 0.000118299 0.25797 0.261799 0.264304
+### 0 time 0.00012126 (warmup, ignored)
+### 1 time 0.000109208
+### 2 time 0.000107153
+### 3 time 0.000103607
+256 256 4 1.52588e-05 0.000103607 0.000106656 0.000109208 0.139722 0.143065 0.147276
+### 0 time 0.000110042 (warmup, ignored)
+### 1 time 9.8229e-05
+### 2 time 9.808e-05
+### 3 time 9.794e-05
+256 256 2 7.62939e-06 9.794e-05 9.8083e-05 9.8229e-05 0.0776695 0.0777851 0.0778987
+### 0 time 9.9648e-05 (warmup, ignored)
+### 1 time 9.782e-05
+### 2 time 9.7889e-05
+### 3 time 9.7801e-05
+256 256 1 3.8147e-06 9.7801e-05 9.78367e-05 9.7889e-05 0.0389696 0.0389905 0.0390047
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 4.12984 (warmup, ignored)
+### 1 time 4.11757
+### 2 time 4.10268
+### 3 time 4.0925
+512 128 16777216 32 4.0925 4.10425 4.11757 7.77158 7.7968 7.81918
+### 0 time 2.03448 (warmup, ignored)
+### 1 time 2.06263
+### 2 time 2.05153
+### 3 time 2.05243
+512 128 8388608 16 2.05153 2.05553 2.06263 7.75708 7.78388 7.79908
+### 0 time 1.00614 (warmup, ignored)
+### 1 time 1.01873
+### 2 time 1.02331
+### 3 time 1.01369
+512 128 4194304 8 1.01369 1.01858 1.02331 7.81776 7.8541 7.89195
+### 0 time 0.505433 (warmup, ignored)
+### 1 time 0.509353
+### 2 time 0.512906
+### 3 time 0.511886
+512 128 2097152 4 0.509353 0.511382 0.512906 7.7987 7.82195 7.8531
+### 0 time 0.257115 (warmup, ignored)
+### 1 time 0.253079
+### 2 time 0.256362
+### 3 time 0.256576
+512 128 1048576 2 0.253079 0.255339 0.256576 7.79495 7.83272 7.90267
+### 0 time 0.125541 (warmup, ignored)
+### 1 time 0.126121
+### 2 time 0.127126
+### 3 time 0.127334
+512 128 524288 1 0.126121 0.12686 0.127334 7.85334 7.88268 7.92891
+### 0 time 0.0629943 (warmup, ignored)
+### 1 time 0.0630053
+### 2 time 0.0623108
+### 3 time 0.0626281
+512 128 262144 0.5 0.0623108 0.0626481 0.0630053 7.93584 7.98109 8.02429
+### 0 time 0.0304555 (warmup, ignored)
+### 1 time 0.0310732
+### 2 time 0.0310916
+### 3 time 0.0308969
+512 128 131072 0.25 0.0308969 0.0310206 0.0310916 8.04076 8.05917 8.09142
+### 0 time 0.0145274 (warmup, ignored)
+### 1 time 0.0145264
+### 2 time 0.0148013
+### 3 time 0.0143261
+512 128 65536 0.125 0.0143261 0.0145513 0.0148013 8.4452 8.59032 8.72531
+### 0 time 0.00547119 (warmup, ignored)
+### 1 time 0.00514468
+### 2 time 0.00528926
+### 3 time 0.00535145
+512 128 32768 0.0625 0.00514468 0.0052618 0.00535145 11.6791 11.8781 12.1485
+### 0 time 0.00255288 (warmup, ignored)
+### 1 time 0.00274991
+### 2 time 0.00266411
+### 3 time 0.00265003
+512 128 16384 0.03125 0.00265003 0.00268802 0.00274991 11.364 11.6257 11.7923
+### 0 time 0.00149273 (warmup, ignored)
+### 1 time 0.0014489
+### 2 time 0.00151236
+### 3 time 0.00148961
+512 128 8192 0.015625 0.0014489 0.00148362 0.00151236 10.3316 10.5316 10.784
+### 0 time 0.000871276 (warmup, ignored)
+### 1 time 0.000826675
+### 2 time 0.000835347
+### 3 time 0.000864644
+512 128 4096 0.0078125 0.000826675 0.000842222 0.000864644 9.03551 9.27606 9.45051
+### 0 time 0.000516069 (warmup, ignored)
+### 1 time 0.00052622
+### 2 time 0.00052593
+### 3 time 0.00053039
+512 128 2048 0.00390625 0.00052593 0.000527513 0.00053039 7.36486 7.40503 7.42732
+### 0 time 0.000287736 (warmup, ignored)
+### 1 time 0.000285633
+### 2 time 0.00028963
+### 3 time 0.000286023
+512 128 1024 0.00195312 0.000285633 0.000287095 0.00028963 6.74352 6.80305 6.83788
+### 0 time 0.000223895 (warmup, ignored)
+### 1 time 0.000222653
+### 2 time 0.000223253
+### 3 time 0.000223383
+512 128 512 0.000976562 0.000222653 0.000223096 0.000223383 4.3717 4.37731 4.38603
+### 0 time 0.00022196 (warmup, ignored)
+### 1 time 0.000221442
+### 2 time 0.000218595
+### 3 time 0.00021643
+512 128 256 0.000488281 0.00021643 0.000218822 0.000221442 2.20501 2.23141 2.25607
+### 0 time 0.00021757 (warmup, ignored)
+### 1 time 0.000218273
+### 2 time 0.000219275
+### 3 time 0.000217518
+512 128 128 0.000244141 0.000217518 0.000218355 0.000219275 1.1134 1.11809 1.12239
+### 0 time 0.000787714 (warmup, ignored)
+### 1 time 0.000167855
+### 2 time 0.000163305
+### 3 time 0.000165023
+512 128 64 0.00012207 0.000163305 0.000165394 0.000167855 0.727237 0.738056 0.747499
+### 0 time 0.000106637 (warmup, ignored)
+### 1 time 9.7468e-05
+### 2 time 9.8782e-05
+### 3 time 9.498e-05
+512 128 32 6.10352e-05 9.498e-05 9.70767e-05 9.8782e-05 0.617877 0.628731 0.642611
+### 0 time 9.6577e-05 (warmup, ignored)
+### 1 time 8.799e-05
+### 2 time 8.7209e-05
+### 3 time 8.5495e-05
+512 128 16 3.05176e-05 8.5495e-05 8.6898e-05 8.799e-05 0.34683 0.351188 0.356952
+### 0 time 8.3783e-05 (warmup, ignored)
+### 1 time 8.1718e-05
+### 2 time 8.1719e-05
+### 3 time 8.1248e-05
+512 128 8 1.52588e-05 8.1248e-05 8.15617e-05 8.1719e-05 0.186723 0.187083 0.187805
+### 0 time 7.3953e-05 (warmup, ignored)
+### 1 time 7.1208e-05
+### 2 time 7.2531e-05
+### 3 time 7.2117e-05
+512 128 4 7.62939e-06 7.1208e-05 7.1952e-05 7.2531e-05 0.105188 0.106035 0.107142
+### 0 time 7.0897e-05 (warmup, ignored)
+### 1 time 7.0447e-05
+### 2 time 7.0076e-05
+### 3 time 7.0156e-05
+512 128 2 3.8147e-06 7.0076e-05 7.02263e-05 7.0447e-05 0.0541499 0.05432 0.0544366
+### 0 time 9.1203e-05 (warmup, ignored)
+### 1 time 6.8693e-05
+### 2 time 6.9184e-05
+### 3 time 6.8711e-05
+512 128 1 1.90735e-06 6.8693e-05 6.88627e-05 6.9184e-05 0.0275692 0.0276979 0.0277663
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.93069 (warmup, ignored)
+### 1 time 3.99506
+### 2 time 3.9396
+### 3 time 3.92556
+1024 64 33554432 32 3.92556 3.95341 3.99506 8.00989 8.09429 8.15171
+### 0 time 1.96174 (warmup, ignored)
+### 1 time 1.95219
+### 2 time 1.95159
+### 3 time 1.92708
+1024 64 16777216 16 1.92708 1.94362 1.95219 8.19593 8.23206 8.30272
+### 0 time 0.985091 (warmup, ignored)
+### 1 time 0.972685
+### 2 time 0.994651
+### 3 time 0.974356
+1024 64 8388608 8 0.972685 0.980564 0.994651 8.04302 8.15857 8.22466
+### 0 time 0.489209 (warmup, ignored)
+### 1 time 0.484204
+### 2 time 0.491582
+### 3 time 0.492979
+1024 64 4194304 4 0.484204 0.489588 0.492979 8.11394 8.17013 8.26098
+### 0 time 0.245288 (warmup, ignored)
+### 1 time 0.240636
+### 2 time 0.239836
+### 3 time 0.240468
+1024 64 2097152 2 0.239836 0.240313 0.240636 8.31129 8.32247 8.33904
+### 0 time 0.118656 (warmup, ignored)
+### 1 time 0.115106
+### 2 time 0.119841
+### 3 time 0.121776
+1024 64 1048576 1 0.115106 0.118908 0.121776 8.21179 8.4099 8.68767
+### 0 time 0.0583744 (warmup, ignored)
+### 1 time 0.0573203
+### 2 time 0.0599434
+### 3 time 0.0601308
+1024 64 524288 0.5 0.0573203 0.0591315 0.0601308 8.3152 8.45573 8.72292
+### 0 time 0.0294208 (warmup, ignored)
+### 1 time 0.0287086
+### 2 time 0.0291663
+### 3 time 0.0299049
+1024 64 262144 0.25 0.0287086 0.0292599 0.0299049 8.35985 8.54411 8.70819
+### 0 time 0.0145438 (warmup, ignored)
+### 1 time 0.0144253
+### 2 time 0.0145269
+### 3 time 0.0147052
+1024 64 131072 0.125 0.0144253 0.0145525 0.0147052 8.50038 8.58959 8.66532
+### 0 time 0.00738758 (warmup, ignored)
+### 1 time 0.00749799
+### 2 time 0.00733501
+### 3 time 0.00737041
+1024 64 65536 0.0625 0.00733501 0.00740114 0.00749799 8.33556 8.44465 8.52078
+### 0 time 0.00320254 (warmup, ignored)
+### 1 time 0.00319364
+### 2 time 0.00329262
+### 3 time 0.00319552
+1024 64 32768 0.03125 0.00319364 0.00322726 0.00329262 9.49092 9.68314 9.78507
+### 0 time 0.00131871 (warmup, ignored)
+### 1 time 0.00130103
+### 2 time 0.00133337
+### 3 time 0.00127561
+1024 64 16384 0.015625 0.00127561 0.00130334 0.00133337 11.7184 11.9885 12.2491
+### 0 time 0.000741349 (warmup, ignored)
+### 1 time 0.000754187
+### 2 time 0.000753906
+### 3 time 0.000750071
+1024 64 8192 0.0078125 0.000750071 0.000752721 0.000754187 10.3588 10.379 10.4157
+### 0 time 0.000459897 (warmup, ignored)
+### 1 time 0.00045599
+### 2 time 0.000446854
+### 3 time 0.000454649
+1024 64 4096 0.00390625 0.000446854 0.000452498 0.00045599 8.56653 8.63264 8.74167
+### 0 time 0.000248188 (warmup, ignored)
+### 1 time 0.00026324
+### 2 time 0.0002544
+### 3 time 0.000260294
+1024 64 2048 0.00195312 0.0002544 0.000259311 0.00026324 7.41956 7.53197 7.67738
+### 0 time 0.000139525 (warmup, ignored)
+### 1 time 0.000139291
+### 2 time 0.000140533
+### 3 time 0.000140933
+1024 64 1024 0.000976562 0.000139291 0.000140252 0.000140933 6.92927 6.9629 7.01095
+### 0 time 0.000120524 (warmup, ignored)
+### 1 time 0.000120404
+### 2 time 0.000118129
+### 3 time 0.000118179
+1024 64 512 0.000488281 0.000118129 0.000118904 0.000120404 4.05536 4.10652 4.13346
+### 0 time 0.000117697 (warmup, ignored)
+### 1 time 0.000116816
+### 2 time 0.000117377
+### 3 time 0.000117016
+1024 64 256 0.000244141 0.000116816 0.00011707 0.000117377 2.07997 2.08543 2.08996
+### 0 time 0.000116635 (warmup, ignored)
+### 1 time 0.000116125
+### 2 time 0.000116475
+### 3 time 0.000116405
+1024 64 128 0.00012207 0.000116125 0.000116335 0.000116475 1.04804 1.0493 1.0512
+### 0 time 0.000650252 (warmup, ignored)
+### 1 time 8.1738e-05
+### 2 time 8.1427e-05
+### 3 time 7.9223e-05
+1024 64 64 6.10352e-05 7.9223e-05 8.0796e-05 8.1738e-05 0.746717 0.755423 0.770422
+### 0 time 7.1889e-05 (warmup, ignored)
+### 1 time 7.0433e-05
+### 2 time 7.0175e-05
+### 3 time 6.9272e-05
+1024 64 32 3.05176e-05 6.9272e-05 6.996e-05 7.0433e-05 0.433285 0.436215 0.440547
+### 0 time 6.6629e-05 (warmup, ignored)
+### 1 time 6.5236e-05
+### 2 time 6.5114e-05
+### 3 time 6.4945e-05
+1024 64 16 1.52588e-05 6.4945e-05 6.50983e-05 6.5236e-05 0.233901 0.234396 0.234949
+### 0 time 5.8241e-05 (warmup, ignored)
+### 1 time 5.6719e-05
+### 2 time 5.5976e-05
+### 3 time 5.6039e-05
+1024 64 8 7.62939e-06 5.5976e-05 5.62447e-05 5.6719e-05 0.134512 0.135647 0.136298
+### 0 time 5.5578e-05 (warmup, ignored)
+### 1 time 5.4106e-05
+### 2 time 5.4404e-05
+### 3 time 5.3714e-05
+1024 64 4 3.8147e-06 5.3714e-05 5.40747e-05 5.4404e-05 0.070118 0.070545 0.0710187
+### 0 time 5.5628e-05 (warmup, ignored)
+### 1 time 5.2912e-05
+### 2 time 5.2501e-05
+### 3 time 5.2571e-05
+1024 64 2 1.90735e-06 5.2501e-05 5.26613e-05 5.2912e-05 0.0360476 0.0362191 0.0363298
+### 0 time 7.3132e-05 (warmup, ignored)
+### 1 time 5.2841e-05
+### 2 time 5.2289e-05
+### 3 time 5.2482e-05
+1024 64 1 9.53674e-07 5.2289e-05 5.25373e-05 5.2841e-05 0.018048 0.0181523 0.0182385
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.68859 (warmup, ignored)
+### 1 time 3.71689
+### 2 time 3.79139
+### 3 time 3.85903
+2048 32 67108864 32 3.71689 3.7891 3.85903 8.29225 8.44527 8.60934
+### 0 time 1.87261 (warmup, ignored)
+### 1 time 1.85856
+### 2 time 1.86282
+### 3 time 1.89344
+2048 32 33554432 16 1.85856 1.87161 1.89344 8.45025 8.54881 8.60884
+### 0 time 0.931421 (warmup, ignored)
+### 1 time 0.928641
+### 2 time 0.93215
+### 3 time 0.934939
+2048 32 16777216 8 0.928641 0.93191 0.934939 8.55671 8.58452 8.61474
+### 0 time 0.462114 (warmup, ignored)
+### 1 time 0.465013
+### 2 time 0.46091
+### 3 time 0.466868
+2048 32 8388608 4 0.46091 0.464263 0.466868 8.56773 8.6158 8.67849
+### 0 time 0.236218 (warmup, ignored)
+### 1 time 0.232767
+### 2 time 0.227455
+### 3 time 0.233749
+2048 32 4194304 2 0.227455 0.231324 0.233749 8.55619 8.64589 8.79294
+### 0 time 0.11695 (warmup, ignored)
+### 1 time 0.114394
+### 2 time 0.119068
+### 3 time 0.118584
+2048 32 2097152 1 0.114394 0.117349 0.119068 8.39854 8.52161 8.74171
+### 0 time 0.0578112 (warmup, ignored)
+### 1 time 0.0576413
+### 2 time 0.057879
+### 3 time 0.0579828
+2048 32 1048576 0.5 0.0576413 0.0578344 0.0579828 8.62325 8.64537 8.67433
+### 0 time 0.0286172 (warmup, ignored)
+### 1 time 0.0283732
+### 2 time 0.0288172
+### 3 time 0.029388
+2048 32 524288 0.25 0.0283732 0.0288595 0.029388 8.50687 8.66266 8.81112
+### 0 time 0.0140499 (warmup, ignored)
+### 1 time 0.0139505
+### 2 time 0.0140653
+### 3 time 0.0140751
+2048 32 262144 0.125 0.0139505 0.0140303 0.0140751 8.8809 8.90927 8.96022
+### 0 time 0.00735965 (warmup, ignored)
+### 1 time 0.00715426
+### 2 time 0.00725885
+### 3 time 0.00737413
+2048 32 131072 0.0625 0.00715426 0.00726242 0.00737413 8.47557 8.60595 8.73606
+### 0 time 0.00368686 (warmup, ignored)
+### 1 time 0.00381109
+### 2 time 0.00364933
+### 3 time 0.00362253
+2048 32 65536 0.03125 0.00362253 0.00369431 0.00381109 8.19975 8.45894 8.62657
+### 0 time 0.00151253 (warmup, ignored)
+### 1 time 0.00150276
+### 2 time 0.00148158
+### 3 time 0.00149132
+2048 32 32768 0.015625 0.00148158 0.00149189 0.00150276 10.3975 10.4733 10.5461
+### 0 time 0.000700194 (warmup, ignored)
+### 1 time 0.000674794
+### 2 time 0.000663051
+### 3 time 0.000685716
+2048 32 16384 0.0078125 0.000663051 0.00067452 0.000685716 11.3932 11.5823 11.7827
+### 0 time 0.000381907 (warmup, ignored)
+### 1 time 0.000380285
+### 2 time 0.000384513
+### 3 time 0.000387256
+2048 32 8192 0.00390625 0.000380285 0.000384018 0.000387256 10.087 10.172 10.2719
+### 0 time 0.000232479 (warmup, ignored)
+### 1 time 0.000242558
+### 2 time 0.000228892
+### 3 time 0.00023726
+2048 32 4096 0.00195312 0.000228892 0.000236237 0.000242558 8.0522 8.26766 8.53295
+### 0 time 0.000124637 (warmup, ignored)
+### 1 time 0.000135752
+### 2 time 0.00012673
+### 3 time 0.000128758
+2048 32 2048 0.000976562 0.00012673 0.000130413 0.000135752 7.19372 7.48821 7.70585
+### 0 time 7.9513e-05 (warmup, ignored)
+### 1 time 7.9043e-05
+### 2 time 7.87e-05
+### 3 time 7.8058e-05
+2048 32 1024 0.000488281 7.8058e-05 7.86003e-05 7.9043e-05 6.17741 6.2122 6.25536
+### 0 time 7.0586e-05 (warmup, ignored)
+### 1 time 7.0717e-05
+### 2 time 7.1198e-05
+### 3 time 7.0685e-05
+2048 32 512 0.000244141 7.0685e-05 7.08667e-05 7.1198e-05 3.42904 3.44507 3.45392
+### 0 time 6.9996e-05 (warmup, ignored)
+### 1 time 6.9714e-05
+### 2 time 7.0105e-05
+### 3 time 7.0286e-05
+2048 32 256 0.00012207 6.9714e-05 7.0035e-05 7.0286e-05 1.73677 1.74299 1.75102
+### 0 time 6.9815e-05 (warmup, ignored)
+### 1 time 6.6379e-05
+### 2 time 6.9525e-05
+### 3 time 6.9634e-05
+2048 32 128 6.10352e-05 6.6379e-05 6.85127e-05 6.9634e-05 0.876514 0.890859 0.919495
+### 0 time 0.000216903 (warmup, ignored)
+### 1 time 5.9813e-05
+### 2 time 5.6908e-05
+### 3 time 5.697e-05
+2048 32 64 3.05176e-05 5.6908e-05 5.7897e-05 5.9813e-05 0.510216 0.527101 0.536262
+### 0 time 5.4534e-05 (warmup, ignored)
+### 1 time 5.3383e-05
+### 2 time 5.2892e-05
+### 3 time 5.2329e-05
+2048 32 32 1.52588e-05 5.2329e-05 5.2868e-05 5.3383e-05 0.285836 0.288621 0.291593
+### 0 time 4.5888e-05 (warmup, ignored)
+### 1 time 4.4777e-05
+### 2 time 4.4314e-05
+### 3 time 4.4304e-05
+2048 32 16 7.62939e-06 4.4304e-05 4.4465e-05 4.4777e-05 0.170386 0.171582 0.172206
+### 0 time 4.3454e-05 (warmup, ignored)
+### 1 time 4.2803e-05
+### 2 time 4.1279e-05
+### 3 time 4.2771e-05
+2048 32 8 3.8147e-06 4.1279e-05 4.22843e-05 4.2803e-05 0.0891222 0.0902154 0.0924125
+### 0 time 4.3653e-05 (warmup, ignored)
+### 1 time 4.1149e-05
+### 2 time 4.111e-05
+### 3 time 4.157e-05
+2048 32 4 1.90735e-06 4.111e-05 4.12763e-05 4.157e-05 0.0458828 0.0462093 0.0463962
+### 0 time 4.1811e-05 (warmup, ignored)
+### 1 time 4.1019e-05
+### 2 time 4.0717e-05
+### 3 time 4.1008e-05
+2048 32 2 9.53674e-07 4.0717e-05 4.09147e-05 4.1019e-05 0.0232496 0.0233089 0.023422
+### 0 time 4.0509e-05 (warmup, ignored)
+### 1 time 2.2784e-05
+### 2 time 2.2033e-05
+### 3 time 2.2363e-05
+2048 32 1 4.76837e-07 2.2033e-05 2.23933e-05 2.2784e-05 0.0209286 0.0212937 0.021642
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.45497 (warmup, ignored)
+### 1 time 3.26413
+### 2 time 3.22667
+### 3 time 3.35847
+4096 16 134217728 32 3.22667 3.28309 3.35847 9.52816 9.74692 9.91735
+### 0 time 1.67164 (warmup, ignored)
+### 1 time 1.62848
+### 2 time 1.62215
+### 3 time 1.64852
+4096 16 67108864 16 1.62215 1.63305 1.64852 9.70566 9.79762 9.86347
+### 0 time 0.821584 (warmup, ignored)
+### 1 time 0.847857
+### 2 time 0.826582
+### 3 time 0.820079
+4096 16 33554432 8 0.820079 0.831506 0.847857 9.43556 9.6211 9.75516
+### 0 time 0.417502 (warmup, ignored)
+### 1 time 0.410453
+### 2 time 0.405043
+### 3 time 0.403487
+4096 16 16777216 4 0.403487 0.406328 0.410453 9.74532 9.84426 9.91357
+### 0 time 0.208572 (warmup, ignored)
+### 1 time 0.206407
+### 2 time 0.203867
+### 3 time 0.209678
+4096 16 8388608 2 0.203867 0.20665 0.209678 9.53845 9.67818 9.81033
+### 0 time 0.0966572 (warmup, ignored)
+### 1 time 0.100412
+### 2 time 0.104863
+### 3 time 0.102189
+4096 16 4194304 1 0.100412 0.102488 0.104863 9.53629 9.75726 9.95893
+### 0 time 0.0500014 (warmup, ignored)
+### 1 time 0.0493194
+### 2 time 0.0517082
+### 3 time 0.0520568
+4096 16 2097152 0.5 0.0493194 0.0510281 0.0520568 9.60489 9.79851 10.138
+### 0 time 0.024597 (warmup, ignored)
+### 1 time 0.0243991
+### 2 time 0.0248365
+### 3 time 0.0253106
+4096 16 1048576 0.25 0.0243991 0.0248487 0.0253106 9.87729 10.0609 10.2463
+### 0 time 0.0127885 (warmup, ignored)
+### 1 time 0.0129925
+### 2 time 0.0130839
+### 3 time 0.0131243
+4096 16 524288 0.125 0.0129925 0.0130669 0.0131243 9.52429 9.56614 9.62096
+### 0 time 0.00632448 (warmup, ignored)
+### 1 time 0.00671184
+### 2 time 0.00642356
+### 3 time 0.00654582
+4096 16 262144 0.0625 0.00642356 0.00656041 0.00671184 9.31191 9.52685 9.7298
+### 0 time 0.00325705 (warmup, ignored)
+### 1 time 0.00339667
+### 2 time 0.00339004
+### 3 time 0.00338301
+4096 16 131072 0.03125 0.00338301 0.00338991 0.00339667 9.20019 9.21854 9.23734
+### 0 time 0.00176935 (warmup, ignored)
+### 1 time 0.0017666
+### 2 time 0.00173547
+### 3 time 0.0016782
+4096 16 65536 0.015625 0.0016782 0.00172676 0.0017666 8.84469 9.04875 9.31055
+### 0 time 0.000598038 (warmup, ignored)
+### 1 time 0.000575102
+### 2 time 0.000619514
+### 3 time 0.000572988
+4096 16 32768 0.0078125 0.000572988 0.000589201 0.000619514 12.6107 13.2595 13.6347
+### 0 time 0.000295714 (warmup, ignored)
+### 1 time 0.00028965
+### 2 time 0.00030007
+### 3 time 0.000280133
+4096 16 16384 0.00390625 0.000280133 0.000289951 0.00030007 13.0178 13.4721 13.9443
+### 0 time 0.000190348 (warmup, ignored)
+### 1 time 0.000191704
+### 2 time 0.000171452
+### 3 time 0.000191511
+4096 16 8192 0.00195312 0.000171452 0.000184889 0.000191704 10.1882 10.5638 11.3917
+### 0 time 0.000120814 (warmup, ignored)
+### 1 time 0.000119026
+### 2 time 0.000111732
+### 3 time 0.00011632
+4096 16 4096 0.000976562 0.000111732 0.000115693 0.000119026 8.20461 8.44101 8.74022
+### 0 time 6.0786e-05 (warmup, ignored)
+### 1 time 6.2168e-05
+### 2 time 6.3402e-05
+### 3 time 6.351e-05
+4096 16 2048 0.000488281 6.2168e-05 6.30267e-05 6.351e-05 7.68826 7.74722 7.85422
+### 0 time 4.9524e-05 (warmup, ignored)
+### 1 time 4.9694e-05
+### 2 time 4.9506e-05
+### 3 time 5.0175e-05
+4096 16 1024 0.000244141 4.9506e-05 4.97917e-05 5.0175e-05 4.86578 4.90324 4.93154
+### 0 time 4.3383e-05 (warmup, ignored)
+### 1 time 4.2831e-05
+### 2 time 4.3453e-05
+### 3 time 4.228e-05
+4096 16 512 0.00012207 4.228e-05 4.28547e-05 4.3453e-05 2.80925 2.84847 2.88719
+### 0 time 4.178e-05 (warmup, ignored)
+### 1 time 4.1901e-05
+### 2 time 4.1811e-05
+### 3 time 4.138e-05
+4096 16 256 6.10352e-05 4.138e-05 4.16973e-05 4.1901e-05 1.45665 1.46377 1.47499
+### 0 time 4.0627e-05 (warmup, ignored)
+### 1 time 4.1688e-05
+### 2 time 4.168e-05
+### 3 time 4.1721e-05
+4096 16 128 3.05176e-05 4.168e-05 4.16963e-05 4.1721e-05 0.731468 0.731901 0.732188
+### 0 time 0.000147171 (warmup, ignored)
+### 1 time 4.5328e-05
+### 2 time 4.2471e-05
+### 3 time 4.216e-05
+4096 16 64 1.52588e-05 4.216e-05 4.33197e-05 4.5328e-05 0.336631 0.352237 0.361926
+### 0 time 3.5788e-05 (warmup, ignored)
+### 1 time 3.4526e-05
+### 2 time 3.4557e-05
+### 3 time 3.4216e-05
+4096 16 32 7.62939e-06 3.4216e-05 3.4433e-05 3.4557e-05 0.220777 0.221572 0.222977
+### 0 time 3.3705e-05 (warmup, ignored)
+### 1 time 3.2854e-05
+### 2 time 3.3193e-05
+### 3 time 3.3023e-05
+4096 16 16 3.8147e-06 3.2854e-05 3.30233e-05 3.3193e-05 0.114925 0.115515 0.116111
+### 0 time 3.4185e-05 (warmup, ignored)
+### 1 time 3.1662e-05
+### 2 time 3.1751e-05
+### 3 time 3.1761e-05
+4096 16 8 1.90735e-06 3.1662e-05 3.17247e-05 3.1761e-05 0.0600532 0.0601219 0.0602409
+### 0 time 3.2872e-05 (warmup, ignored)
+### 1 time 3.0889e-05
+### 2 time 3.1621e-05
+### 3 time 3.14e-05
+4096 16 4 9.53674e-07 3.0889e-05 3.13033e-05 3.1621e-05 0.0301595 0.0304656 0.0308742
+### 0 time 1.5079e-05 (warmup, ignored)
+### 1 time 1.564e-05
+### 2 time 1.582e-05
+### 3 time 1.562e-05
+4096 16 2 4.76837e-07 1.562e-05 1.56933e-05 1.582e-05 0.0301414 0.0303847 0.0305273
+### 0 time 2.8434e-05 (warmup, ignored)
+### 1 time 1.557e-05
+### 2 time 1.54e-05
+### 3 time 1.4578e-05
+4096 16 1 2.38419e-07 1.4578e-05 1.51827e-05 1.557e-05 0.0153127 0.0157033 0.0163547
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 3.83871 (warmup, ignored)
+### 1 time 4.30941
+### 2 time 3.89566
+### 3 time 3.99604
+8192 8 268435456 32 3.89566 4.06704 4.30941 7.42561 7.86813 8.21426
+### 0 time 1.3723 (warmup, ignored)
+### 1 time 1.3976
+### 2 time 1.38389
+### 3 time 1.393
+8192 8 134217728 16 1.38389 1.3915 1.3976 11.4482 11.4984 11.5616
+### 0 time 0.688116 (warmup, ignored)
+### 1 time 0.677669
+### 2 time 0.694298
+### 3 time 0.691888
+8192 8 67108864 8 0.677669 0.687952 0.694298 11.5224 11.6287 11.8052
+### 0 time 0.345136 (warmup, ignored)
+### 1 time 0.340881
+### 2 time 0.349601
+### 3 time 0.327488
+8192 8 33554432 4 0.327488 0.339323 0.349601 11.4416 11.7882 12.2142
+### 0 time 0.173656 (warmup, ignored)
+### 1 time 0.171114
+### 2 time 0.172282
+### 3 time 0.172861
+8192 8 16777216 2 0.171114 0.172086 0.172861 11.57 11.6221 11.6881
+### 0 time 0.0871035 (warmup, ignored)
+### 1 time 0.0817155
+### 2 time 0.0867078
+### 3 time 0.0848328
+8192 8 8388608 1 0.0817155 0.0844187 0.0867078 11.533 11.8457 12.2376
+### 0 time 0.0426082 (warmup, ignored)
+### 1 time 0.0413193
+### 2 time 0.0413438
+### 3 time 0.0427562
+8192 8 4194304 0.5 0.0413193 0.0418065 0.0427562 11.6942 11.9599 12.1009
+### 0 time 0.0205174 (warmup, ignored)
+### 1 time 0.0215138
+### 2 time 0.0215784
+### 3 time 0.020962
+8192 8 2097152 0.25 0.020962 0.0213514 0.0215784 11.5857 11.7088 11.9263
+### 0 time 0.0106065 (warmup, ignored)
+### 1 time 0.0103714
+### 2 time 0.0106319
+### 3 time 0.0105737
+8192 8 1048576 0.125 0.0103714 0.0105257 0.0106319 11.7571 11.8757 12.0523
+### 0 time 0.00522006 (warmup, ignored)
+### 1 time 0.00519179
+### 2 time 0.00508538
+### 3 time 0.00524733
+8192 8 524288 0.0625 0.00508538 0.00517484 0.00524733 11.9108 12.0777 12.2901
+### 0 time 0.00266162 (warmup, ignored)
+### 1 time 0.00267139
+### 2 time 0.00272376
+### 3 time 0.00271638
+8192 8 262144 0.03125 0.00267139 0.00270384 0.00272376 11.4731 11.5576 11.698
+### 0 time 0.00130886 (warmup, ignored)
+### 1 time 0.00132727
+### 2 time 0.00141646
+### 3 time 0.00133462
+8192 8 131072 0.015625 0.00132727 0.00135945 0.00141646 11.031 11.4936 11.7723
+### 0 time 0.000684327 (warmup, ignored)
+### 1 time 0.000671445
+### 2 time 0.000727868
+### 3 time 0.000726217
+8192 8 65536 0.0078125 0.000671445 0.00070851 0.000727868 10.7334 11.0267 11.6354
+### 0 time 0.000243924 (warmup, ignored)
+### 1 time 0.000235177
+### 2 time 0.000245855
+### 3 time 0.000249213
+8192 8 32768 0.00390625 0.000235177 0.000243415 0.000249213 15.6743 16.0477 16.6098
+### 0 time 0.000138879 (warmup, ignored)
+### 1 time 0.000137279
+### 2 time 0.000136921
+### 3 time 0.000128384
+8192 8 16384 0.00195312 0.000128384 0.000134195 0.000137279 14.2274 14.5544 15.2131
+### 0 time 8.3859e-05 (warmup, ignored)
+### 1 time 9.3521e-05
+### 2 time 9.4072e-05
+### 3 time 9.1116e-05
+8192 8 8192 0.000976562 9.1116e-05 9.2903e-05 9.4072e-05 10.381 10.5116 10.7178
+### 0 time 5.8634e-05 (warmup, ignored)
+### 1 time 5.8022e-05
+### 2 time 5.794e-05
+### 3 time 5.5467e-05
+8192 8 4096 0.000488281 5.5467e-05 5.7143e-05 5.8022e-05 8.41545 8.5449 8.80309
+### 0 time 3.8382e-05 (warmup, ignored)
+### 1 time 3.8444e-05
+### 2 time 3.7201e-05
+### 3 time 3.8102e-05
+8192 8 2048 0.000244141 3.7201e-05 3.79157e-05 3.8444e-05 6.35055 6.43904 6.56274
+### 0 time 3.3855e-05 (warmup, ignored)
+### 1 time 3.3683e-05
+### 2 time 3.3954e-05
+### 3 time 3.3956e-05
+8192 8 1024 0.00012207 3.3683e-05 3.38643e-05 3.3956e-05 3.59496 3.60469 3.62409
+### 0 time 2.8696e-05 (warmup, ignored)
+### 1 time 2.8925e-05
+### 2 time 2.8555e-05
+### 3 time 2.8724e-05
+8192 8 512 6.10352e-05 2.8555e-05 2.87347e-05 2.8925e-05 2.11012 2.12409 2.13746
+### 0 time 2.7913e-05 (warmup, ignored)
+### 1 time 2.637e-05
+### 2 time 2.7843e-05
+### 3 time 2.7933e-05
+8192 8 256 3.05176e-05 2.637e-05 2.7382e-05 2.7933e-05 1.09253 1.11451 1.15728
+### 0 time 2.7213e-05 (warmup, ignored)
+### 1 time 2.7213e-05
+### 2 time 2.7392e-05
+### 3 time 2.7311e-05
+8192 8 128 1.52588e-05 2.7213e-05 2.73053e-05 2.7392e-05 0.557053 0.558821 0.560717
+### 0 time 7.8221e-05 (warmup, ignored)
+### 1 time 2.6711e-05
+### 2 time 2.5239e-05
+### 3 time 2.5488e-05
+8192 8 64 7.62939e-06 2.5239e-05 2.58127e-05 2.6711e-05 0.285627 0.295568 0.302286
+### 0 time 2.4317e-05 (warmup, ignored)
+### 1 time 2.4367e-05
+### 2 time 2.4607e-05
+### 3 time 2.4286e-05
+8192 8 32 3.8147e-06 2.4286e-05 2.442e-05 2.4607e-05 0.155025 0.156212 0.157074
+### 0 time 2.5048e-05 (warmup, ignored)
+### 1 time 2.3536e-05
+### 2 time 2.2683e-05
+### 3 time 2.3284e-05
+8192 8 16 1.90735e-06 2.2683e-05 2.31677e-05 2.3536e-05 0.0810396 0.082328 0.0840871
+### 0 time 2.5128e-05 (warmup, ignored)
+### 1 time 2.3325e-05
+### 2 time 2.3155e-05
+### 3 time 2.3084e-05
+8192 8 8 9.53674e-07 2.3084e-05 2.3188e-05 2.3325e-05 0.0408864 0.0411279 0.0413132
+### 0 time 1.1351e-05 (warmup, ignored)
+### 1 time 1.019e-05
+### 2 time 1.074e-05
+### 3 time 1.07e-05
+8192 8 4 4.76837e-07 1.019e-05 1.05433e-05 1.074e-05 0.0443982 0.0452264 0.0467946
+### 0 time 1.041e-05 (warmup, ignored)
+### 1 time 1.062e-05
+### 2 time 1.035e-05
+### 3 time 1.034e-05
+8192 8 2 2.38419e-07 1.034e-05 1.04367e-05 1.062e-05 0.02245 0.0228443 0.0230579
+### 0 time 1.1441e-05 (warmup, ignored)
+### 1 time 1.014e-05
+### 2 time 1.0239e-05
+### 3 time 1.051e-05
+8192 8 1 1.19209e-07 1.014e-05 1.02963e-05 1.051e-05 0.0113425 0.0115778 0.0117563
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 2.87422 (warmup, ignored)
+### 1 time 3.10365
+### 2 time 2.94916
+### 3 time 2.82532
+16384 4 536870912 32 2.82532 2.95938 3.10365 10.3104 10.8131 11.3261
+### 0 time 1.23198 (warmup, ignored)
+### 1 time 1.21383
+### 2 time 1.41583
+### 3 time 1.27848
+16384 4 268435456 16 1.21383 1.30271 1.41583 11.3008 12.282 13.1814
+### 0 time 0.471695 (warmup, ignored)
+### 1 time 0.44193
+### 2 time 0.451575
+### 3 time 0.447991
+16384 4 134217728 8 0.44193 0.447165 0.451575 17.7158 17.8905 18.1024
+### 0 time 0.226396 (warmup, ignored)
+### 1 time 0.226105
+### 2 time 0.21894
+### 3 time 0.224442
+16384 4 67108864 4 0.21894 0.223162 0.226105 17.6909 17.9242 18.2699
+### 0 time 0.111402 (warmup, ignored)
+### 1 time 0.109563
+### 2 time 0.110378
+### 3 time 0.111311
+16384 4 33554432 2 0.109563 0.110417 0.111311 17.9677 18.1131 18.2544
+### 0 time 0.0569726 (warmup, ignored)
+### 1 time 0.055997
+### 2 time 0.0569335
+### 3 time 0.055228
+16384 4 16777216 1 0.055228 0.0560528 0.0569335 17.5643 17.8403 18.1067
+### 0 time 0.0276464 (warmup, ignored)
+### 1 time 0.0276491
+### 2 time 0.0282608
+### 3 time 0.0283181
+16384 4 8388608 0.5 0.0276491 0.028076 0.0283181 17.6566 17.8088 18.0838
+### 0 time 0.0142475 (warmup, ignored)
+### 1 time 0.0139401
+### 2 time 0.0140506
+### 3 time 0.0139255
+16384 4 4194304 0.25 0.0139255 0.013972 0.0140506 17.7929 17.8929 17.9527
+### 0 time 0.00682041 (warmup, ignored)
+### 1 time 0.00712687
+### 2 time 0.00687706
+### 3 time 0.00689505
+16384 4 2097152 0.125 0.00687706 0.00696633 0.00712687 17.5393 17.9435 18.1764
+### 0 time 0.00333223 (warmup, ignored)
+### 1 time 0.00354229
+### 2 time 0.00344169
+### 3 time 0.00342718
+16384 4 1048576 0.0625 0.00342718 0.00347038 0.00354229 17.644 18.0095 18.2366
+### 0 time 0.00178787 (warmup, ignored)
+### 1 time 0.00173717
+### 2 time 0.0017336
+### 3 time 0.0017551
+16384 4 524288 0.03125 0.0017336 0.00174196 0.0017551 17.8053 17.9396 18.026
+### 0 time 0.000927787 (warmup, ignored)
+### 1 time 0.000888401
+### 2 time 0.00088879
+### 3 time 0.000908598
+16384 4 262144 0.015625 0.000888401 0.000895263 0.000908598 17.1968 17.453 17.5878
+### 0 time 0.000437157 (warmup, ignored)
+### 1 time 0.000445117
+### 2 time 0.000465352
+### 3 time 0.000427167
+16384 4 131072 0.0078125 0.000427167 0.000445879 0.000465352 16.7884 17.5216 18.2891
+### 0 time 0.000250695 (warmup, ignored)
+### 1 time 0.000229855
+### 2 time 0.000252891
+### 3 time 0.000229735
+16384 4 65536 0.00390625 0.000229735 0.000237494 0.000252891 15.4464 16.4478 17.0033
+### 0 time 0.000123583 (warmup, ignored)
+### 1 time 0.00011082
+### 2 time 0.00011814
+### 3 time 0.000115223
+16384 4 32768 0.00195312 0.00011082 0.000114728 0.00011814 16.5323 17.024 17.6243
+### 0 time 7.9894e-05 (warmup, ignored)
+### 1 time 7.6368e-05
+### 2 time 7.4532e-05
+### 3 time 7.8439e-05
+16384 4 16384 0.000976562 7.4532e-05 7.64463e-05 7.8439e-05 12.45 12.7745 13.1026
+### 0 time 4.4233e-05 (warmup, ignored)
+### 1 time 4.6049e-05
+### 2 time 5.3404e-05
+### 3 time 5.2542e-05
+16384 4 8192 0.000488281 4.6049e-05 5.0665e-05 5.3404e-05 9.14316 9.63745 10.6035
+### 0 time 3.7031e-05 (warmup, ignored)
+### 1 time 3.643e-05
+### 2 time 3.7503e-05
+### 3 time 3.7101e-05
+16384 4 4096 0.000244141 3.643e-05 3.70113e-05 3.7503e-05 6.5099 6.59637 6.70164
+### 0 time 2.617e-05 (warmup, ignored)
+### 1 time 2.562e-05
+### 2 time 2.5479e-05
+### 3 time 2.595e-05
+16384 4 2048 0.00012207 2.5479e-05 2.5683e-05 2.595e-05 4.70406 4.75296 4.79102
+### 0 time 2.3294e-05 (warmup, ignored)
+### 1 time 2.3095e-05
+### 2 time 2.3275e-05
+### 3 time 2.3215e-05
+16384 4 1024 6.10352e-05 2.3095e-05 2.3195e-05 2.3275e-05 2.62235 2.63139 2.64279
+### 0 time 1.8476e-05 (warmup, ignored)
+### 1 time 1.8566e-05
+### 2 time 1.8605e-05
+### 3 time 1.8395e-05
+16384 4 512 3.05176e-05 1.8395e-05 1.8522e-05 1.8605e-05 1.64029 1.64764 1.65901
+### 0 time 1.7824e-05 (warmup, ignored)
+### 1 time 1.7734e-05
+### 2 time 1.7755e-05
+### 3 time 1.7805e-05
+16384 4 256 1.52588e-05 1.7734e-05 1.77647e-05 1.7805e-05 0.856995 0.85894 0.860426
+### 0 time 1.7513e-05 (warmup, ignored)
+### 1 time 1.7272e-05
+### 2 time 1.7344e-05
+### 3 time 1.7333e-05
+16384 4 128 7.62939e-06 1.7272e-05 1.73163e-05 1.7344e-05 0.439887 0.440589 0.44172
+### 0 time 2.2773e-05 (warmup, ignored)
+### 1 time 2.1712e-05
+### 2 time 2.2192e-05
+### 3 time 2.1732e-05
+16384 4 64 3.8147e-06 2.1712e-05 2.18787e-05 2.2192e-05 0.171895 0.174357 0.175695
+### 0 time 2.1661e-05 (warmup, ignored)
+### 1 time 2.1751e-05
+### 2 time 2.1912e-05
+### 3 time 2.14e-05
+16384 4 32 1.90735e-06 2.14e-05 2.16877e-05 2.1912e-05 0.0870458 0.0879462 0.0891284
+### 0 time 1.5219e-05 (warmup, ignored)
+### 1 time 1.4939e-05
+### 2 time 1.4889e-05
+### 3 time 1.4938e-05
+16384 4 16 9.53674e-07 1.4889e-05 1.4922e-05 1.4939e-05 0.0638379 0.0639106 0.0640523
+### 0 time 1.3897e-05 (warmup, ignored)
+### 1 time 1.3806e-05
+### 2 time 1.3947e-05
+### 3 time 1.3916e-05
+16384 4 8 4.76837e-07 1.3806e-05 1.38897e-05 1.3947e-05 0.0341892 0.0343304 0.0345384
+### 0 time 1.3766e-05 (warmup, ignored)
+### 1 time 1.3526e-05
+### 2 time 1.3736e-05
+### 3 time 1.3967e-05
+16384 4 4 2.38419e-07 1.3526e-05 1.3743e-05 1.3967e-05 0.0170701 0.0173484 0.0176267
+### 0 time 1.3946e-05 (warmup, ignored)
+### 1 time 1.4017e-05
+### 2 time 1.3837e-05
+### 3 time 1.4016e-05
+16384 4 2 1.19209e-07 1.3837e-05 1.39567e-05 1.4017e-05 0.00850462 0.00854139 0.00861526
+### 0 time 1.3667e-05 (warmup, ignored)
+### 1 time 1.4036e-05
+### 2 time 1.3957e-05
+### 3 time 1.3876e-05
+16384 4 1 5.96046e-08 1.3876e-05 1.39563e-05 1.4036e-05 0.00424655 0.0042708 0.00429552
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 1.8013 (warmup, ignored)
+### 1 time 1.7723
+### 2 time 1.74765
+### 3 time 1.7628
+32768 2 1073741824 32 1.74765 1.76092 1.7723 18.0557 18.1724 18.3103
+### 0 time 0.744974 (warmup, ignored)
+### 1 time 0.782499
+### 2 time 0.722351
+### 3 time 0.751055
+32768 2 536870912 16 0.722351 0.751969 0.782499 20.4473 21.2775 22.1499
+### 0 time 0.270059 (warmup, ignored)
+### 1 time 0.277472
+### 2 time 0.265693
+### 3 time 0.262562
+32768 2 268435456 8 0.262562 0.268576 0.277472 28.8317 29.7868 30.469
+### 0 time 0.12186 (warmup, ignored)
+### 1 time 0.12335
+### 2 time 0.122023
+### 3 time 0.123628
+32768 2 134217728 4 0.122023 0.123 0.123628 32.355 32.5202 32.7807
+### 0 time 0.0611344 (warmup, ignored)
+### 1 time 0.0610263
+### 2 time 0.0613601
+### 3 time 0.0614995
+32768 2 67108864 2 0.0610263 0.0612953 0.0614995 32.5206 32.6289 32.7727
+### 0 time 0.0305092 (warmup, ignored)
+### 1 time 0.0313238
+### 2 time 0.0300905
+### 3 time 0.0308528
+32768 2 33554432 1 0.0300905 0.0307557 0.0313238 31.9246 32.5143 33.233
+### 0 time 0.0153535 (warmup, ignored)
+### 1 time 0.0153012
+### 2 time 0.0151304
+### 3 time 0.0151653
+32768 2 16777216 0.5 0.0151304 0.015199 0.0153012 32.6771 32.8969 33.046
+### 0 time 0.00754246 (warmup, ignored)
+### 1 time 0.00768788
+### 2 time 0.00770024
+### 3 time 0.00754393
+32768 2 8388608 0.25 0.00754393 0.00764402 0.00770024 32.4665 32.7053 33.1392
+### 0 time 0.00366868 (warmup, ignored)
+### 1 time 0.00360434
+### 2 time 0.0037393
+### 3 time 0.0036814
+32768 2 4194304 0.125 0.00360434 0.00367501 0.0037393 33.4287 34.0135 34.6804
+### 0 time 0.00181083 (warmup, ignored)
+### 1 time 0.00179025
+### 2 time 0.00184702
+### 3 time 0.00185034
+32768 2 2097152 0.0625 0.00179025 0.0018292 0.00185034 33.7776 34.1679 34.9113
+### 0 time 0.000898109 (warmup, ignored)
+### 1 time 0.000890154
+### 2 time 0.000873358
+### 3 time 0.000896375
+32768 2 1048576 0.03125 0.000873358 0.000886629 0.000896375 34.8626 35.2459 35.7814
+### 0 time 0.000418586 (warmup, ignored)
+### 1 time 0.000427507
+### 2 time 0.000405104
+### 3 time 0.000407457
+32768 2 524288 0.015625 0.000405104 0.000413356 0.000427507 36.5491 37.8003 38.5703
+### 0 time 0.000197431 (warmup, ignored)
+### 1 time 0.000195327
+### 2 time 0.000191694
+### 3 time 0.000190948
+32768 2 262144 0.0078125 0.000190948 0.000192656 0.000195327 39.997 40.5515 40.9143
+### 0 time 0.000135913 (warmup, ignored)
+### 1 time 0.000130929
+### 2 time 0.000136735
+### 3 time 0.000130784
+32768 2 131072 0.00390625 0.000130784 0.000132816 0.000136735 28.568 29.411 29.868
+### 0 time 8.8532e-05 (warmup, ignored)
+### 1 time 8.6677e-05
+### 2 time 8.7529e-05
+### 3 time 8.757e-05
+32768 2 65536 0.00195312 8.6677e-05 8.72587e-05 8.757e-05 22.3036 22.3832 22.5334
+### 0 time 4.2522e-05 (warmup, ignored)
+### 1 time 4.2332e-05
+### 2 time 4.226e-05
+### 3 time 4.176e-05
+32768 2 32768 0.000976562 4.176e-05 4.21173e-05 4.2332e-05 23.0691 23.1867 23.3851
+### 0 time 3.7161e-05 (warmup, ignored)
+### 1 time 3.4206e-05
+### 2 time 3.4034e-05
+### 3 time 3.3834e-05
+32768 2 16384 0.000488281 3.3834e-05 3.40247e-05 3.4206e-05 14.2747 14.3508 14.4317
+### 0 time 3.0047e-05 (warmup, ignored)
+### 1 time 2.8444e-05
+### 2 time 2.9236e-05
+### 3 time 3.0048e-05
+32768 2 8192 0.000244141 2.8444e-05 2.92427e-05 3.0048e-05 8.12502 8.34878 8.5832
+### 0 time 2.4777e-05 (warmup, ignored)
+### 1 time 2.539e-05
+### 2 time 2.4717e-05
+### 3 time 2.4727e-05
+32768 2 4096 0.00012207 2.4717e-05 2.49447e-05 2.539e-05 4.80781 4.89364 4.93872
+### 0 time 1.8295e-05 (warmup, ignored)
+### 1 time 1.7544e-05
+### 2 time 1.7674e-05
+### 3 time 1.7414e-05
+32768 2 2048 6.10352e-05 1.7414e-05 1.7544e-05 1.7674e-05 3.45339 3.47898 3.50495
+### 0 time 1.6462e-05 (warmup, ignored)
+### 1 time 1.6252e-05
+### 2 time 1.58e-05
+### 3 time 1.6191e-05
+32768 2 1024 3.05176e-05 1.58e-05 1.6081e-05 1.6252e-05 1.87777 1.89774 1.93149
+### 0 time 1.2444e-05 (warmup, ignored)
+### 1 time 1.2163e-05
+### 2 time 1.2033e-05
+### 3 time 1.2073e-05
+32768 2 512 1.52588e-05 1.2033e-05 1.20897e-05 1.2163e-05 1.25453 1.26213 1.26808
+### 0 time 1.1482e-05 (warmup, ignored)
+### 1 time 1.1432e-05
+### 2 time 1.1652e-05
+### 3 time 1.1422e-05
+32768 2 256 7.62939e-06 1.1422e-05 1.1502e-05 1.1652e-05 0.654771 0.66331 0.667956
+### 0 time 1.1061e-05 (warmup, ignored)
+### 1 time 1.1021e-05
+### 2 time 1.0921e-05
+### 3 time 1.1101e-05
+32768 2 128 3.8147e-06 1.0921e-05 1.10143e-05 1.1101e-05 0.343635 0.346339 0.349299
+### 0 time 6.803e-06 (warmup, ignored)
+### 1 time 6.703e-06
+### 2 time 6.833e-06
+### 3 time 6.834e-06
+32768 2 64 1.90735e-06 6.703e-06 6.79e-06 6.834e-06 0.279097 0.280906 0.284552
+### 0 time 6.543e-06 (warmup, ignored)
+### 1 time 6.342e-06
+### 2 time 6.262e-06
+### 3 time 6.402e-06
+32768 2 32 9.53674e-07 6.262e-06 6.33533e-06 6.402e-06 0.148965 0.150533 0.152295
+### 0 time 2.635e-06 (warmup, ignored)
+### 1 time 2.555e-06
+### 2 time 2.625e-06
+### 3 time 2.605e-06
+32768 2 16 4.76837e-07 2.555e-06 2.595e-06 2.625e-06 0.181652 0.183752 0.186629
+### 0 time 2.565e-06 (warmup, ignored)
+### 1 time 2.615e-06
+### 2 time 2.615e-06
+### 3 time 2.595e-06
+32768 2 8 2.38419e-07 2.595e-06 2.60833e-06 2.615e-06 0.0911734 0.0914065 0.0918761
+### 0 time 2.575e-06 (warmup, ignored)
+### 1 time 2.565e-06
+### 2 time 2.545e-06
+### 3 time 2.525e-06
+32768 2 4 1.19209e-07 2.525e-06 2.545e-06 2.565e-06 0.0464754 0.0468406 0.0472116
+### 0 time 2.555e-06 (warmup, ignored)
+### 1 time 2.555e-06
+### 2 time 2.495e-06
+### 3 time 2.515e-06
+32768 2 2 5.96046e-08 2.495e-06 2.52167e-06 2.555e-06 0.0233286 0.023637 0.0238896
+### 0 time 2.525e-06 (warmup, ignored)
+### 1 time 2.525e-06
+### 2 time 2.535e-06
+### 3 time 2.535e-06
+32768 2 1 2.98023e-08 2.525e-06 2.53167e-06 2.535e-06 0.0117563 0.0117718 0.0118029
+
+
+# Strided Alltoall performance, 65536 tasks, 3 iterations
+# comms | comm size | count | GiB (in+out) | seconds (min, avg, max) | GiB/s (min, avg, max)
+### 0 time 0.0320827 (warmup, ignored)
+### 1 time 0.0327023
+### 2 time 0.0327481
+### 3 time 0.0328302
+65536 1 2147483647 32 0.0327023 0.0327602 0.0328302 974.712 976.795 978.524
+### 0 time 0.0163802 (warmup, ignored)
+### 1 time 0.0163777
+### 2 time 0.0163681
+### 3 time 0.0163591
+65536 1 1073741823 16 0.0163591 0.0163683 0.0163777 976.938 977.498 978.046
+### 0 time 0.00812096 (warmup, ignored)
+### 1 time 0.00813575
+### 2 time 0.00813007
+### 3 time 0.00813809
+65536 1 536870911 8 0.00813007 0.00813464 0.00813809 983.032 983.449 984.001
+### 0 time 0.00404028 (warmup, ignored)
+### 1 time 0.00404059
+### 2 time 0.00403835
+### 3 time 0.00403926
+65536 1 268435455 4 0.00403835 0.0040394 0.00404059 989.954 990.246 990.504
+### 0 time 0.00199579 (warmup, ignored)
+### 1 time 0.00199481
+### 2 time 0.00199326
+### 3 time 0.00199409
+65536 1 134217727 2 0.00199326 0.00199405 0.00199481 1002.6 1002.98 1003.38
+### 0 time 0.000982435 (warmup, ignored)
+### 1 time 0.000976823
+### 2 time 0.000979802
+### 3 time 0.000982224
+65536 1 67108863 1 0.000976823 0.000979616 0.000982224 1018.1 1020.81 1023.73
+### 0 time 0.000484777 (warmup, ignored)
+### 1 time 0.000484971
+### 2 time 0.000482484
+### 3 time 0.00048544
+65536 1 33554431 0.5 0.000482484 0.000484298 0.00048544 1029.99 1032.42 1036.3
+### 0 time 0.000242341 (warmup, ignored)
+### 1 time 0.000242762
+### 2 time 0.000243751
+### 3 time 0.000243058
+65536 1 16777215 0.25 0.000242762 0.00024319 0.000243751 1025.64 1028 1029.82
+### 0 time 0.000126434 (warmup, ignored)
+### 1 time 0.000125633
+### 2 time 0.000126264
+### 3 time 0.000126374
+65536 1 8388607 0.125 0.000125633 0.00012609 0.000126374 989.127 991.353 994.961
+### 0 time 6.9253e-05 (warmup, ignored)
+### 1 time 6.8503e-05
+### 2 time 6.8282e-05
+### 3 time 6.8429e-05
+65536 1 4194303 0.0625 6.8282e-05 6.84047e-05 6.8503e-05 912.369 913.68 915.322
+### 0 time 4.0358e-05 (warmup, ignored)
+### 1 time 4.0076e-05
+### 2 time 4.0398e-05
+### 3 time 4.0378e-05
+65536 1 2097151 0.03125 4.0076e-05 4.0284e-05 4.0398e-05 773.553 775.742 779.768
+### 0 time 2.7292e-05 (warmup, ignored)
+### 1 time 2.7263e-05
+### 2 time 2.639e-05
+### 3 time 2.7323e-05
+65536 1 1048575 0.015625 2.639e-05 2.6992e-05 2.7323e-05 571.862 578.875 592.08
+### 0 time 2.0208e-05 (warmup, ignored)
+### 1 time 1.9778e-05
+### 2 time 2.0039e-05
+### 3 time 2.0158e-05
+65536 1 524287 0.00781249 1.9778e-05 1.99917e-05 2.0158e-05 387.563 390.787 395.009
+### 0 time 1.6862e-05 (warmup, ignored)
+### 1 time 1.6652e-05
+### 2 time 1.6441e-05
+### 3 time 1.6532e-05
+65536 1 262143 0.00390624 1.6441e-05 1.65417e-05 1.6652e-05 234.581 236.145 237.591
+### 0 time 2.5249e-05 (warmup, ignored)
+### 1 time 2.5179e-05
+### 2 time 2.5189e-05
+### 3 time 2.5168e-05
+65536 1 131071 0.00195311 2.5168e-05 2.51787e-05 2.5189e-05 77.5382 77.57 77.6029
+### 0 time 1.4909e-05 (warmup, ignored)
+### 1 time 1.4908e-05
+### 2 time 1.4909e-05
+### 3 time 1.4889e-05
+65536 1 65535 0.000976548 1.4889e-05 1.4902e-05 1.4909e-05 65.5005 65.5313 65.5885
+### 0 time 9.658e-06 (warmup, ignored)
+### 1 time 9.648e-06
+### 2 time 9.708e-06
+### 3 time 9.628e-06
+65536 1 32767 0.000488266 9.628e-06 9.66133e-06 9.708e-06 50.2953 50.5382 50.7132
+### 0 time 6.933e-06 (warmup, ignored)
+### 1 time 6.943e-06
+### 2 time 6.933e-06
+### 3 time 6.943e-06
+65536 1 16383 0.000244126 6.933e-06 6.93967e-06 6.943e-06 35.1614 35.1783 35.2121
+### 0 time 5.61e-06 (warmup, ignored)
+### 1 time 5.57e-06
+### 2 time 5.62e-06
+### 3 time 5.571e-06
+65536 1 8191 0.000122055 5.57e-06 5.587e-06 5.62e-06 21.718 21.8463 21.913
+### 0 time 4.799e-06 (warmup, ignored)
+### 1 time 4.789e-06
+### 2 time 4.79e-06
+### 3 time 4.799e-06
+65536 1 4095 6.10203e-05 4.789e-06 4.79267e-06 4.799e-06 12.7152 12.732 12.7418
+### 0 time 4.349e-06 (warmup, ignored)
+### 1 time 4.488e-06
+### 2 time 4.479e-06
+### 3 time 4.489e-06
+65536 1 2047 3.05027e-05 4.479e-06 4.48533e-06 4.489e-06 6.79498 6.80054 6.81015
+### 0 time 4.258e-06 (warmup, ignored)
+### 1 time 4.158e-06
+### 2 time 4.168e-06
+### 3 time 4.178e-06
+65536 1 1023 1.52439e-05 4.158e-06 4.168e-06 4.178e-06 3.64861 3.65736 3.66616
+### 0 time 7.61e-07 (warmup, ignored)
+### 1 time 7.41e-07
+### 2 time 7.31e-07
+### 3 time 7.31e-07
+65536 1 511 7.61449e-06 7.31e-07 7.34333e-07 7.41e-07 10.276 10.3693 10.4165
+### 0 time 4.5e-07 (warmup, ignored)
+### 1 time 4.3e-07
+### 2 time 4.3e-07
+### 3 time 4.31e-07
+65536 1 255 3.7998e-06 4.3e-07 4.30333e-07 4.31e-07 8.81623 8.82989 8.83674
+### 0 time 4e-07 (warmup, ignored)
+### 1 time 4e-07
+### 2 time 4e-07
+### 3 time 4e-07
+65536 1 127 1.89245e-06 4e-07 4e-07 4e-07 4.73112 4.73112 4.73112
+### 0 time 1.2e-07 (warmup, ignored)
+### 1 time 9.99999e-08
+### 2 time 9.99999e-08
+### 3 time 9.99999e-08
+65536 1 63 9.38773e-07 9.99999e-08 9.99999e-08 9.99999e-08 9.38775 9.38775 9.38775
+### 0 time 9.99999e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 9e-08
+### 3 time 9e-08
+65536 1 31 4.61936e-07 9e-08 9e-08 9e-08 5.13262 5.13262 5.13262
+### 0 time 9.99999e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 9e-08
+### 3 time 9e-08
+65536 1 15 2.23517e-07 9e-08 9e-08 9e-08 2.48353 2.48353 2.48353
+### 0 time 9.99999e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 9e-08
+### 3 time 9e-08
+65536 1 7 1.04308e-07 9e-08 9e-08 9e-08 1.15898 1.15898 1.15898
+### 0 time 9.99999e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 9e-08
+### 3 time 9e-08
+65536 1 3 4.47035e-08 9e-08 9e-08 9e-08 0.496706 0.496706 0.496706
+### 0 time 9e-08 (warmup, ignored)
+### 1 time 9e-08
+### 2 time 8.00001e-08
+### 3 time 9e-08
+65536 1 1 1.49012e-08 8.00001e-08 8.66667e-08 9e-08 0.165569 0.171936 0.186264
+# Done
+
+MPICH Slingshot Network Summary: 2 network timeouts
+
++ date
+Sun 24 Mar 2024 06:46:13 AM EDT
