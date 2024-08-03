@@ -1,0 +1,145 @@
+Error: nrs (128) should be evenly divided rs_per_host (6)
+Error: Requested job constraints can never be met. Job was not scheduled. Check your request and try again.
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@batch2>
+Subject: Job 3361856: <mpiGraph> in cluster <summit> Exited
+
+Job <mpiGraph> was submitted from host <login2> by user <khana> in cluster <summit> at Fri Mar 22 19:19:39 2024
+Job was executed on host(s) <1*batch2>, in queue <batch>, as user <khana> in cluster <summit> at Fri Mar 22 21:36:29 2024
+                            <42*b13n10>
+                            <42*b13n11>
+                            <42*b13n12>
+                            <42*b13n13>
+                            <42*b13n14>
+                            <42*b13n15>
+                            <42*b13n16>
+                            <42*b13n17>
+                            <42*b13n18>
+                            <42*b14n01>
+                            <42*b14n02>
+                            <42*b14n03>
+                            <42*b14n04>
+                            <42*b14n05>
+                            <42*b14n06>
+                            <42*b14n07>
+                            <42*b14n08>
+                            <42*b14n09>
+                            <42*b14n10>
+                            <42*b14n11>
+                            <42*b14n12>
+                            <42*b14n13>
+                            <42*b14n14>
+                            <42*b14n15>
+                            <42*b14n16>
+                            <42*b14n17>
+                            <42*b14n18>
+                            <42*b15n01>
+                            <42*b15n02>
+                            <42*b15n03>
+                            <42*b15n04>
+                            <42*b15n05>
+                            <42*b15n06>
+                            <42*b15n07>
+                            <42*b15n08>
+                            <42*b15n09>
+                            <42*b15n10>
+                            <42*b15n11>
+                            <42*b15n12>
+                            <42*b15n13>
+                            <42*b15n14>
+                            <42*b15n15>
+                            <42*b15n16>
+                            <42*b15n17>
+                            <42*b15n18>
+                            <42*b23n18>
+                            <42*b24n01>
+                            <42*b24n02>
+                            <42*b35n05>
+                            <42*b35n06>
+                            <42*c26n16>
+                            <42*c26n17>
+                            <42*c26n18>
+                            <42*c27n01>
+                            <42*c27n02>
+                            <42*c27n03>
+                            <42*c27n04>
+                            <42*c27n05>
+                            <42*c27n06>
+                            <42*c27n07>
+                            <42*c27n08>
+                            <42*c27n09>
+                            <42*e03n11>
+                            <42*e03n12>
+                            <42*e03n14>
+                            <42*e03n15>
+                            <42*e03n16>
+                            <42*e03n17>
+                            <42*e03n18>
+                            <42*e04n01>
+                            <42*e04n02>
+                            <42*e04n03>
+                            <42*e04n04>
+                            <42*e04n05>
+                            <42*e04n06>
+                            <42*e04n07>
+                            <42*e04n08>
+                            <42*e04n09>
+                            <42*e04n10>
+                            <42*e04n11>
+                            <42*e04n12>
+                            <42*e04n13>
+                            <42*e04n14>
+                            <42*e04n15>
+                            <42*e04n16>
+                            <42*e04n17>
+                            <42*e04n18>
+                            <42*e05n01>
+                            <42*e05n02>
+                            <42*e05n03>
+                            <42*e05n04>
+                            <42*e05n05>
+                            <42*e05n06>
+                            <42*e05n07>
+                            <42*e05n08>
+                            <42*e05n09>
+                            <42*e05n10>
+                            <42*e05n11>
+                            <42*e05n12>
+                            <42*e05n13>
+                            <42*e05n14>
+                            <42*e05n15>
+                            <42*e05n16>
+                            <42*e05n17>
+                            <42*e05n18>
+                            <42*e06n01>
+                            <42*h28n12>
+                            <42*h33n08>
+                            <42*h33n09>
+                            <42*h33n10>
+                            <42*h33n11>
+                            <42*h33n12>
+                            <42*h33n13>
+                            <42*h33n14>
+                            <42*h33n15>
+                            <42*h33n16>
+                            <42*h33n17>
+                            <42*h33n18>
+                            <42*h34n01>
+                            <42*h34n02>
+                            <42*h34n03>
+                            <42*h34n04>
+                            <42*h34n05>
+                            <42*h34n06>
+                            <42*h34n07>
+                            <42*h34n08>
+                            <42*h34n09>
+                            <42*h34n10>
+</ccs/home/khana> was used as the home directory.
+</gpfs/alpine2/stf008/proj-shared/khana/mpiGraph> was used as the working directory.
+Started at Fri Mar 22 21:36:29 2024
+Terminated at Fri Mar 22 21:37:11 2024
+Results reported at Fri Mar 22 21:37:11 2024
+
+The output (if any) is above this job summary.
+
