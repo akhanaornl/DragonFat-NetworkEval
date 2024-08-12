@@ -42,8 +42,6 @@ The results presented in the paper are based on experiments conducted on the Fro
 - **Frontier Architecture**: HPE Cray EX 235a “Bard Peak” node architecture with AMD EPYC 7A53 “Trento” CPUs, AMD MI250X GPUs, and Slingshot interconnect.
 - **Summit Architecture**: IBM AC922 node architecture with IBM POWER9 processors, NVIDIA V100 GPUs, and two ports of EDR InfiniBand.
 
-We used a variety of open-source benchmarks, miniapps, and real applications to evaluate the network performance. Each benchmark was run with different communication patterns to ensure a fair comparison between the two systems.
-
 ## Data Collection
 
 - **Figures of Merit (FOM)**: For each application, we collected reports of the FOM to determine the scaling efficiency.
